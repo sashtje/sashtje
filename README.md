@@ -31,7 +31,7 @@
 
 ## Contacts:
 
-<a href="www.linkedin.com/in/sashtje" target="_blank">![linkedin](https://user-images.githubusercontent.com/60893467/166714652-fd4f42b5-91bd-4859-a9ca-cc73faf7a506.svg)</a> <a href="https://twitter.com/sashtje" target="_blank">![twitter](https://user-images.githubusercontent.com/60893467/166718649-640076b7-527a-48ac-af32-830acfb994c9.svg)</a> <a href="mailto:sashtje.lefevre@gmail.com" target="_blank">![gmail](https://user-images.githubusercontent.com/60893467/166717361-8ddb1cd4-a140-44d0-8321-380ba9d9aaf8.svg)</a> <a href="https://discordapp.com/users/Sashtje#0033/" target="_blank">![discord](https://user-images.githubusercontent.com/60893467/166718297-c93efc96-c490-4da3-b813-66cbaf75b7f3.svg)</a>
+<a href="https://www.linkedin.com/in/sashtje" target="_blank">![linkedin](https://user-images.githubusercontent.com/60893467/166714652-fd4f42b5-91bd-4859-a9ca-cc73faf7a506.svg)</a> <a href="https://twitter.com/sashtje" target="_blank">![twitter](https://user-images.githubusercontent.com/60893467/166718649-640076b7-527a-48ac-af32-830acfb994c9.svg)</a> <a href="mailto:sashtje.lefevre@gmail.com" target="_blank">![gmail](https://user-images.githubusercontent.com/60893467/166717361-8ddb1cd4-a140-44d0-8321-380ba9d9aaf8.svg)</a>
 
 ## My activity:
 ![contrib graph](./profile-3d-contrib/profile-gitblock.svg)
