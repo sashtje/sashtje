@@ -26,3 +26,6 @@
 ![Trello](https://img.shields.io/badge/Time%20management-Trello-%2300A591?style=flat)  ![GitHub Project](https://img.shields.io/badge/Time%20management-GitHub%20Project-%23FF4500?style=flat)
 
 ![Node](https://img.shields.io/badge/Other-Node-Lime?style=flat)  ![Sql](https://img.shields.io/badge/Other-Sql-%23FFFF00?style=flat)
+
+## My activity:
+![contrib graph](./profile-3d-contrib/profile-gitblock.svg)
