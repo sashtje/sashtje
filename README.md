@@ -2,10 +2,10 @@
 
 ## My name is Aleksandra (sashtje)
 
-- 👀 I’m interested in Web Dev
-- 🌱 I’m currently learning Frontend Dev stack
-- 💞️ I’m looking to collaborate on interesting projects as a Frontend Developer
-- 📫 You can send me a letter: sashtje.lefevre@gmail.com
+- 👀 I’m currently looking for a job as a React Developer
+- 🎯 I'm focusing now on React & Redux & React Native & Next.js & Node
+- 🌞 I love beautiful design & art, books, biking and travel
+- ✉️ I will be glad to collaborate on interesting projects. Feel free to write me. See my contacts :arrow_down_small:
 
 ## Languages
 
