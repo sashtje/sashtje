@@ -37,3 +37,7 @@
 
 ## My activity:
 ![contrib graph](./profile-3d-contrib/profile-gitblock.svg)
+
+
+
+<p align="center"> <img src="https://komarev.com/ghpvc/?username=sashtje&label=Profile%20views&color=0e75b6&style=flat" alt="sashtje" /> </p>
