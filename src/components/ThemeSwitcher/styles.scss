@@ -1,0 +1,172 @@
+@import "https://unpkg.com/open-props/easings.min.css";
+
+.theme-toggle {
+  --size: 2rem;
+  --icon-fill: #c9cd02;
+  --icon-fill-hover: #e3e706;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  background: none;
+  border: none;
+  padding: 0;
+
+  inline-size: var(--size);
+  block-size: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  outline-offset: 5px;
+
+  @media (hover: none) {
+    --size: 48px;
+  }
+
+  &__sun-and-moon {
+    inline-size: 100%;
+    block-size: 100%;
+    stroke-linecap: round;
+  }
+
+  &__moon,
+  &__sun,
+  &__sun-beams {
+    transform-origin: center center;
+  }
+
+  &__moon,
+  &__sun {
+    fill: var(--icon-fill);
+
+    .theme-toggle:hover &,
+    .theme-toggle:focus-visible & {
+      fill: var(--icon-fill-hover);
+    }
+  }
+
+  &__sun {
+    transition: transform 0.7s var(--ease-elastic-3), fill 0.3s;
+  }
+
+  &__sun-beams {
+    stroke: var(--icon-fill);
+    stroke-width: 2px;
+    transition: transform 0.7s var(--ease-elastic-4), fill 0.3s;
+
+    .theme-toggle:hover &,
+    .theme-toggle:focus-visible & {
+      stroke: var(--icon-fill-hover);
+    }
+  }
+
+  &__sun-beam_8 {
+    transition: opacity 0.05s;
+  }
+
+  &__sun-beam_7 {
+    transition: opacity 0.05s 0.025s;
+  }
+
+  &__sun-beam_6 {
+    transition: opacity 0.05s 0.05s;
+  }
+
+  &__sun-beam_5 {
+    transition: opacity 0.05s 0.075s;
+  }
+
+  &__sun-beam_4 {
+    transition: opacity 0.05s 0.1s;
+  }
+
+  &__sun-beam_3 {
+    transition: opacity 0.05s 0.125s;
+  }
+
+  &__sun-beam_2 {
+    transition: opacity 0.05s 0.15s;
+  }
+
+  &__sun-beam_1 {
+    transition: opacity 0.05s 0.175s;
+  }
+}
+
+[data-theme="dark"] {
+  .theme-toggle {
+    --icon-fill: rgb(5, 97, 177);
+    --icon-fill-hover: rgb(4, 144, 250);
+
+    &__sun {
+      transform: scale(1.75);
+      transition-timing-function: var(--ease-3);
+      transition-duration: 0.7s;
+    }
+
+    &__sun-beams {
+      transform: rotateZ(-45deg);
+      transition: transform 0.5s;
+    }
+
+    &__sun-beam_1,
+    &__sun-beam_2,
+    &__sun-beam_3,
+    &__sun-beam_4,
+    &__sun-beam_5,
+    &__sun-beam_6,
+    &__sun-beam_7,
+    &__sun-beam_8 {
+      opacity: 0;
+    }
+
+    &__sun-beam_1 {
+      transition: opacity 0.05s;
+    }
+
+    &__sun-beam_2 {
+      transition: opacity 0.05s 0.025s;
+    }
+
+    &__sun-beam_3 {
+      transition: opacity 0.05s 0.05s;
+    }
+
+    &__sun-beam_4 {
+      transition: opacity 0.05s 0.075s;
+    }
+
+    &__sun-beam_5 {
+      transition: opacity 0.05s 0.1s;
+    }
+
+    &__sun-beam_6 {
+      transition: opacity 0.05s 0.125s;
+    }
+
+    &__sun-beam_7 {
+      transition: opacity 0.05s 0.15s;
+    }
+
+    &__sun-beam_8 {
+      transition: opacity 0.05s 0.175s;
+    }
+
+    &__moon circle {
+      transform: translateX(-9px);
+
+      transition-delay: 0.25s;
+      transition-duration: 0.5s;
+
+      @supports (cx: 1) {
+        transform: translateX(0);
+        cx: 15;
+        transition: cx 0.5s var(--ease-out-5);
+      }
+    }
+  }
+}

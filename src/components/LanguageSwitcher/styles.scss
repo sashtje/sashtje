@@ -1,0 +1,72 @@
+.lang-switcher {
+  position: absolute;
+  top: 10px;
+  left: 70px;
+  width: 70px;
+  height: 35px;
+
+  &__svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__svg-item-down {
+    fill: #ab9898;
+  }
+
+  &__svg-item {
+    fill: #c9cd02;
+
+    &_1 {
+      transition: transform 0.5s 0s ease-out;
+    }
+
+    &_2 {
+      transition: transform 0.5s 0.5s ease-out;
+    }
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    padding: 0;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #272727;
+    }
+  }
+
+  &__btn-en {
+    left: 0;
+    color: #272727;
+  }
+
+  &__btn-ru {
+    padding-right: 2px;
+    right: 0;
+    color: #ffffff;
+  }
+
+  [data-lang="ru"] & {
+    &__svg-item {
+      transform: translateX(94px);
+    }
+
+    &__btn-en {
+      color: #ffffff;
+    }
+
+    &__btn-ru {
+      color: #272727;
+    }
+  }
+}

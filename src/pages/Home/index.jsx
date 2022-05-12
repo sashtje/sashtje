@@ -1,9 +1,11 @@
 import React from "react";
 
+import ThemeSwitcher from "../../components/ThemeSwitcher";
+
 import "./styles.scss";
 
 const Home = () => {
-  return <div>Home</div>;
+  return <main className="page__content home"></main>;
 };
 
 export default Home;
