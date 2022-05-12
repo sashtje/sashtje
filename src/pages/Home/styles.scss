@@ -1,0 +1,117 @@
+.home {
+  .s {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 500px;
+    height: auto;
+
+    &__eyes {
+      animation: eyes-moving 5s 0.5s ease-in-out infinite alternate;
+    }
+
+    &__arm {
+      transform-origin: -100px 0px;
+      animation: arm-moving 1s ease-in-out infinite alternate;
+    }
+  }
+}
+
+@keyframes eyes-moving {
+  0%,
+  45% {
+    transform: translateX(0px);
+  }
+  55%,
+  100% {
+    transform: translateX(-50px);
+  }
+}
+
+@keyframes arm-moving {
+  100% {
+    transform: rotate(45deg) translateX(-30px);
+  }
+}
+
+.st0 {
+  fill: #1c4fbe;
+}
+.st1 {
+  fill: #ee693f;
+}
+.st2 {
+  fill: #ffb8cb;
+}
+.st3 {
+  fill: #f94003;
+}
+.st4 {
+  fill: #dea740;
+}
+.st5 {
+  fill: #1cb6be;
+}
+.st6 {
+  fill: #bcce3e;
+}
+.st7 {
+  fill: #edeff2;
+}
+.st8 {
+  fill: #684e3c;
+}
+.st9 {
+  fill: #100f0d;
+}
+.st10 {
+  fill: #5b4332;
+}
+.st11 {
+  fill: #5c7242;
+}
+.st12 {
+  fill: #e1b0af;
+}
+.st13 {
+  fill: #ec5527;
+}
+.st14 {
+  fill: #057590;
+}
+.st15 {
+  fill: #771c39;
+}
+.st16 {
+  fill: #f8a70c;
+}
+.st17 {
+  fill: #f06522;
+}
+.st18 {
+  fill: #ffffff;
+}
+.st19 {
+  fill: #cc7c2c;
+}
+.st20 {
+  fill: #5d6124;
+}
+.st21 {
+  fill: #e6aa30;
+}
+.st22 {
+  fill: #2ab06a;
+}
+.st23 {
+  fill: #725948;
+}
+.st24 {
+  fill: #1a1613;
+}
+.st25 {
+  fill: none;
+}
+.st26 {
+  fill: #ee4d4c;
+}
