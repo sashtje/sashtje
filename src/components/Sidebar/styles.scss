@@ -13,15 +13,18 @@
 }
 
 .sidebar-nav {
+  position: relative;
   height: 200px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 
   &__link {
     width: 100%;
-    padding: 15px 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: #aaaaaa;
     font-size: 1.5rem;
@@ -37,12 +40,34 @@
 
     &_is_active {
       color: #ff0000;
-      box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.3);
+
+      &:nth-child(1) ~ .sidebar-nav__marker {
+        top: 0;
+      }
+
+      &:nth-child(2) ~ .sidebar-nav__marker {
+        top: 70px;
+      }
+
+      &:nth-child(3) ~ .sidebar-nav__marker {
+        top: 140px;
+      }
     }
 
     svg {
       margin: 0 auto;
       display: block;
     }
+  }
+
+  &__marker {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease-in-out;
   }
 }

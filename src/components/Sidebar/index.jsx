@@ -26,6 +26,8 @@ const Sidebar = () => {
         <NavLink className={setActive} to="/contacts">
           <FaEnvelope />
         </NavLink>
+
+        <div className="sidebar-nav__marker"></div>
       </nav>
     </div>
   );
