@@ -12,8 +12,39 @@
 
     &__arm {
       transform-origin: -100px 0px;
-      animation: arm-moving 1s ease-in-out infinite alternate;
+      animation: arm-moving 5s ease-out infinite;
     }
+  }
+}
+
+@keyframes arm-moving {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  9% {
+    transform: rotate(45deg);
+  }
+
+  18% {
+    transform: rotate(0deg);
+  }
+
+  27% {
+    transform: rotate(45deg);
+  }
+
+  36% {
+    transform: rotate(0deg);
+  }
+
+  45% {
+    transform: rotate(45deg);
+  }
+
+  54%,
+  100% {
+    transform: rotate(0deg);
   }
 }
 
@@ -25,12 +56,6 @@
   55%,
   100% {
     transform: translateX(-50px);
-  }
-}
-
-@keyframes arm-moving {
-  100% {
-    transform: rotate(45deg) translateX(-30px);
   }
 }
 
