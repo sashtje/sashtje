@@ -6,6 +6,9 @@
   &__content {
     position: relative;
     min-height: 100vh;
-    margin-left: 60px;
+    padding: 55px 20px 20px 80px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 1s;
   }
 }
