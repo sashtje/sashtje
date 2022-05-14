@@ -1,6 +1,6 @@
 .home {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 50%);
 
   .s {
     max-width: 100%;
@@ -74,7 +74,7 @@
   justify-content: center;
 
   &__title {
-    font-size: 2.25rem;
+    font-size: calc(24px + 16 * (100vw / 1200));
     line-height: 1.4;
     font-weight: 600;
     margin: -35px 0 20px 0;
@@ -85,13 +85,13 @@
   }
 
   &__letter-s {
-    font-size: 2.5rem;
+    font-size: calc(26px + 16 * (100vw / 1200));
     color: #c9cd02;
     text-shadow: 1px 1px 3px #000000;
   }
 
   &__subtitle {
-    font-size: 1.4rem;
+    font-size: calc(16px + 12 * (100vw / 1800));
     font-style: italic;
     margin: 20px 0 50px 0;
     animation: fadeIn 1s 6s backwards;
@@ -108,7 +108,7 @@
     background-color: transparent;
     padding: 10px 15px;
     border: 1px solid #000000;
-    font-size: 1.2rem;
+    font-size: calc(16px + 8 * (100vw / 2000));
     text-decoration: none;
     color: #000000;
     overflow: hidden;
