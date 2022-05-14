@@ -1,3 +1,6 @@
+$duration: 1s;
+$first-delay: 2s;
+
 .about {
   &__title {
     font-size: calc(24px + 16 * (100vw / 1200));
@@ -5,5 +8,199 @@
     font-weight: 600;
     margin: 0 0 20px 0;
     text-align: center;
+  }
+}
+
+.skills-cube {
+  height: 400px;
+  width: 300px;
+  padding: 200px 100px 100px 100px;
+
+  &__spinner {
+    position: relative;
+    transform-style: preserve-3d;
+
+    animation: spinCube2 8s calc($first-delay + 4s) forwards;
+  }
+
+  &__face {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #c5cd94;
+    background-color: rgb(255 255 255 / 70%);
+    box-shadow: 0 0 20px 0px rgba(236, 248, 154, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+  }
+
+  &__complex-face {
+    position: absolute;
+    transform-style: preserve-3d;
+    top: -200px;
+
+    transform-origin: center bottom;
+    animation: foldComplex $duration calc($first-delay + 3s) forwards,
+      unfoldComplex $duration calc($first-delay + 12s) forwards;
+  }
+
+  &__face1 {
+    color: #764abc;
+    // background-color: rgba(255, 0, 0, 0.4);
+
+    transform-origin: bottom center;
+    animation: foldFace1 $duration calc($first-delay + 5s) forwards,
+      unfoldFace1 $duration calc($first-delay + 13s) forwards;
+  }
+
+  &__face2 {
+    color: #1572b6;
+
+    // background-color: rgba(0, 255, 0, 0.4);
+  }
+
+  &__face3 {
+    position: absolute;
+    left: -100px;
+    color: #e34f26;
+
+    // background-color: rgba(0, 0, 255, 0.4);
+
+    transform-origin: right center;
+    animation: foldFace3 $duration calc($first-delay + 1s) forwards,
+      unfoldFace3 $duration calc($first-delay + 15s) forwards;
+  }
+
+  &__face4 {
+    color: #61dafb;
+    // background-color: rgba(255, 255, 0, 0.4);
+  }
+
+  &__face5 {
+    position: absolute;
+    right: -100px;
+    bottom: 0;
+    color: #3178c6;
+
+    // background-color: rgba(255, 0, 255, 0.4);
+
+    transform-origin: left center;
+    animation: foldFace5 $duration $first-delay forwards,
+      unfoldFace5 $duration calc($first-delay + 16s) forwards;
+  }
+
+  &__face6 {
+    position: absolute;
+    bottom: -100px;
+    color: #f7df1e;
+    // background-color: rgba(0, 255, 255, 0.4);
+
+    transform-origin: center top;
+    animation: foldFace6 $duration calc($first-delay + 2s) forwards,
+      unfoldFace6 $duration calc($first-delay + 14s) forwards;
+  }
+}
+
+@keyframes foldFace5 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes unfoldFace5 {
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes foldFace3 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-90deg);
+  }
+}
+
+@keyframes unfoldFace3 {
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes foldFace6 {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(-90deg);
+  }
+}
+
+@keyframes unfoldFace6 {
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes foldFace1 {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(90deg);
+  }
+}
+
+@keyframes unfoldFace1 {
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes foldComplex {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(90deg);
+  }
+}
+
+@keyframes unfoldComplex {
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes spinCube2 {
+  from,
+  to {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  12.5% {
+    transform: rotateY(230deg) rotateX(50deg);
+  }
+  25% {
+    transform: rotateY(230deg) rotateX(50deg);
+  }
+  37.5% {
+    transform: rotateY(-90deg);
+  }
+  50% {
+    transform: rotateY(-90deg) rotateX(-90deg) rotateZ(90deg);
+  }
+  62.5% {
+    transform: rotateY(-180deg) rotateZ(90deg);
+  }
+  75% {
+    transform: rotateY(-270deg) rotateX(0deg);
+  }
+  87.5% {
+    transform: rotateX(90deg);
   }
 }
