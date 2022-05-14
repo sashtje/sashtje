@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { RingLoader } from "react-spinners";
+import { ScaleLoader } from "react-spinners";
 
 import "./styles.scss";
 
@@ -18,11 +18,12 @@ const About = () => {
     <>
       <main className="page__content about">About</main>
 
-      <RingLoader
+      <ScaleLoader
         size={100}
         color={"#b2b604"}
         css={override}
         loading={isLoading}
+        speedMultiplier={2}
       />
     </>
   );

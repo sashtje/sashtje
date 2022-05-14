@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { RingLoader } from "react-spinners";
+import { CircleLoader } from "react-spinners";
 
 import "./styles.scss";
 
@@ -18,11 +18,12 @@ const Contacts = () => {
     <>
       <main className="page__content contacts">Contacts</main>
 
-      <RingLoader
+      <CircleLoader
         size={100}
         color={"#b2b604"}
         css={override}
         loading={isLoading}
+        speedMultiplier={2}
       />
     </>
   );
