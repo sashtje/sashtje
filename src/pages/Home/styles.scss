@@ -2,6 +2,14 @@
   display: grid;
   grid-template-columns: repeat(2, 50%);
 
+  @media (max-width: 655px) and (orientation: landscape) {
+    grid-template-columns: 100%;
+  }
+
+  @media (max-width: 590px) and (orientation: portrait) {
+    grid-template-columns: 100%;
+  }
+
   .s {
     max-width: 100%;
     max-height: calc(100vh - 75px);
@@ -16,6 +24,16 @@
 
     @media (hover: none) and (orientation: portrait) {
       max-height: calc(100vh - 148px);
+    }
+
+    @media (max-width: 655px) and (orientation: landscape) {
+      height: auto;
+      grid-area: 2 / 1;
+    }
+
+    @media (max-width: 590px) and (orientation: portrait) {
+      height: auto;
+      grid-area: 2 / 1;
     }
 
     &__eyes {
@@ -81,11 +99,27 @@
   flex-direction: column;
   justify-content: center;
 
+  @media (max-width: 655px) and (orientation: landscape) {
+    margin: 0 0 20px 0;
+  }
+
+  @media (max-width: 590px) and (orientation: portrait) {
+    margin: 0 0 20px 0;
+  }
+
   &__title {
     font-size: calc(24px + 16 * (100vw / 1200));
     line-height: 1.4;
     font-weight: 600;
     margin: -35px 0 20px 0;
+
+    @media (max-width: 655px) and (orientation: landscape) {
+      margin: 20px 0;
+    }
+
+    @media (max-width: 590px) and (orientation: portrait) {
+      margin: 20px 0;
+    }
 
     &-word {
       white-space: nowrap;
