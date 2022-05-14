@@ -1,22 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { RingLoader } from "react-spinners";
-import { css } from "@emotion/react";
 
 import AnimatedLetters from "./../../components/AnimatedLetters/";
 
 import "./styles.scss";
 
+import { override } from "../../model/loader";
 import CV from "../../assets/cv/CV_Aleksandra (Sashtje).txt";
-
-const override = css`
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  animation: fadeOut 1s 1s;
-  animation-fill-mode: forwards;
-`;
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
