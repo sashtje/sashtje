@@ -10,7 +10,7 @@ import "./styles.scss";
 import CV from "../../assets/cv/CV_Aleksandra (Sashtje).txt";
 
 const override = css`
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
@@ -177,19 +177,21 @@ const Home = () => {
             React / TypeScript / JavaScript
           </p>
 
-          <Link
-            className="home-content__btn home-content__contact-me"
-            to="/contacts"
-          >
-            Contact me
-          </Link>
-          <a
-            className="home-content__btn home-content__download-cv"
-            href={CV}
-            download={true}
-          >
-            Download CV
-          </a>
+          <div className="home-content__controls">
+            <Link
+              className="home-content__btn home-content__contact-me"
+              to="/contacts"
+            >
+              Contact me
+            </Link>
+            <a
+              className="home-content__btn home-content__download-cv"
+              href={CV}
+              download={true}
+            >
+              Download CV
+            </a>
+          </div>
         </section>
       </main>
 

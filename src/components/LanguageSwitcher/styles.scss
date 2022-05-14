@@ -5,6 +5,15 @@
   width: 70px;
   height: 35px;
 
+  @media (hover: none) {
+    width: 96px;
+    height: 48px;
+  }
+
+  @media (orientation: portrait) {
+    left: 10px;
+  }
+
   &__svg {
     position: absolute;
     top: 0;

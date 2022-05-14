@@ -23,6 +23,7 @@ html[data-theme="dark"] {
 body {
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
+  background-color: #fffff6;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

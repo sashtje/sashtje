@@ -10,5 +10,14 @@
     opacity: 0;
     animation: fadeIn 1s forwards;
     animation-delay: 1s;
+
+    @media (hover: none) {
+      padding-top: 68px;
+    }
+
+    @media (orientation: portrait) {
+      padding-left: 20px;
+      padding-bottom: 80px;
+    }
   }
 }
