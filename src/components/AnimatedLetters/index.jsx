@@ -14,7 +14,7 @@ const AnimatedLetters = ({ strArray, startDelay, timeBeforeHoverActive }) => {
   }, []);
 
   return (
-    <>
+    <span className="text-animate-word">
       {strArray.map((item, index) => (
         <span
           key={index}
@@ -26,7 +26,7 @@ const AnimatedLetters = ({ strArray, startDelay, timeBeforeHoverActive }) => {
           {item[0]}
         </span>
       ))}
-    </>
+    </span>
   );
 };
 

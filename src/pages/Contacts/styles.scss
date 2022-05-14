@@ -1,0 +1,9 @@
+.contacts {
+  &__title {
+    font-size: calc(24px + 16 * (100vw / 1200));
+    line-height: 1.4;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+}
