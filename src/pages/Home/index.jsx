@@ -108,69 +108,96 @@ const Home = () => {
 
         <section className="home-content">
           <h1 className="home-content__title">
-            <AnimatedLetters
-              strArray={[
-                ["H", ""],
-                ["i,", ""],
-              ]}
-              startDelay={1.5}
-              timeBeforeHoverActive={6}
-            />
+            <span className="home-content__title-word">
+              <AnimatedLetters
+                strArray={[
+                  ["H", ""],
+                  ["i,", ""],
+                ]}
+                startDelay={1.5}
+                timeBeforeHoverActive={6}
+              />
+            </span>
             <br />
-            <AnimatedLetters
-              strArray={[
-                ["I", ""],
-                ["'m", ""],
-                [" ", ""],
-                ["A", ""],
-                ["l", ""],
-                ["e", ""],
-                ["k", ""],
-                ["s", ""],
-                ["a", ""],
-                ["n", ""],
-                ["d", ""],
-                ["r", ""],
-                ["a", ""],
-                [" ", ""],
-                ["(", ""],
-                ["S", "home-content__letter-s"],
-                ["a", ""],
-                ["s", ""],
-                ["h", ""],
-                ["t", ""],
-                ["j", ""],
-                ["e", ""],
-                [")", ""],
-              ]}
-              startDelay={1.7}
-              timeBeforeHoverActive={6}
-            />
+            <span className="home-content__title-word">
+              <AnimatedLetters
+                strArray={[
+                  ["I", ""],
+                  ["'m", ""],
+                ]}
+                startDelay={1.7}
+                timeBeforeHoverActive={6}
+              />
+            </span>{" "}
+            <span className="home-content__title-word">
+              <AnimatedLetters
+                strArray={[
+                  ["A", ""],
+                  ["l", ""],
+                  ["e", ""],
+                  ["k", ""],
+                  ["s", ""],
+                  ["a", ""],
+                  ["n", ""],
+                  ["d", ""],
+                  ["r", ""],
+                  ["a", ""],
+                ]}
+                startDelay={2}
+                timeBeforeHoverActive={6}
+              />
+            </span>{" "}
+            <span className="home-content__title-word">
+              <AnimatedLetters
+                strArray={[
+                  ["(", ""],
+                  ["S", "home-content__letter-s"],
+                  ["a", ""],
+                  ["s", ""],
+                  ["h", ""],
+                  ["t", ""],
+                  ["j", ""],
+                  ["e", ""],
+                  [")", ""],
+                ]}
+                startDelay={3.1}
+                timeBeforeHoverActive={6}
+              />
+            </span>
             <br />
-            <AnimatedLetters
-              strArray={[
-                ["F", ""],
-                ["r", ""],
-                ["o", ""],
-                ["n", ""],
-                ["t", ""],
-                ["e", ""],
-                ["n", ""],
-                ["d", ""],
-                [" ", ""],
-                ["D", ""],
-                ["e", ""],
-                ["v", ""],
-                ["e", ""],
-                ["l", ""],
-                ["o", ""],
-                ["p", ""],
-                ["e", ""],
-                ["r", ""],
-              ]}
-              startDelay={4}
-              timeBeforeHoverActive={6}
-            />
+            <span className="home-content__title-word">
+              <AnimatedLetters
+                strArray={[
+                  ["F", ""],
+                  ["r", ""],
+                  ["o", ""],
+                  ["n", ""],
+                  ["t", ""],
+                  ["e", ""],
+                  ["n", ""],
+                  ["d", ""],
+                ]}
+                startDelay={4}
+                timeBeforeHoverActive={6}
+              />
+            </span>{" "}
+            <span className="home-content__title-word">
+              <AnimatedLetters
+                strArray={[
+                  ["D", ""],
+                  ["e", ""],
+                  ["v", ""],
+                  ["e", ""],
+                  ["l", ""],
+                  ["o", ""],
+                  ["p", ""],
+                  ["e", ""],
+                  ["r", ""],
+                ]}
+                startDelay={4.9}
+                timeBeforeHoverActive={6}
+              />
+            </span>
           </h1>
 
           <p className="home-content__subtitle">
