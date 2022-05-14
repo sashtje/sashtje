@@ -10,6 +10,14 @@
       max-height: calc(100vh - 88px);
     }
 
+    @media (orientation: portrait) {
+      max-height: calc(100vh - 135px);
+    }
+
+    @media (hover: none) and (orientation: portrait) {
+      max-height: calc(100vh - 148px);
+    }
+
     &__eyes {
       animation: eyes-moving 5s 1s ease-in-out infinite alternate;
     }
