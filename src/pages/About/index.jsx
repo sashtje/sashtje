@@ -23,12 +23,54 @@ import { override } from "../../model/loader";
 
 const About = () => {
   const [isLoading, setIsLoading] = useState(true);
+  let [isOddSkills, setIsOddSkills] = useState(true);
+  const [isCubeAnimated, setIsCubeAnimated] = useState(false);
+  const [wasLaunch, setWasLaunch] = useState(false);
+
+  const getCubeClass = (isCubeAnimated) => {
+    return isCubeAnimated
+      ? "skills-cube skills-cube_is_animated"
+      : "skills-cube";
+  };
+
+  const getOddGroupClass = (isOddSkills) => {
+    return isOddSkills
+      ? "skills-cube__group skills-cube__group_is_visible"
+      : "skills-cube__group";
+  };
+
+  const getEvenGroupClass = (isOddSkills) => {
+    return isOddSkills
+      ? "skills-cube__group"
+      : "skills-cube__group skills-cube__group_is_visible";
+  };
+
+  const startCubeAnimation = () => {
+    setIsCubeAnimated(true);
+    setTimeout(() => {
+      setIsCubeAnimated(false);
+      setIsOddSkills((isOddSkills = !isOddSkills));
+      setTimeout(() => {
+        startCubeAnimation();
+      }, 2000);
+    }, 17000);
+  };
 
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
     }, 2000);
   }, []);
+
+  useEffect(() => {
+    if (isLoading || wasLaunch) return;
+
+    setWasLaunch(true);
+    setTimeout(() => {
+      //h1 was loaded
+      startCubeAnimation();
+    }, 1000);
+  }, [isLoading, wasLaunch, isOddSkills, isCubeAnimated]);
 
   return (
     <>
@@ -55,66 +97,66 @@ const About = () => {
           />
         </h1>
 
-        <div className="skills-cube">
+        <div className={getCubeClass(isCubeAnimated)}>
           <div className="skills-cube__spinner">
             <div className="skills-cube__complex-face">
               <div className="skills-cube__face skills-cube__face1">
-                <span className="skills-cube__group">
+                <span className={getOddGroupClass(isOddSkills)}>
                   <SiRedux color="#764abc" title="Redux" />
                 </span>
 
-                <span className="skills-cube__group skills-cube__group_is_visible">
+                <span className={getEvenGroupClass(isOddSkills)}>
                   <SiWebpack color="#8dd6f9" title="Webpack" />
                 </span>
               </div>
 
               <div className="skills-cube__face skills-cube__face2">
-                <span className="skills-cube__group">
+                <span className={getOddGroupClass(isOddSkills)}>
                   <SiCss3 color="#1572b6" title="CSS3" />
                 </span>
 
-                <span className="skills-cube__group skills-cube__group_is_visible">
+                <span className={getEvenGroupClass(isOddSkills)}>
                   <SiGit color="#f05032" title="Git" />
                 </span>
               </div>
             </div>
 
             <div className="skills-cube__face skills-cube__face3">
-              <span className="skills-cube__group">
+              <span className={getOddGroupClass(isOddSkills)}>
                 <SiHtml5 color="#e34f26" title="HTML5" />
               </span>
 
-              <span className="skills-cube__group skills-cube__group_is_visible">
+              <span className={getEvenGroupClass(isOddSkills)}>
                 <SiFigma color="#f24e1e" title="Figma" />
               </span>
             </div>
 
             <div className="skills-cube__face skills-cube__face4">
-              <span className="skills-cube__group">
+              <span className={getOddGroupClass(isOddSkills)}>
                 <SiReact color="#61dafb" title="React" />
               </span>
 
-              <span className="skills-cube__group skills-cube__group_is_visible">
+              <span className={getEvenGroupClass(isOddSkills)}>
                 <SiSass color="#cc6699" title="SASS" />
               </span>
             </div>
 
             <div className="skills-cube__face skills-cube__face5">
-              <span className="skills-cube__group">
+              <span className={getOddGroupClass(isOddSkills)}>
                 <SiTypescript color="#3178c6" title="TypeScript" />
               </span>
 
-              <span className="skills-cube__group skills-cube__group_is_visible">
+              <span className={getEvenGroupClass(isOddSkills)}>
                 <SiAdobephotoshop color="#31a8ff" title="Photoshop" />
               </span>
             </div>
 
             <div className="skills-cube__face skills-cube__face6">
-              <span className="skills-cube__group">
+              <span className={getOddGroupClass(isOddSkills)}>
                 <SiJavascript color="#f7df1e" title="JavaScript" />
               </span>
 
-              <span className="skills-cube__group skills-cube__group_is_visible">
+              <span className={getEvenGroupClass(isOddSkills)}>
                 <SiVisualstudiocode color="#007acc" title="VS Code" />
               </span>
             </div>

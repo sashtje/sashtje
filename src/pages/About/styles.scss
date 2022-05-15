@@ -19,8 +19,6 @@ $first-delay: 0s;
   &__spinner {
     position: relative;
     transform-style: preserve-3d;
-
-    animation: spinCube2 8s calc($first-delay + 4s) forwards;
   }
 
   &__face {
@@ -38,6 +36,7 @@ $first-delay: 0s;
 
     &:hover {
       font-size: 3rem;
+      border: 1px solid #37c2cd;
       box-shadow: 0 0 20px 0px rgba(126, 126, 126, 0.5);
     }
 
@@ -62,14 +61,10 @@ $first-delay: 0s;
     top: -200px;
 
     transform-origin: center bottom;
-    animation: foldComplex $duration calc($first-delay + 3s) forwards,
-      unfoldComplex $duration calc($first-delay + 12s) forwards;
   }
 
   &__face1 {
     transform-origin: bottom center;
-    animation: foldFace1 $duration calc($first-delay + 5s) forwards,
-      unfoldFace1 $duration calc($first-delay + 13s) forwards;
   }
 
   &__face3 {
@@ -77,8 +72,6 @@ $first-delay: 0s;
     left: -100px;
 
     transform-origin: right center;
-    animation: foldFace3 $duration calc($first-delay + 1s) forwards,
-      unfoldFace3 $duration calc($first-delay + 15s) forwards;
   }
 
   &__face5 {
@@ -87,8 +80,6 @@ $first-delay: 0s;
     bottom: 0;
 
     transform-origin: left center;
-    animation: foldFace5 $duration $first-delay forwards,
-      unfoldFace5 $duration calc($first-delay + 16s) forwards;
   }
 
   &__face6 {
@@ -96,8 +87,37 @@ $first-delay: 0s;
     bottom: -100px;
 
     transform-origin: center top;
-    animation: foldFace6 $duration calc($first-delay + 2s) forwards,
-      unfoldFace6 $duration calc($first-delay + 14s) forwards;
+  }
+
+  &_is_animated {
+    .skills-cube__spinner {
+      animation: spinCube2 8s calc($first-delay + 4s) forwards;
+    }
+
+    .skills-cube__complex-face {
+      animation: foldComplex $duration calc($first-delay + 3s) forwards,
+        unfoldComplex $duration calc($first-delay + 12s) forwards;
+    }
+
+    .skills-cube__face1 {
+      animation: foldFace1 $duration calc($first-delay + 5s) forwards,
+        unfoldFace1 $duration calc($first-delay + 13s) forwards;
+    }
+
+    .skills-cube__face3 {
+      animation: foldFace3 $duration calc($first-delay + 1s) forwards,
+        unfoldFace3 $duration calc($first-delay + 15s) forwards;
+    }
+
+    .skills-cube__face5 {
+      animation: foldFace5 $duration $first-delay forwards,
+        unfoldFace5 $duration calc($first-delay + 16s) forwards;
+    }
+
+    .skills-cube__face6 {
+      animation: foldFace6 $duration calc($first-delay + 2s) forwards,
+        unfoldFace6 $duration calc($first-delay + 14s) forwards;
+    }
   }
 }
 
