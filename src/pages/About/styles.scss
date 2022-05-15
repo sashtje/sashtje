@@ -1,5 +1,5 @@
 $duration: 1s;
-$first-delay: 2s;
+$first-delay: 0s;
 
 .about {
   &__title {
@@ -34,7 +34,7 @@ $first-delay: 2s;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    transition: 0.5s;
+    transition: box-shadow 0.5s;
 
     &:hover {
       font-size: 3rem;

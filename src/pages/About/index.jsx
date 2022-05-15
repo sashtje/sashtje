@@ -22,13 +22,13 @@ import "./styles.scss";
 import { override } from "../../model/loader";
 
 const About = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
-  /* useEffect(() => {
+  useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
     }, 2000);
-  }, []); */
+  }, []);
 
   return (
     <>
@@ -60,62 +60,62 @@ const About = () => {
             <div className="skills-cube__complex-face">
               <div className="skills-cube__face skills-cube__face1">
                 <span className="skills-cube__group">
-                  <SiRedux color="#764abc" />
+                  <SiRedux color="#764abc" title="Redux" />
                 </span>
 
                 <span className="skills-cube__group skills-cube__group_is_visible">
-                  <SiWebpack color="#8dd6f9" />
+                  <SiWebpack color="#8dd6f9" title="Webpack" />
                 </span>
               </div>
 
               <div className="skills-cube__face skills-cube__face2">
                 <span className="skills-cube__group">
-                  <SiCss3 color="#1572b6" />
+                  <SiCss3 color="#1572b6" title="CSS3" />
                 </span>
 
                 <span className="skills-cube__group skills-cube__group_is_visible">
-                  <SiGit color="#f05032" />
+                  <SiGit color="#f05032" title="Git" />
                 </span>
               </div>
             </div>
 
             <div className="skills-cube__face skills-cube__face3">
               <span className="skills-cube__group">
-                <SiHtml5 color="#e34f26" />
+                <SiHtml5 color="#e34f26" title="HTML5" />
               </span>
 
               <span className="skills-cube__group skills-cube__group_is_visible">
-                <SiFigma color="#f24e1e" />
+                <SiFigma color="#f24e1e" title="Figma" />
               </span>
             </div>
 
             <div className="skills-cube__face skills-cube__face4">
               <span className="skills-cube__group">
-                <SiReact color="#61dafb" />
+                <SiReact color="#61dafb" title="React" />
               </span>
 
               <span className="skills-cube__group skills-cube__group_is_visible">
-                <SiSass color="#cc6699" />
+                <SiSass color="#cc6699" title="SASS" />
               </span>
             </div>
 
             <div className="skills-cube__face skills-cube__face5">
               <span className="skills-cube__group">
-                <SiTypescript color="#3178c6" />
+                <SiTypescript color="#3178c6" title="TypeScript" />
               </span>
 
               <span className="skills-cube__group skills-cube__group_is_visible">
-                <SiAdobephotoshop color="#31a8ff" />
+                <SiAdobephotoshop color="#31a8ff" title="Photoshop" />
               </span>
             </div>
 
             <div className="skills-cube__face skills-cube__face6">
               <span className="skills-cube__group">
-                <SiJavascript color="#f7df1e" />
+                <SiJavascript color="#f7df1e" title="JavaScript" />
               </span>
 
               <span className="skills-cube__group skills-cube__group_is_visible">
-                <SiVisualstudiocode color="#007acc" />
+                <SiVisualstudiocode color="#007acc" title="VS Code" />
               </span>
             </div>
           </div>
