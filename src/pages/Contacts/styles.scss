@@ -58,4 +58,16 @@
       display: block;
     }
   }
+
+  &__container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+
+    &-map {
+    }
+
+    &-form {
+    }
+  }
 }

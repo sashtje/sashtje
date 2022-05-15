@@ -89,7 +89,7 @@ const Contacts = () => {
         <div className="contacts__container">
           <div className="contacts__container-map"></div>
 
-          <form className="contacts__form"></form>
+          <form className="contacts__container-form"></form>
         </div>
       </main>
 
