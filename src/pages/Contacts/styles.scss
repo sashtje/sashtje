@@ -6,4 +6,56 @@
     margin: 0 0 20px 0;
     text-align: center;
   }
+
+  &__about {
+    font-size: calc(16px + 12 * (100vw / 1800));
+    line-height: 1.4;
+
+    &_is_highlight {
+      font-weight: 600;
+      color: #ff0000;
+    }
+  }
+
+  &__contacts-block {
+    max-width: 900px;
+    margin: 30px auto 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px 20px;
+    flex-wrap: wrap;
+  }
+
+  &__contact-item {
+    font-size: 2.5rem;
+    transition: 0.5s;
+    outline-offset: 3px;
+    border-bottom: 3px solid transparent;
+    padding: 7px;
+
+    &:hover {
+      transform: translateY(-7px);
+    }
+
+    &_is_linkedin:hover {
+      border-color: #0a66c2;
+    }
+
+    &_is_twitter:hover {
+      border-color: #1da1f2;
+    }
+
+    &_is_github:hover {
+      border-color: #181717;
+    }
+
+    &_is_gmail:hover {
+      border-color: #ea4335;
+    }
+
+    svg {
+      display: block;
+    }
+  }
 }
