@@ -40,6 +40,20 @@ $first-delay: 2s;
       font-size: 3rem;
       box-shadow: 0 0 20px 0px rgba(126, 126, 126, 0.5);
     }
+
+    svg {
+      display: block;
+    }
+  }
+
+  &__group {
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+
+    &_is_visible {
+      opacity: 1;
+    }
   }
 
   &__complex-face {
@@ -53,44 +67,24 @@ $first-delay: 2s;
   }
 
   &__face1 {
-    color: #764abc;
-    // background-color: rgba(255, 0, 0, 0.4);
-
     transform-origin: bottom center;
     animation: foldFace1 $duration calc($first-delay + 5s) forwards,
       unfoldFace1 $duration calc($first-delay + 13s) forwards;
   }
 
-  &__face2 {
-    color: #1572b6;
-
-    // background-color: rgba(0, 255, 0, 0.4);
-  }
-
   &__face3 {
     position: absolute;
     left: -100px;
-    color: #e34f26;
-
-    // background-color: rgba(0, 0, 255, 0.4);
 
     transform-origin: right center;
     animation: foldFace3 $duration calc($first-delay + 1s) forwards,
       unfoldFace3 $duration calc($first-delay + 15s) forwards;
   }
 
-  &__face4 {
-    color: #61dafb;
-    // background-color: rgba(255, 255, 0, 0.4);
-  }
-
   &__face5 {
     position: absolute;
     right: -100px;
     bottom: 0;
-    color: #3178c6;
-
-    // background-color: rgba(255, 0, 255, 0.4);
 
     transform-origin: left center;
     animation: foldFace5 $duration $first-delay forwards,
@@ -100,8 +94,6 @@ $first-delay: 2s;
   &__face6 {
     position: absolute;
     bottom: -100px;
-    color: #f7df1e;
-    // background-color: rgba(0, 255, 255, 0.4);
 
     transform-origin: center top;
     animation: foldFace6 $duration calc($first-delay + 2s) forwards,
@@ -202,7 +194,7 @@ $first-delay: 2s;
     transform: rotateY(-90deg) rotateX(-90deg) rotateZ(90deg);
   }
   62.5% {
-    transform: rotateY(-180deg) rotateZ(90deg);
+    transform: rotateY(-180deg) rotateZ(180deg);
   }
   75% {
     transform: rotateY(-270deg) rotateX(0deg);

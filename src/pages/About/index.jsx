@@ -7,6 +7,12 @@ import {
   SiReact,
   SiTypescript,
   SiJavascript,
+  SiGit,
+  SiWebpack,
+  SiFigma,
+  SiSass,
+  SiAdobephotoshop,
+  SiVisualstudiocode,
 } from "react-icons/si";
 
 import AnimatedLetters from "../../components/AnimatedLetters";
@@ -53,28 +59,64 @@ const About = () => {
           <div className="skills-cube__spinner">
             <div className="skills-cube__complex-face">
               <div className="skills-cube__face skills-cube__face1">
-                <SiRedux />
+                <span className="skills-cube__group">
+                  <SiRedux color="#764abc" />
+                </span>
+
+                <span className="skills-cube__group skills-cube__group_is_visible">
+                  <SiWebpack color="#8dd6f9" />
+                </span>
               </div>
 
               <div className="skills-cube__face skills-cube__face2">
-                <SiCss3 />
+                <span className="skills-cube__group">
+                  <SiCss3 color="#1572b6" />
+                </span>
+
+                <span className="skills-cube__group skills-cube__group_is_visible">
+                  <SiGit color="#f05032" />
+                </span>
               </div>
             </div>
 
             <div className="skills-cube__face skills-cube__face3">
-              <SiHtml5 />
+              <span className="skills-cube__group">
+                <SiHtml5 color="#e34f26" />
+              </span>
+
+              <span className="skills-cube__group skills-cube__group_is_visible">
+                <SiFigma color="#f24e1e" />
+              </span>
             </div>
 
             <div className="skills-cube__face skills-cube__face4">
-              <SiReact />
+              <span className="skills-cube__group">
+                <SiReact color="#61dafb" />
+              </span>
+
+              <span className="skills-cube__group skills-cube__group_is_visible">
+                <SiSass color="#cc6699" />
+              </span>
             </div>
 
             <div className="skills-cube__face skills-cube__face5">
-              <SiTypescript />
+              <span className="skills-cube__group">
+                <SiTypescript color="#3178c6" />
+              </span>
+
+              <span className="skills-cube__group skills-cube__group_is_visible">
+                <SiAdobephotoshop color="#31a8ff" />
+              </span>
             </div>
 
             <div className="skills-cube__face skills-cube__face6">
-              <SiJavascript />
+              <span className="skills-cube__group">
+                <SiJavascript color="#f7df1e" />
+              </span>
+
+              <span className="skills-cube__group skills-cube__group_is_visible">
+                <SiVisualstudiocode color="#007acc" />
+              </span>
             </div>
           </div>
         </div>
