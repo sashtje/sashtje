@@ -48,11 +48,13 @@ const About = () => {
   const startCubeAnimation = () => {
     setIsCubeAnimated(true);
     setTimeout(() => {
+      //wait for end of rotation animation
       setIsCubeAnimated(false);
       setIsOddSkills((isOddSkills = !isOddSkills));
       setTimeout(() => {
+        //wait for end of change skills transition
         startCubeAnimation();
-      }, 2000);
+      }, 1000);
     }, 17000);
   };
 
