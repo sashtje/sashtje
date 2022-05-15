@@ -108,7 +108,47 @@ const Contacts = () => {
             </MapContainer>
           </div>
 
-          <form className="contacts__container-form"></form>
+          <form className="contacts__container-form contacts-form">
+            <div className="contacts-form__container">
+              <div className="contacts-form__row">
+                <input
+                  className="contacts-form__input"
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  required
+                />
+                <input
+                  className="contacts-form__input"
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+
+              <input
+                className="contacts-form__input"
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                required
+              />
+
+              <textarea
+                className="contacts-form__textarea"
+                name="message"
+                placeholder="Message"
+                required
+              />
+
+              <input
+                className="contacts-form__btn-submit"
+                type="submit"
+                value="SEND"
+              />
+            </div>
+          </form>
         </div>
       </main>
 
