@@ -30,7 +30,7 @@ const Contacts = () => {
               ["y", ""],
             ]}
             startDelay={1.5}
-            timeBeforeHoverActive={3}
+            timeBeforeHoverActive={2.7}
           />{" "}
           <AnimatedLetters
             strArray={[
@@ -44,7 +44,7 @@ const Contacts = () => {
               ["s", ""],
             ]}
             startDelay={1.8}
-            timeBeforeHoverActive={3}
+            timeBeforeHoverActive={3.6}
           />
         </h1>
         <p className="contacts__about">
