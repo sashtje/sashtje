@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { CircleLoader } from "react-spinners";
 import { SiLinkedin, SiTwitter, SiGithub, SiGmail } from "react-icons/si";
+import { BsBuilding } from "react-icons/bs";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import emailjs from "@emailjs/browser";
 
 import AnimatedLetters from "../../components/AnimatedLetters";
 
@@ -87,7 +90,23 @@ const Contacts = () => {
         </div>
 
         <div className="contacts__container">
-          <div className="contacts__container-map"></div>
+          <div className="contacts__container-map">
+            <div className="contacts__container-map-banner">
+              Currently I live in Moscow, but I'm ready to consider relocation
+            </div>
+
+            <MapContainer center={[55.75232, 37.6116908]} zoom={5}>
+              <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+              <Marker position={[55.75232, 37.6116908]}>
+                <Popup>
+                  <span className="contacts__container-map-popup-icon">
+                    <BsBuilding />
+                  </span>{" "}
+                  Moscow, Russia
+                </Popup>
+              </Marker>
+            </MapContainer>
+          </div>
 
           <form className="contacts__container-form"></form>
         </div>
