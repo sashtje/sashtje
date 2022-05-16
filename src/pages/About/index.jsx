@@ -87,7 +87,7 @@ const About = () => {
               ["t", ""],
             ]}
             startDelay={1.5}
-            timeBeforeHoverActive={2.5}
+            timeBeforeHoverActive={3}
           />{" "}
           <AnimatedLetters
             strArray={[
@@ -95,7 +95,7 @@ const About = () => {
               ["e", ""],
             ]}
             startDelay={2.1}
-            timeBeforeHoverActive={2.5}
+            timeBeforeHoverActive={4.3}
           />
         </h1>
 

@@ -105,7 +105,7 @@ const Home = () => {
                 ["i,", ""],
               ]}
               startDelay={1.5}
-              timeBeforeHoverActive={6}
+              timeBeforeHoverActive={2.7}
             />
             <br />
             <AnimatedLetters
@@ -114,7 +114,7 @@ const Home = () => {
                 ["'m", ""],
               ]}
               startDelay={1.7}
-              timeBeforeHoverActive={6}
+              timeBeforeHoverActive={2.9}
             />{" "}
             <AnimatedLetters
               strArray={[
@@ -130,7 +130,7 @@ const Home = () => {
                 ["a", ""],
               ]}
               startDelay={2}
-              timeBeforeHoverActive={6}
+              timeBeforeHoverActive={4}
             />{" "}
             <AnimatedLetters
               strArray={[
@@ -145,7 +145,7 @@ const Home = () => {
                 [")", ""],
               ]}
               startDelay={3.1}
-              timeBeforeHoverActive={6}
+              timeBeforeHoverActive={5}
             />
             <br />
             <AnimatedLetters
@@ -160,7 +160,7 @@ const Home = () => {
                 ["d", ""],
               ]}
               startDelay={4}
-              timeBeforeHoverActive={6}
+              timeBeforeHoverActive={5.8}
             />{" "}
             <AnimatedLetters
               strArray={[
@@ -175,7 +175,7 @@ const Home = () => {
                 ["r", ""],
               ]}
               startDelay={4.9}
-              timeBeforeHoverActive={6}
+              timeBeforeHoverActive={6.8}
             />
           </h1>
 
