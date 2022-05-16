@@ -65,6 +65,14 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
 
+    @media (max-width: 840px) and (orientation: landscape) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 780px) and (orientation: portrait) {
+      grid-template-columns: 1fr;
+    }
+
     &-map {
       position: relative;
       width: 100%;
@@ -80,7 +88,8 @@
         color: #ffffff;
         padding: 10px 15px;
         z-index: 1;
-        font-size: 1.2rem;
+        // font-size: 1.2rem;
+        font-size: calc(16px + 12 * (100vw / 1800));
         line-height: 1.4;
         text-shadow: 0 0 3px rgba(0, 0, 0, 1);
         border: 3px solid rgb(14, 154, 2);
@@ -135,6 +144,11 @@
       margin: 0;
       flex: 1 0 240px;
       width: auto;
+
+      @media (max-width: 300px) {
+        flex: auto;
+        width: 100%;
+      }
     }
   }
 
@@ -143,7 +157,7 @@
     display: block;
     width: 100%;
     font-family: inherit;
-    font-size: 1.1rem;
+    font-size: calc(16px + 3 * (100vw / 1800));
     padding: 10px 15px;
   }
 
@@ -159,7 +173,7 @@
 
   &__btn-submit {
     font-family: inherit;
-    font-size: 1.1rem;
+    font-size: calc(15px + 3 * (100vw / 1800));
     font-weight: 600;
     letter-spacing: 2px;
     border: 1px solid #000000;
