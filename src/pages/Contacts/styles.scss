@@ -85,14 +85,13 @@
       &-banner {
         position: absolute;
         top: -10px;
-        left: 10px;
+        left: 50px;
         right: 10px;
         height: auto;
         background-color: rgb(14 178 0 / 100%);
         color: #ffffff;
         padding: 10px 15px;
         z-index: 1;
-        // font-size: 1.2rem;
         font-size: calc(16px + 12 * (100vw / 1800));
         line-height: 1.4;
         text-shadow: 0 0 3px rgba(0, 0, 0, 1);
@@ -117,8 +116,10 @@
   height: 100%;
   z-index: 0;
 
-  a {
-    display: none;
+  .leaflet-control-attribution {
+    a {
+      display: none;
+    }
   }
 }
 
