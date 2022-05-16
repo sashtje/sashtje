@@ -23,7 +23,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px 20px;
+    gap: 20px;
     flex-wrap: wrap;
   }
 
@@ -71,6 +71,10 @@
 
     @media (max-width: 780px) and (orientation: portrait) {
       grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 500px) {
+      margin-top: 30px;
     }
 
     &-map {
