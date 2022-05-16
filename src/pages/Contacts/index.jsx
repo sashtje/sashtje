@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { CircleLoader } from "react-spinners";
 import { SiLinkedin, SiTwitter, SiGithub, SiGmail } from "react-icons/si";
 import { BsBuilding } from "react-icons/bs";
@@ -14,11 +14,41 @@ import { override } from "../../model/loader";
 const Contacts = () => {
   const [isLoading, setIsLoading] = useState(true);
 
+  const form = useRef();
+
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
     }, 2000);
   }, []);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_mj2op5g",
+        "template_b8gltyd",
+        form.current,
+        "WqsPwKKnOXyCGCq9h"
+      )
+      .then(
+        () => {
+          alert(
+            "Your email was sent successfully. Thank you for your message :)"
+          );
+        },
+        () => {
+          alert(
+            "Sorry, something went wrong :( your email wasn't sent. Please, try again or contact me any other way above."
+          );
+        }
+      )
+      .finally(() => {
+        //clean the form
+        form.current.reset();
+      });
+  };
 
   return (
     <>
@@ -112,7 +142,11 @@ const Contacts = () => {
             </MapContainer>
           </div>
 
-          <form className="contacts__container-form contacts-form">
+          <form
+            className="contacts__container-form contacts-form"
+            ref={form}
+            onSubmit={sendEmail}
+          >
             <div className="contacts-form__container">
               <div className="contacts-form__row">
                 <input
