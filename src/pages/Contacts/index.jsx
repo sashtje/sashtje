@@ -60,6 +60,7 @@ const Contacts = () => {
             className="contacts__contact-item contacts__contact-item_is_linkedin"
             href="https://www.linkedin.com/in/sashtje"
             target="_blank"
+            rel="noreferrer"
           >
             <SiLinkedin color="#0a66c2" />
           </a>
@@ -68,6 +69,7 @@ const Contacts = () => {
             className="contacts__contact-item contacts__contact-item_is_twitter"
             href="https://twitter.com/sashtje"
             target="_blank"
+            rel="noreferrer"
           >
             <SiTwitter color="#1da1f2" />
           </a>
@@ -76,6 +78,7 @@ const Contacts = () => {
             className="contacts__contact-item contacts__contact-item_is_github"
             href="https://github.com/sashtje"
             target="_blank"
+            rel="noreferrer"
           >
             <SiGithub color="#181717" />
           </a>
@@ -84,6 +87,7 @@ const Contacts = () => {
             className="contacts__contact-item contacts__contact-item_is_gmail"
             href="mailto:sashtje.lefevre@gmail.com"
             target="_blank"
+            rel="noreferrer"
           >
             <SiGmail color="#ea4335" />
           </a>

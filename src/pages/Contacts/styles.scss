@@ -128,10 +128,13 @@
 
   &__row {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 
     .contacts-form__input {
       margin: 0;
+      flex: 1 0 240px;
+      width: auto;
     }
   }
 
