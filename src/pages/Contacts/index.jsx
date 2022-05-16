@@ -6,6 +6,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import emailjs from "@emailjs/browser";
 
 import AnimatedLetters from "../../components/AnimatedLetters";
+import ModalWindow from "../../components/ModalWindow";
 
 import "./styles.scss";
 
@@ -13,6 +14,8 @@ import { override } from "../../model/loader";
 
 const Contacts = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [isModalWindowShown, setIsModalWindowShown] = useState(false);
+  const [messageForModalWindow, setMessageForModalWindow] = useState("");
 
   const form = useRef();
 
@@ -34,20 +37,27 @@ const Contacts = () => {
       )
       .then(
         () => {
-          alert(
+          setMessageForModalWindow(
             "Your email was sent successfully. Thank you for your message :)"
           );
+          setIsModalWindowShown(true);
         },
         () => {
-          alert(
+          setMessageForModalWindow(
             "Sorry, something went wrong :( your email wasn't sent. Please, try again or contact me any other way above."
           );
+          setIsModalWindowShown(true);
         }
       )
       .finally(() => {
         //clean the form
         form.current.reset();
       });
+  };
+
+  const closeModalWindow = () => {
+    setIsModalWindowShown(false);
+    setMessageForModalWindow("");
   };
 
   return (
@@ -189,6 +199,12 @@ const Contacts = () => {
           </form>
         </div>
       </main>
+
+      {isModalWindowShown && (
+        <ModalWindow closeWindow={closeModalWindow}>
+          {messageForModalWindow}
+        </ModalWindow>
+      )}
 
       <CircleLoader
         size={100}
