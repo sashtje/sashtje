@@ -72,6 +72,10 @@
 
     &__btn-en {
       color: #ffffff;
+
+      &:hover {
+        color: #272727;
+      }
     }
 
     &__btn-ru {
