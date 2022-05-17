@@ -4,7 +4,6 @@ import { SiLinkedin, SiTwitter, SiGithub, SiGmail } from "react-icons/si";
 import { BsBuilding } from "react-icons/bs";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import emailjs from "@emailjs/browser";
-import { motion } from "framer-motion";
 
 import AnimatedLetters from "../../components/AnimatedLetters";
 import ModalWindow from "../../components/ModalWindow";

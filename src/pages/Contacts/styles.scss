@@ -10,6 +10,8 @@
   &__about {
     font-size: calc(16px + 12 * (100vw / 1800));
     line-height: 1.4;
+    animation: fadeInUp 1s 2.8s forwards;
+    opacity: 0;
 
     &_is_highlight {
       font-weight: 600;
@@ -25,6 +27,8 @@
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
+    animation: fadeInUp 1s 3.8s forwards;
+    opacity: 0;
   }
 
   &__contact-item {
@@ -96,6 +100,8 @@
         line-height: 1.4;
         text-shadow: 0 0 3px rgba(0, 0, 0, 1);
         border: 3px solid rgb(14, 154, 2);
+        opacity: 0;
+        animation: fadeInUp 1s 5.6s forwards;
       }
 
       &-popup-icon {
@@ -115,6 +121,8 @@
   width: 100%;
   height: 100%;
   z-index: 0;
+  opacity: 0;
+  animation: backInLeft 1s 4.6s forwards;
 
   .leaflet-control-attribution {
     a {
@@ -135,6 +143,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  animation: backInRight 1s 4.6s forwards;
 
   &__container {
     width: 100%;
