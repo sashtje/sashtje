@@ -9,6 +9,42 @@ $first-delay: 0s;
     margin: 0 0 20px 0;
     text-align: center;
   }
+
+  &__about-me {
+    max-width: 1220px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 10px));
+    grid-gap: 20px;
+  }
+}
+
+.about-me {
+  &__block {
+    width: 100%;
+    font-size: calc(16px + 5 * (100vw / 1800));
+    line-height: 1.6;
+  }
+
+  &__cube {
+  }
+
+  &__my-photo {
+    width: calc(50% - 10px);
+    float: left;
+    margin: 0 20px 10px 0;
+    border-radius: 20px;
+    filter: grayscale(0);
+    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      filter: sepia(100%);
+      transform: rotate(-7deg);
+      transform-origin: top left;
+    }
+  }
 }
 
 .skills-cube {

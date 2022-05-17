@@ -14,12 +14,15 @@ import {
   SiAdobephotoshop,
   SiVisualstudiocode,
 } from "react-icons/si";
+import { Link } from "react-router-dom";
 
 import AnimatedLetters from "../../components/AnimatedLetters";
 
 import "./styles.scss";
 
 import { override } from "../../model/loader";
+import myphoto from "../../assets/Aleksandra.jpg";
+import CV from "../../assets/cv/CV_Aleksandra (Sashtje).txt";
 
 const About = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -99,68 +102,118 @@ const About = () => {
           />
         </h1>
 
-        <div className={getCubeClass(isCubeAnimated)}>
-          <div className="skills-cube__spinner">
-            <div className="skills-cube__complex-face">
-              <div className="skills-cube__face skills-cube__face1">
-                <span className={getOddGroupClass(isOddSkills)}>
-                  <SiRedux color="#764abc" title="Redux" />
-                </span>
+        <div className="about__about-me about-me">
+          <div className="about-me__block">
+            <img
+              className="about-me__my-photo"
+              src={myphoto}
+              alt="Sashtje, frontend developer"
+            />
+            <p>
+              I am passionate about Web development and design, enjoy coding and
+              learning new things.
+            </p>
 
-                <span className={getEvenGroupClass(isOddSkills)}>
-                  <SiWebpack color="#8dd6f9" title="Webpack" />
-                </span>
+            <p>
+              I like to create various animations and my goal is to make the
+              communication between a user and the Web the most enjoyable and
+              interesting.
+            </p>
+
+            <p>
+              I am an independent, responsible, persistent, communicative and
+              result-oriented person. It is important for me to do my work with
+              a high quality.
+            </p>
+
+            <p>
+              I would be happy to find a development team to work together on
+              modern interesting projects and to continuously improving my
+              skills.
+            </p>
+
+            <div className="home-content__controls">
+              <Link
+                className="home-content__btn home-content__contact-me"
+                to="/contacts"
+              >
+                Contact me
+              </Link>
+              <a
+                className="home-content__btn home-content__download-cv"
+                href={CV}
+                download={true}
+              >
+                Download CV
+              </a>
+            </div>
+          </div>
+
+          <div className="about-me__cube">
+            <div className={getCubeClass(isCubeAnimated)}>
+              <div className="skills-cube__spinner">
+                <div className="skills-cube__complex-face">
+                  <div className="skills-cube__face skills-cube__face1">
+                    <span className={getOddGroupClass(isOddSkills)}>
+                      <SiRedux color="#764abc" title="Redux" />
+                    </span>
+
+                    <span className={getEvenGroupClass(isOddSkills)}>
+                      <SiWebpack color="#8dd6f9" title="Webpack" />
+                    </span>
+                  </div>
+
+                  <div className="skills-cube__face skills-cube__face2">
+                    <span className={getOddGroupClass(isOddSkills)}>
+                      <SiCss3 color="#1572b6" title="CSS3" />
+                    </span>
+
+                    <span className={getEvenGroupClass(isOddSkills)}>
+                      <SiGit color="#f05032" title="Git" />
+                    </span>
+                  </div>
+                </div>
+
+                <div className="skills-cube__face skills-cube__face3">
+                  <span className={getOddGroupClass(isOddSkills)}>
+                    <SiHtml5 color="#e34f26" title="HTML5" />
+                  </span>
+
+                  <span className={getEvenGroupClass(isOddSkills)}>
+                    <SiFigma color="#f24e1e" title="Figma" />
+                  </span>
+                </div>
+
+                <div className="skills-cube__face skills-cube__face4">
+                  <span className={getOddGroupClass(isOddSkills)}>
+                    <SiReact color="#61dafb" title="React" />
+                  </span>
+
+                  <span className={getEvenGroupClass(isOddSkills)}>
+                    <SiSass color="#cc6699" title="SASS" />
+                  </span>
+                </div>
+
+                <div className="skills-cube__face skills-cube__face5">
+                  <span className={getOddGroupClass(isOddSkills)}>
+                    <SiTypescript color="#3178c6" title="TypeScript" />
+                  </span>
+
+                  <span className={getEvenGroupClass(isOddSkills)}>
+                    <SiAdobephotoshop color="#31a8ff" title="Photoshop" />
+                  </span>
+                </div>
+
+                <div className="skills-cube__face skills-cube__face6">
+                  <span className={getOddGroupClass(isOddSkills)}>
+                    <SiJavascript color="#f7df1e" title="JavaScript" />
+                  </span>
+
+                  <span className={getEvenGroupClass(isOddSkills)}>
+                    <SiVisualstudiocode color="#007acc" title="VS Code" />
+                  </span>
+                </div>
               </div>
-
-              <div className="skills-cube__face skills-cube__face2">
-                <span className={getOddGroupClass(isOddSkills)}>
-                  <SiCss3 color="#1572b6" title="CSS3" />
-                </span>
-
-                <span className={getEvenGroupClass(isOddSkills)}>
-                  <SiGit color="#f05032" title="Git" />
-                </span>
-              </div>
-            </div>
-
-            <div className="skills-cube__face skills-cube__face3">
-              <span className={getOddGroupClass(isOddSkills)}>
-                <SiHtml5 color="#e34f26" title="HTML5" />
-              </span>
-
-              <span className={getEvenGroupClass(isOddSkills)}>
-                <SiFigma color="#f24e1e" title="Figma" />
-              </span>
-            </div>
-
-            <div className="skills-cube__face skills-cube__face4">
-              <span className={getOddGroupClass(isOddSkills)}>
-                <SiReact color="#61dafb" title="React" />
-              </span>
-
-              <span className={getEvenGroupClass(isOddSkills)}>
-                <SiSass color="#cc6699" title="SASS" />
-              </span>
-            </div>
-
-            <div className="skills-cube__face skills-cube__face5">
-              <span className={getOddGroupClass(isOddSkills)}>
-                <SiTypescript color="#3178c6" title="TypeScript" />
-              </span>
-
-              <span className={getEvenGroupClass(isOddSkills)}>
-                <SiAdobephotoshop color="#31a8ff" title="Photoshop" />
-              </span>
-            </div>
-
-            <div className="skills-cube__face skills-cube__face6">
-              <span className={getOddGroupClass(isOddSkills)}>
-                <SiJavascript color="#f7df1e" title="JavaScript" />
-              </span>
-
-              <span className={getEvenGroupClass(isOddSkills)}>
-                <SiVisualstudiocode color="#007acc" title="VS Code" />
-              </span>
             </div>
           </div>
         </div>
