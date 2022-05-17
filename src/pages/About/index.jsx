@@ -97,7 +97,7 @@ const About = () => {
               ["e", ""],
             ]}
             startDelay={2.1}
-            timeBeforeHoverActive={4.3}
+            timeBeforeHoverActive={3.3}
           />
         </h1>
 

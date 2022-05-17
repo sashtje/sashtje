@@ -27,6 +27,11 @@ $first-delay: 0s;
   }
 
   &__cube {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 1s 2.3s forwards;
   }
 
   &__my-photo {
@@ -37,6 +42,7 @@ $first-delay: 0s;
     filter: grayscale(0);
     box-shadow: 0 0px 30px rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    animation: fadeInLeft 1s 3.3s backwards;
     transition: 0.3s;
 
     &:hover {
@@ -49,6 +55,7 @@ $first-delay: 0s;
   &__text {
     margin: 0 0 20px 0;
     text-indent: 50px;
+    animation: fadeInLeft 1s 2.3s backwards;
 
     &:first-letter {
       font-weight: 600;

@@ -51,4 +51,12 @@
   .contact-controls__btn {
     font-size: calc(16px + 5 * (100vw / 1800));
   }
+
+  .contact-controls__contact-me {
+    animation: fadeIn 1s 4.3s backwards;
+  }
+
+  .contact-controls__download-cv {
+    animation: fadeIn 1s 4.4s backwards;
+  }
 }
