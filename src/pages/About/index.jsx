@@ -14,7 +14,6 @@ import {
   SiAdobephotoshop,
   SiVisualstudiocode,
 } from "react-icons/si";
-import { Link } from "react-router-dom";
 
 import AnimatedLetters from "../../components/AnimatedLetters";
 
@@ -22,7 +21,7 @@ import "./styles.scss";
 
 import { override } from "../../model/loader";
 import myphoto from "../../assets/Aleksandra.jpg";
-import CV from "../../assets/cv/CV_Aleksandra (Sashtje).txt";
+import ContactControls from "../../components/ContactControls";
 
 const About = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -109,44 +108,30 @@ const About = () => {
               src={myphoto}
               alt="Sashtje, frontend developer"
             />
-            <p>
+            <p className="about-me__text">
               I am passionate about Web development and design, enjoy coding and
               learning new things.
             </p>
 
-            <p>
+            <p className="about-me__text">
               I like to create various animations and my goal is to make the
               communication between a user and the Web the most enjoyable and
               interesting.
             </p>
 
-            <p>
+            <p className="about-me__text">
               I am an independent, responsible, persistent, communicative and
               result-oriented person. It is important for me to do my work with
               a high quality.
             </p>
 
-            <p>
+            <p className="about-me__text">
               I would be happy to find a development team to work together on
               modern interesting projects and to continuously improving my
               skills.
             </p>
 
-            <div className="home-content__controls">
-              <Link
-                className="home-content__btn home-content__contact-me"
-                to="/contacts"
-              >
-                Contact me
-              </Link>
-              <a
-                className="home-content__btn home-content__download-cv"
-                href={CV}
-                download={true}
-              >
-                Download CV
-              </a>
-            </div>
+            <ContactControls />
           </div>
 
           <div className="about-me__cube">

@@ -6,7 +6,7 @@ $first-delay: 0s;
     font-size: calc(24px + 16 * (100vw / 1200));
     line-height: 1.4;
     font-weight: 600;
-    margin: 0 0 20px 0;
+    margin: 0 0 30px 0;
     text-align: center;
   }
 
@@ -43,6 +43,18 @@ $first-delay: 0s;
       filter: sepia(100%);
       transform: rotate(-7deg);
       transform-origin: top left;
+    }
+  }
+
+  &__text {
+    margin: 0 0 20px 0;
+    text-indent: 50px;
+
+    &:first-letter {
+      font-weight: 600;
+      color: #ff0000;
+      font-size: calc(16px + 7 * (100vw / 1800));
+      text-shadow: 1px 1px 2px #000000;
     }
   }
 }

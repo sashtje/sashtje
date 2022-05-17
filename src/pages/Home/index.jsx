@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { RingLoader } from "react-spinners";
 
 import AnimatedLetters from "./../../components/AnimatedLetters/";
+import ContactControls from "../../components/ContactControls";
 
 import "./styles.scss";
 
 import { override } from "../../model/loader";
-import CV from "../../assets/cv/CV_Aleksandra (Sashtje).txt";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -183,21 +182,7 @@ const Home = () => {
             React / TypeScript / JavaScript
           </p>
 
-          <div className="home-content__controls">
-            <Link
-              className="home-content__btn home-content__contact-me"
-              to="/contacts"
-            >
-              Contact me
-            </Link>
-            <a
-              className="home-content__btn home-content__download-cv"
-              href={CV}
-              download={true}
-            >
-              Download CV
-            </a>
-          </div>
+          <ContactControls />
         </section>
       </main>
 
