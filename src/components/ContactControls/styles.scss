@@ -59,4 +59,11 @@
   .contact-controls__download-cv {
     animation: fadeIn 1s 4.4s backwards;
   }
+
+  @media (max-width: 325px) {
+    .contact-controls {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }

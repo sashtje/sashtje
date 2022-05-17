@@ -1,7 +1,15 @@
 $duration: 1s;
 $first-delay: 0s;
 
+:root {
+  --cube-side: 170;
+  --cube-font-size: 3rem;
+  --cube-font-size-hover: 4rem;
+}
+
 .about {
+  overflow: hidden;
+
   &__title {
     font-size: calc(24px + 16 * (100vw / 1200));
     line-height: 1.4;
@@ -16,6 +24,14 @@ $first-delay: 0s;
     display: grid;
     grid-template-columns: repeat(2, calc(50% - 10px));
     grid-gap: 20px;
+
+    @media (max-width: 721px) and (orientation: landscape) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 661px) and (orientation: portrait) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
@@ -27,6 +43,7 @@ $first-delay: 0s;
   }
 
   &__cube {
+    padding: 1px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,6 +53,7 @@ $first-delay: 0s;
 
   &__my-photo {
     width: calc(50% - 10px);
+    min-width: 155px;
     float: left;
     margin: 0 20px 10px 0;
     border-radius: 20px;
@@ -44,6 +62,13 @@ $first-delay: 0s;
     cursor: pointer;
     animation: fadeInLeft 1s 3.3s backwards;
     transition: 0.3s;
+
+    @media (max-width: 325px) {
+      display: block;
+      float: none;
+      width: 155px;
+      margin: 0 auto 20px auto;
+    }
 
     &:hover {
       filter: sepia(100%);
@@ -67,9 +92,82 @@ $first-delay: 0s;
 }
 
 .skills-cube {
-  height: 400px;
-  width: 300px;
-  padding: 200px 100px 100px 100px;
+  height: calc(4px * var(--cube-side));
+  width: calc(3px * var(--cube-side));
+  padding: calc(2px * var(--cube-side)) calc(1px * var(--cube-side))
+    calc(1px * var(--cube-side)) calc(1px * var(--cube-side));
+
+  @media (orientation: landscape) and (max-width: 1141px) {
+    --cube-side: 150;
+    --cube-font-size: 2.5rem;
+    --cube-font-size-hover: 3.5rem;
+  }
+
+  @media (orientation: landscape) and (max-width: 1021px) {
+    --cube-side: 100;
+    --cube-font-size: 2rem;
+    --cube-font-size-hover: 3rem;
+  }
+
+  @media (orientation: landscape) and (max-width: 721px) {
+    --cube-side: 170;
+    --cube-font-size: 3rem;
+    --cube-font-size-hover: 4rem;
+  }
+
+  @media (orientation: landscape) and (max-width: 611px) {
+    --cube-side: 150;
+    --cube-font-size: 2.5rem;
+    --cube-font-size-hover: 3.5rem;
+  }
+
+  @media (orientation: landscape) and (max-width: 551px) {
+    --cube-side: 100;
+    --cube-font-size: 2rem;
+    --cube-font-size-hover: 3rem;
+  }
+
+  @media (orientation: landscape) and (max-width: 401px) {
+    --cube-side: 80;
+    --cube-font-size: 1.5rem;
+    --cube-font-size-hover: 2.5rem;
+  }
+
+  @media (orientation: portrait) and (max-width: 1081px) {
+    --cube-side: 150;
+    --cube-font-size: 2.5rem;
+    --cube-font-size-hover: 3.5rem;
+  }
+
+  @media (orientation: portrait) and (max-width: 961px) {
+    --cube-side: 100;
+    --cube-font-size: 2rem;
+    --cube-font-size-hover: 3rem;
+  }
+
+  @media (orientation: portrait) and (max-width: 661px) {
+    --cube-side: 170;
+    --cube-font-size: 3rem;
+    --cube-font-size-hover: 4rem;
+  }
+
+  @media (orientation: portrait) and (max-width: 551px) {
+    --cube-side: 150;
+    --cube-font-size: 2.5rem;
+    --cube-font-size-hover: 3.5rem;
+  }
+
+  @media (orientation: portrait) and (max-width: 491px) {
+    --cube-side: 100;
+    --cube-font-size: 2rem;
+    --cube-font-size-hover: 3rem;
+  }
+
+  @media (orientation: portrait) and (max-width: 341px) {
+    --cube-side: 80;
+    --cube-font-size: 1.5rem;
+    --cube-font-size-hover: 2.5rem;
+  }
 
   &__spinner {
     position: relative;
@@ -78,19 +176,19 @@ $first-delay: 0s;
 
   &__face {
     cursor: pointer;
-    width: 100px;
-    height: 100px;
+    width: calc(1px * var(--cube-side));
+    height: calc(1px * var(--cube-side));
     border: 1px solid #c5cd94;
     background-color: rgb(255 255 255 / 70%);
     box-shadow: 0 0 20px 0px rgba(236, 248, 154, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: var(--cube-font-size);
     transition: box-shadow 0.5s;
 
     &:hover {
-      font-size: 3rem;
+      font-size: var(--cube-font-size-hover);
       border: 1px solid #37c2cd;
       box-shadow: 0 0 20px 0px rgba(126, 126, 126, 0.5);
     }
@@ -113,7 +211,7 @@ $first-delay: 0s;
   &__complex-face {
     position: absolute;
     transform-style: preserve-3d;
-    top: -200px;
+    top: calc(-2px * var(--cube-side));
 
     transform-origin: center bottom;
   }
@@ -124,14 +222,14 @@ $first-delay: 0s;
 
   &__face3 {
     position: absolute;
-    left: -100px;
+    left: calc(-1px * var(--cube-side));
 
     transform-origin: right center;
   }
 
   &__face5 {
     position: absolute;
-    right: -100px;
+    right: calc(-1px * var(--cube-side));
     bottom: 0;
 
     transform-origin: left center;
@@ -139,7 +237,7 @@ $first-delay: 0s;
 
   &__face6 {
     position: absolute;
-    bottom: -100px;
+    bottom: calc(-1px * var(--cube-side));
 
     transform-origin: center top;
   }
