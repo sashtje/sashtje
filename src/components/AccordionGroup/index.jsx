@@ -21,7 +21,7 @@ const AccordionGroup = () => {
 
   return (
     <div className="accordion-group">
-      {accordionsArray.map(({ icon, title }, index) => (
+      {accordionsArray.map(({ icon, title, content }, index) => (
         <motion.div
           className="accordion"
           key={index}
@@ -36,6 +36,7 @@ const AccordionGroup = () => {
             number={index}
             icon={icon}
             title={title}
+            content={content}
             expanded={expanded}
             setExpanded={setExpanded}
           />

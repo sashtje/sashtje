@@ -37,4 +37,15 @@
       display: block;
     }
   }
+
+  &__content {
+    overflow: hidden;
+
+    &-wrapper {
+      padding: 20px 0;
+    }
+  }
+
+  &__btn-close {
+  }
 }
