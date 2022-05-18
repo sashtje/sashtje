@@ -43,9 +43,27 @@
 
     &-wrapper {
       padding: 20px 0;
+      transform-origin: top center;
     }
   }
 
   &__btn-close {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    font-size: 2rem;
+    color: rgb(109, 176, 122);
+    cursor: pointer;
+    float: right;
+    margin: 20px;
+    transition: 0.3s;
+
+    &:hover {
+      color: lightcoral;
+    }
+
+    svg {
+      display: block;
+    }
   }
 }

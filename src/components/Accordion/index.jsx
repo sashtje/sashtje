@@ -1,6 +1,7 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+import { BsFillArrowUpSquareFill } from "react-icons/bs";
 
 import "./styles.scss";
 
@@ -72,13 +73,19 @@ const Accordion = ({ number, icon, title, content, expanded, setExpanded }) => {
             variants={contentVariants}
             transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
           >
-            <div className="accordion__content-wrapper">
+            <motion.div
+              className="accordion__content-wrapper"
+              variants={{ collapsed: { scale: 0.8 }, open: { scale: 1 } }}
+              transition={{ duration: 0.8 }}
+            >
               {content}
               <button
                 className="accordion__btn-close"
                 onClick={handleExpandAccordion}
-              ></button>
-            </div>
+              >
+                <BsFillArrowUpSquareFill />
+              </button>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
