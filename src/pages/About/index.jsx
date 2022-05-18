@@ -16,12 +16,13 @@ import {
 } from "react-icons/si";
 
 import AnimatedLetters from "../../components/AnimatedLetters";
+import ContactControls from "../../components/ContactControls";
+import AccordionGroup from "../../components/AccordionGroup";
 
 import "./styles.scss";
 
 import { override } from "../../model/loader";
 import myphoto from "../../assets/Aleksandra.jpg";
-import ContactControls from "../../components/ContactControls";
 
 const About = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -202,6 +203,8 @@ const About = () => {
             </div>
           </div>
         </div>
+
+        <AccordionGroup />
       </main>
 
       <ScaleLoader

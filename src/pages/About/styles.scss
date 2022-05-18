@@ -21,6 +21,7 @@ $first-delay: 0s;
   &__about-me {
     max-width: 1220px;
     margin: 0 auto;
+    margin-bottom: 30px;
     display: grid;
     grid-template-columns: repeat(2, calc(50% - 10px));
     grid-gap: 20px;
