@@ -1,15 +1,17 @@
 import React from "react";
 
+import SkillsSection from "./SkillsSection";
+
 import "./styles.scss";
+
+import skills from "../../model/skills";
 
 const Skills = () => {
   return (
-    <div>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque expedita
-      excepturi illum minus explicabo provident? Lorem ipsum, dolor sit amet
-      consectetur adipisicing elit. Maiores tempore ipsam laudantium voluptate
-      eaque quam! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Expedita quos sapiente possimus quidem, neque impedit?
+    <div className="skills">
+      {skills.map(({ title, skillsArray }, index) => (
+        <SkillsSection key={index} title={title} skillsArray={skillsArray} />
+      ))}
     </div>
   );
 };
