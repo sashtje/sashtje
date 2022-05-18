@@ -17,7 +17,7 @@ const Accordion = ({ number, icon, title, expanded, setExpanded }) => {
   };
 
   return (
-    <div className="accordion">
+    <>
       <motion.button
         className="accordion__header-btn"
         initial={false}
@@ -56,7 +56,7 @@ const Accordion = ({ number, icon, title, expanded, setExpanded }) => {
           )}
         </AnimatePresence>
       </motion.button>
-    </div>
+    </>
   );
 };
 
