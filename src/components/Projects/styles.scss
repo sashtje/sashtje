@@ -5,6 +5,14 @@
     padding: 0 20px;
     margin: 20px 0;
     grid-gap: 40px;
+
+    @media (orientation: landscape) and (max-width: 801px) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (orientation: portrait) and (max-width: 741px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {

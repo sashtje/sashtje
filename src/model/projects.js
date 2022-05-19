@@ -225,7 +225,12 @@ const rsArtQuiz = {
   description: [
     <>
       A guessing game (SPA). It's a task from RsSchool. You need to guess either
-      the artist from the picture, or the picture from the artist.
+      the artist from the picture, or the picture from the artist. If you play
+      in one of the categories, an icon with the number of correct answers will
+      appear on the category card at the end. When you click on this icon, a
+      page with results will open, where you can see detailed information on the
+      paintings (if you click on them) and open a painting on the full screen or
+      download it to your computer.
     </>,
   ],
 };
