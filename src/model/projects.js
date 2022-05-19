@@ -1,7 +1,6 @@
 import theWatchImg from "../assets/images/projects/the-watch.webp";
 
 import timerCatImg from "../assets/images/projects/timer-cat-light.webp";
-import timerCatImgDark from "../assets/images/projects/timer-cat-dark.webp";
 
 import birthdayCardImg from "../assets/images/projects/birthday-card.webp";
 
@@ -67,7 +66,6 @@ const theWatch = {
 const timerCat = {
   title: "Timer cat",
   image: timerCatImg,
-  imageDarkMode: timerCatImgDark,
   transition: "background-position 9s linear, outline 0.3s",
   deployLink: "https://aleksawebdev.github.io/timer-cat/",
   codeLink: "https://github.com/AleksaWebDev/timer-cat",
@@ -459,14 +457,14 @@ const travelSite = {
 const projects = [
   theWatch,
   timerCat,
-  birthdayCard,
-  rsLang,
   rsReact,
+  rsLang,
+  birthdayCard,
+  rsNewsPortal,
   rsCv,
   rsMuseum,
   rsMomentum,
   rsArtQuiz,
-  rsNewsPortal,
   rsChristmasTask,
   rsAsyncRace,
   rsCssMemSlider,
