@@ -102,5 +102,14 @@
       color: #8f09eb;
       text-shadow: 1px 1px 2px #000000;
     }
+
+    a {
+      font-weight: 600;
+      transition: 0.3s;
+
+      &:hover {
+        color: #ff0000;
+      }
+    }
   }
 }
