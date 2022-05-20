@@ -282,7 +282,7 @@ const rsChristmasTask = {
 const rsAsyncRace = {
   title: "RsAsyncRace",
   image: rsAsyncRaceImg,
-  transition: "background-position 2s linear, outline 0.3s",
+  transition: "background-position 1s linear, outline 0.3s",
   deployLink: "https://sashtje.github.io/rsschool/async-race/",
   codeLink: "https://github.com/sashtje/rsschool",
   tags: ["scss", "ts", "webpack", "api", "spa"],
