@@ -131,10 +131,53 @@ const Education = () => {
 
       <section className="education__section">
         <h2 className="education__title">Experience as a programmer:</h2>
+
+        <p className="education__text">
+          I worked as a <b>1C programmer</b>, improved the current configuration
+          of the enterprise system, maintained and improved the old code, and
+          also wrote new functionality. I also maintained 2 existing projects in{" "}
+          <b>C#</b> and wrote in <b>C#</b> from scratch a site parser through a
+          proxy.
+        </p>
       </section>
 
       <section className="education__section">
         <h2 className="education__title">University:</h2>
+
+        <p className="education__text">
+          I have graduated from <b>Lomonosov Moscow State University</b>, have
+          successfully completed Specialist programme in{" "}
+          <b>"Applied Mathematics and Computer Science"</b> and have been
+          awarded the qualification of{" "}
+          <b>"Specialist in Mathematics and System Programming"</b>.
+        </p>
+
+        <p className="education__text">
+          My diploma <b>"Tools for teaching logic programming"</b> consisted
+          from the development and implementation of a graphical tracing system
+          for the Prolog language. The system traces programs written in Prolog
+          and displays the result in the form of a proof tree. The
+          implementation of the tracer was written in <b>SWI-Prolog</b> with an
+          object-oriented library <b>XPCE</b>, with which a graphical user
+          interface was created.
+        </p>
+
+        <p className="education__text">
+          As part of my studies at the University, I worked with the{" "}
+          <b>Linux</b> operating system, technologies <b>OpenMP</b>, <b>MPI</b>,
+          as well as with a number of programming languages: <b>Assembler</b>,{" "}
+          <b>C</b>, <b>C++</b>, <b>C#</b>, <b>Java</b>, <b>Lisp</b>,{" "}
+          <b>Prolog</b>, a little <b>Haskell</b>.
+        </p>
+
+        <p className="education__text">
+          Also I have a little experience with <b>PHP</b> and <b>Python</b>.
+        </p>
+
+        <p className="education__text">
+          I am a fast learner and ready with great pleasure to learn all the
+          necessary technologies for work.
+        </p>
       </section>
     </div>
   );

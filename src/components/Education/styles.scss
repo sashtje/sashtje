@@ -6,14 +6,15 @@
     transition: color 0.3s;
     font-weight: 600;
 
-    &:hover {
+    &:hover,
+    &:active {
       color: #ff0000;
     }
   }
 
   &__section {
     & + .education__section {
-      border-top: 1px solid #000;
+      border-top: 1px solid #000000;
       margin-top: 30px;
     }
   }
@@ -22,7 +23,7 @@
     font-size: calc(16px + 9 * (100vw / 1800));
     text-align: center;
     line-height: 1.6;
-    margin: 20px 0 30px 0;
+    margin: 20px 0;
   }
 
   &__text {
@@ -43,6 +44,12 @@
         left: 0;
         display: block;
       }
+    }
+
+    b {
+      background-color: #fdff90;
+      padding: 0 5px;
+      border-radius: 5px;
     }
   }
 }
