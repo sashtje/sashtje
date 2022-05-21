@@ -1,0 +1,48 @@
+.modal-photo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  animation: backInLeft 0.5s ease-in-out forwards;
+
+  &_is_hiding {
+    animation: backOutLeft 0.5s ease-in-out forwards;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 0;
+    font-size: 35px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    @media (hover: none) {
+      font-size: 40px;
+    }
+
+    &:hover {
+      color: #ff0000;
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+    svg {
+      display: block;
+    }
+  }
+
+  &__photo {
+    display: block;
+    max-width: 100%;
+    max-height: 100vh;
+  }
+}

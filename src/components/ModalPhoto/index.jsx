@@ -6,7 +6,7 @@ import "./styles.scss";
 
 import modalRoot from "../../model/modal";
 
-const ModalWindow = ({ closeWindow, children }) => {
+const ModalPhoto = ({ closeWindow, src, alt }) => {
   const [isHiding, setIsHiding] = useState(false);
 
   const el = document.createElement("div");
@@ -26,7 +26,7 @@ const ModalWindow = ({ closeWindow, children }) => {
   };
 
   const getModalWindowClass = (isHiding) => {
-    return isHiding ? "modal-window modal-window_is_hiding" : "modal-window";
+    return isHiding ? "modal-photo modal-photo_is_hiding" : "modal-photo";
   };
 
   useEffect(() => {
@@ -39,16 +39,19 @@ const ModalWindow = ({ closeWindow, children }) => {
 
   return createPortal(
     <div className={getModalWindowClass(isHiding)} onClick={handleCloseWindow}>
-      <div className="modal-window__wrapper" onClick={stopClick}>
-        <button className="modal-window__close-btn" onClick={handleCloseWindow}>
-          <IoIosCloseCircleOutline />
-        </button>
+      <button className="modal-photo__close-btn" onClick={handleCloseWindow}>
+        <IoIosCloseCircleOutline />
+      </button>
 
-        <div className="modal-window__content">{children}</div>
-      </div>
+      <img
+        className="modal-photo__photo"
+        src={src}
+        alt={alt}
+        onClick={stopClick}
+      />
     </div>,
     el
   );
 };
 
-export default ModalWindow;
+export default ModalPhoto;

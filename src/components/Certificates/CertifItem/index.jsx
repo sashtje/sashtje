@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { GoLinkExternal } from "react-icons/go";
 
+import ModalPhoto from "../../ModalPhoto";
+
 const CertifItem = ({ isDiploma, isLink, src, alt, href = "" }) => {
+  const [isModalPhotoShown, setIsModalPhotoShown] = useState(false);
+
+  const closeModalPhoto = () => {
+    setIsModalPhotoShown(false);
+  };
+
+  const openModalPhoto = () => {
+    setIsModalPhotoShown(true);
+  };
+
   return (
     <>
       <div
@@ -11,7 +23,12 @@ const CertifItem = ({ isDiploma, isLink, src, alt, href = "" }) => {
             : "certificates__item"
         }
       >
-        <img className="certificates__item-photo" src={src} alt={alt} />
+        <img
+          className="certificates__item-photo"
+          src={src}
+          alt={alt}
+          onClick={openModalPhoto}
+        />
 
         {isLink && (
           <a
@@ -25,7 +42,9 @@ const CertifItem = ({ isDiploma, isLink, src, alt, href = "" }) => {
         )}
       </div>
 
-      {/* modalPhoto */}
+      {isModalPhotoShown && (
+        <ModalPhoto closeWindow={closeModalPhoto} src={src} alt={alt} />
+      )}
     </>
   );
 };
