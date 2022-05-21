@@ -1,8 +1,9 @@
 import React from "react";
 import { SiCodewars, SiReact } from "react-icons/si";
-import { GoLinkExternal } from "react-icons/go";
 
 import CustomLink from "../CustomLink";
+import Certificates from "../Certificates";
+import CertifItem from "../Certificates/CertifItem";
 
 import "./styles.scss";
 
@@ -23,24 +24,15 @@ const Education = () => {
           <CustomLink href="https://rs.school/">RsSchool</CustomLink>.
         </p>
 
-        <div className="certificates">
-          <div className="certificates__item certificates__item_is_single-cert">
-            <img
-              className="certificates__item-photo"
-              src={rsSchoolCertImg}
-              alt="RsSchool certificate, JS / Frontend 2021 Q3"
-            />
-
-            <a
-              className="certificates__item-link"
-              href="https://app.rs.school/certificate/fdki7gcx"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <GoLinkExternal />
-            </a>
-          </div>
-        </div>
+        <Certificates isTable={false}>
+          <CertifItem
+            isDiploma={false}
+            isLink={true}
+            src={rsSchoolCertImg}
+            alt="RsSchool certificate, JS / Frontend 2021 Q3"
+            href="https://app.rs.school/certificate/fdki7gcx"
+          />
+        </Certificates>
 
         <p className="education__text">
           As part of my studies at <b>RsSchool</b>, I solved problems on
@@ -114,41 +106,23 @@ const Education = () => {
           <b>"JavaScript Algorithms and Data Structures"</b>.
         </p>
 
-        <div className="certificates certificates_is_two-col">
-          <div className="certificates__item">
-            <img
-              className="certificates__item-photo"
-              src={fccRwdImg}
-              alt="freecodecamp certificate, responsive web design"
-            />
+        <Certificates isTable={true}>
+          <CertifItem
+            isDiploma={false}
+            isLink={true}
+            src={fccRwdImg}
+            alt="freecodecamp certificate, responsive web design"
+            href="https://www.freecodecamp.org/certification/aleksawebdev/responsive-web-design"
+          />
 
-            <a
-              className="certificates__item-link"
-              href="https://www.freecodecamp.org/certification/aleksawebdev/responsive-web-design"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <GoLinkExternal />
-            </a>
-          </div>
-
-          <div className="certificates__item">
-            <img
-              className="certificates__item-photo"
-              src={fccAdsImg}
-              alt="freecodecamp certificate, js algorithms and data structures"
-            />
-
-            <a
-              className="certificates__item-link"
-              href="https://www.freecodecamp.org/certification/aleksawebdev/javascript-algorithms-and-data-structures"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <GoLinkExternal />
-            </a>
-          </div>
-        </div>
+          <CertifItem
+            isDiploma={false}
+            isLink={true}
+            src={fccAdsImg}
+            alt="freecodecamp certificate, js algorithms and data structures"
+            href="https://www.freecodecamp.org/certification/aleksawebdev/javascript-algorithms-and-data-structures"
+          />
+        </Certificates>
       </section>
 
       <section className="education__section">
@@ -184,15 +158,14 @@ const Education = () => {
           interface was created.
         </p>
 
-        <div className="certificates">
-          <div className="certificates__item certificates__item_is_diploma-cert">
-            <img
-              className="certificates__item-photo"
-              src={myDiplomaImg}
-              alt="Prolog programs tracer, SWI Prolog, XPCE"
-            />
-          </div>
-        </div>
+        <Certificates isTable={false}>
+          <CertifItem
+            isDiploma={true}
+            isLink={false}
+            src={myDiplomaImg}
+            alt="Prolog programs tracer, SWI Prolog, XPCE"
+          />
+        </Certificates>
 
         <p className="education__text">
           As part of my studies at the University, I worked with the{" "}
