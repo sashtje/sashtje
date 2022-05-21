@@ -1,4 +1,5 @@
 import React from "react";
+import { SiDuolingo } from "react-icons/si";
 
 import "./styles.scss";
 
@@ -53,8 +54,24 @@ const Languages = () => {
       </p>
 
       <p className="languages__text">
-        I enjoy constantly improving my English and am ready to learn another
-        language if necessary.
+        I enjoy constantly improving my English using different platforms and
+        books. Here you can{" "}
+        <a
+          href="https://www.duolingo.com/profile/RoboOwl"
+          target="_blank"
+          rel="noreferrer"
+        >
+          see my{" "}
+          <span className="languages__text-icon">
+            <SiDuolingo color="#58cc02" />
+          </span>{" "}
+          account
+        </a>
+        .
+      </p>
+
+      <p className="languages__text">
+        If it is necessary, I will be happy to learn any other languages.
       </p>
     </div>
   );

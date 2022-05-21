@@ -1,20 +1,82 @@
 .languages {
+  font-size: calc(16px + 5 * (100vw / 1800));
+  line-height: 1.6;
+
+  a {
+    transition: color 0.3s;
+    font-weight: 600;
+
+    &:hover,
+    &:active {
+      color: #ff0000;
+    }
+  }
+
   &__block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 20px;
+    justify-content: center;
+    margin-top: 10px;
   }
 
   &__language {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    min-width: 100px;
+    background-color: #ffffff;
+
     &-title {
+      font-size: calc(16px + 9 * (100vw / 1800));
+      font-weight: 600;
+      color: #eb9104;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      border-bottom: 1px solid #000000;
+      padding-bottom: 10px;
     }
 
     &-subtitle {
+      font-size: calc(16px + 3 * (100vw / 1800));
+      margin-top: 10px;
+      text-align: center;
     }
   }
 
   &__section {
     &-title {
+      font-size: calc(16px + 9 * (100vw / 1800));
+      text-align: center;
+      line-height: 1.6;
+      margin: 30px 0 20px 0;
     }
   }
 
   &__text {
+    margin: 20px 0;
+    vertical-align: middle;
+
+    &-icon {
+      position: relative;
+      vertical-align: middle;
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      font-size: 2rem;
+
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+      }
+    }
+
+    b {
+      background-color: #fdff90;
+      padding: 0 5px;
+      border-radius: 5px;
+    }
   }
 }
