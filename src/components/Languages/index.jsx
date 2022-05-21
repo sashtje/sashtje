@@ -24,6 +24,7 @@ const Languages = () => {
         <h2 className="languages__section-title">
           Certificate from{" "}
           <a
+            className="link"
             href="https://www.efset.org/ef-set-50/"
             target="_blank"
             rel="noreferrer"
@@ -38,6 +39,7 @@ const Languages = () => {
         <h2 className="languages__section-title">
           Certificates from{" "}
           <a
+            className="link"
             href="https://play.google.com/store/apps/details?id=ru.zengalt.simpler&hl=ru&gl=US"
             target="_blank"
             rel="noreferrer"
@@ -57,6 +59,7 @@ const Languages = () => {
         I enjoy constantly improving my English using different platforms and
         books. Here you can{" "}
         <a
+          className="link"
           href="https://www.duolingo.com/profile/RoboOwl"
           target="_blank"
           rel="noreferrer"

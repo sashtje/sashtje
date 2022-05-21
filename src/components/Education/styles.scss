@@ -2,16 +2,6 @@
   font-size: calc(16px + 5 * (100vw / 1800));
   line-height: 1.6;
 
-  a {
-    transition: color 0.3s;
-    font-weight: 600;
-
-    &:hover,
-    &:active {
-      color: #ff0000;
-    }
-  }
-
   &__section {
     & + .education__section {
       border-top: 1px solid #000000;

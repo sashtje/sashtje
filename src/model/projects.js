@@ -291,6 +291,7 @@ const rsAsyncRace = {
       Working with asynchronous requests and api. To use this app you will need
       before to start the{" "}
       <a
+        className="link"
         href="https://github.com/sashtje/async-race-api"
         target="_blank"
         rel="noreferrer"

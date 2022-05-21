@@ -12,7 +12,12 @@ const Education = () => {
         <p className="education__text">
           I successfully completed the course{" "}
           <b>"JavaScript / Frontend 2021 Q3"</b> from{" "}
-          <a href="https://rs.school/" target="_blank" rel="noreferrer">
+          <a
+            className="link"
+            href="https://rs.school/"
+            target="_blank"
+            rel="noreferrer"
+          >
             RsSchool
           </a>
           .
@@ -32,6 +37,7 @@ const Education = () => {
         <ul className="education__list">
           <li className="education__list-item">
             <a
+              className="link"
               href="https://github.com/sashtje/basic-js"
               target="_blank"
               rel="noreferrer"
@@ -42,6 +48,7 @@ const Education = () => {
 
           <li className="education__list-item">
             <a
+              className="link"
               href="https://github.com/sashtje/basic-js-ds"
               target="_blank"
               rel="noreferrer"
@@ -52,6 +59,7 @@ const Education = () => {
 
           <li className="education__list-item">
             <a
+              className="link"
               href="https://github.com/sashtje/core-js-101"
               target="_blank"
               rel="noreferrer"
@@ -62,6 +70,7 @@ const Education = () => {
 
           <li className="education__list-item">
             <a
+              className="link"
               href="https://github.com/sashtje/HTML-builder"
               target="_blank"
               rel="noreferrer"
@@ -75,6 +84,7 @@ const Education = () => {
           The other part of the tasks was solved within the <b>CodeWars</b>{" "}
           site. So you can{" "}
           <a
+            className="link"
             href="https://www.codewars.com/users/sashtje"
             target="_blank"
             rel="noreferrer"
@@ -96,6 +106,7 @@ const Education = () => {
           portfolio (this site), finding a job and continuing to improve my
           skills in parallel. You can{" "}
           <a
+            className="link"
             href="https://github.com/sashtje/rsschool-react"
             target="_blank"
             rel="noreferrer"
@@ -112,6 +123,7 @@ const Education = () => {
         <p className="education__text">
           Here are my two certificates from{" "}
           <a
+            className="link"
             href="https://www.freecodecamp.org/"
             target="_blank"
             rel="noreferrer"
