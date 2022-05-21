@@ -20,6 +20,10 @@
     margin: 20px 0;
     vertical-align: middle;
 
+    &_is_big-margins {
+      margin: 40px 0;
+    }
+
     &-icon {
       position: relative;
       vertical-align: middle;
@@ -37,7 +41,8 @@
     }
 
     b {
-      background-color: #fdff90;
+      background-color: #e4a120;
+      color: #ffffff;
       padding: 0 5px;
       border-radius: 5px;
     }

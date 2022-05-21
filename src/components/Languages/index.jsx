@@ -1,7 +1,14 @@
 import React from "react";
 import { SiDuolingo } from "react-icons/si";
+import { GoLinkExternal } from "react-icons/go";
 
 import "./styles.scss";
+
+import efCertImg from "../../assets/images/languages/EF-SET-Certificate.webp";
+import elemImg from "../../assets/images/languages/elementary.webp";
+import preInterImg from "../../assets/images/languages/pre-intermediate.webp";
+import interImg from "../../assets/images/languages/intermediate.webp";
+import upperInterImg from "../../assets/images/languages/upper-intermediate.webp";
 
 const Languages = () => {
   return (
@@ -33,6 +40,25 @@ const Languages = () => {
           </a>
           :
         </h2>
+
+        <div className="certificates">
+          <div className="certificates__item certificates__item_is_single-cert">
+            <img
+              className="certificates__item-photo"
+              src={efCertImg}
+              alt="EF English First certificate, C2"
+            />
+
+            <a
+              className="certificates__item-link"
+              href="https://www.efset.org/cert/Qr3FLW"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GoLinkExternal />
+            </a>
+          </div>
+        </div>
       </section>
 
       <section className="languages__section">
@@ -48,6 +74,40 @@ const Languages = () => {
           </a>
           :
         </h2>
+
+        <div className="certificates certificates_is_two-col">
+          <div className="certificates__item">
+            <img
+              className="certificates__item-photo"
+              src={elemImg}
+              alt="elementary certificate, Simpler app"
+            />
+          </div>
+
+          <div className="certificates__item">
+            <img
+              className="certificates__item-photo"
+              src={preInterImg}
+              alt="pre-intermediate certificate, Simpler app"
+            />
+          </div>
+
+          <div className="certificates__item">
+            <img
+              className="certificates__item-photo"
+              src={interImg}
+              alt="intermediate certificate, Simpler app"
+            />
+          </div>
+
+          <div className="certificates__item">
+            <img
+              className="certificates__item-photo"
+              src={upperInterImg}
+              alt="upper-intermediate certificate, Simpler app"
+            />
+          </div>
+        </div>
       </section>
 
       <p className="languages__text">

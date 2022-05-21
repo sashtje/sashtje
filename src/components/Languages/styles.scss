@@ -9,6 +9,7 @@
     padding: 0 20px;
     justify-content: center;
     margin-top: 10px;
+    margin-bottom: 40px;
   }
 
   &__language {
@@ -61,12 +62,6 @@
         left: 0;
         display: block;
       }
-    }
-
-    b {
-      background-color: #fdff90;
-      padding: 0 5px;
-      border-radius: 5px;
     }
   }
 }

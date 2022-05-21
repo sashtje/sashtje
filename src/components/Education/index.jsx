@@ -1,7 +1,13 @@
 import React from "react";
 import { SiCodewars, SiReact } from "react-icons/si";
+import { GoLinkExternal } from "react-icons/go";
 
 import "./styles.scss";
+
+import rsSchoolCertImg from "../../assets/images/education/RsSchool.webp";
+import fccRwdImg from "../../assets/images/education/fcc-resp-web-design.webp";
+import fccAdsImg from "../../assets/images/education/fcc-al-str.webp";
+import myDiplomaImg from "../../assets/images/education/diploma.webp";
 
 const Education = () => {
   return (
@@ -23,8 +29,23 @@ const Education = () => {
           .
         </p>
 
-        <div className="education__certificates">
-          <div className="education__certificates-item education__certificates-item_is_rsschool"></div>
+        <div className="certificates">
+          <div className="certificates__item certificates__item_is_single-cert">
+            <img
+              className="certificates__item-photo"
+              src={rsSchoolCertImg}
+              alt="RsSchool certificate, JS / Frontend 2021 Q3"
+            />
+
+            <a
+              className="certificates__item-link"
+              href="https://app.rs.school/certificate/fdki7gcx"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GoLinkExternal />
+            </a>
+          </div>
         </div>
 
         <p className="education__text">
@@ -98,7 +119,7 @@ const Education = () => {
           here.
         </p>
 
-        <p className="education__text">
+        <p className="education__text education__text_is_big-margins">
           I also took a course on <b>React</b> from <b>RsSchool</b>, completed
           all the tasks except the last one. I left before the last task because
           I already have a similar big team project in React and I decided that
@@ -134,10 +155,40 @@ const Education = () => {
           <b>"JavaScript Algorithms and Data Structures"</b>.
         </p>
 
-        <div className="education__certificates">
-          <div className="education__certificates-item education__certificates-item_is_rwd"></div>
+        <div className="certificates certificates_is_two-col">
+          <div className="certificates__item">
+            <img
+              className="certificates__item-photo"
+              src={fccRwdImg}
+              alt="freecodecamp certificate, responsive web design"
+            />
 
-          <div className="education__certificates-item education__certificates-item_is_ads"></div>
+            <a
+              className="certificates__item-link"
+              href="https://www.freecodecamp.org/certification/aleksawebdev/responsive-web-design"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GoLinkExternal />
+            </a>
+          </div>
+
+          <div className="certificates__item">
+            <img
+              className="certificates__item-photo"
+              src={fccAdsImg}
+              alt="freecodecamp certificate, js algorithms and data structures"
+            />
+
+            <a
+              className="certificates__item-link"
+              href="https://www.freecodecamp.org/certification/aleksawebdev/javascript-algorithms-and-data-structures"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GoLinkExternal />
+            </a>
+          </div>
         </div>
       </section>
 
@@ -173,6 +224,16 @@ const Education = () => {
           object-oriented library <b>XPCE</b>, with which a graphical user
           interface was created.
         </p>
+
+        <div className="certificates">
+          <div className="certificates__item certificates__item_is_diploma-cert">
+            <img
+              className="certificates__item-photo"
+              src={myDiplomaImg}
+              alt="Prolog programs tracer, SWI Prolog, XPCE"
+            />
+          </div>
+        </div>
 
         <p className="education__text">
           As part of my studies at the University, I worked with the{" "}
