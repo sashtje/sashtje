@@ -2,6 +2,8 @@ import React from "react";
 import { SiDuolingo } from "react-icons/si";
 import { GoLinkExternal } from "react-icons/go";
 
+import CustomLink from "../CustomLink";
+
 import "./styles.scss";
 
 import efCertImg from "../../assets/images/languages/EF-SET-Certificate.webp";
@@ -30,15 +32,7 @@ const Languages = () => {
       <section className="languages__section">
         <h2 className="languages__section-title">
           Certificate from{" "}
-          <a
-            className="link"
-            href="https://www.efset.org/ef-set-50/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            EF
-          </a>
-          :
+          <CustomLink href="https://www.efset.org/ef-set-50/">EF</CustomLink>:
         </h2>
 
         <div className="certificates">
@@ -64,14 +58,9 @@ const Languages = () => {
       <section className="languages__section">
         <h2 className="languages__section-title">
           Certificates from{" "}
-          <a
-            className="link"
-            href="https://play.google.com/store/apps/details?id=ru.zengalt.simpler&hl=ru&gl=US"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <CustomLink href="https://apps.apple.com/ca/app/english-learning-with-simpler/id1265670676">
             Simpler app
-          </a>
+          </CustomLink>
           :
         </h2>
 
@@ -118,18 +107,13 @@ const Languages = () => {
       <p className="languages__text">
         I enjoy constantly improving my English using different platforms and
         books. Here you can{" "}
-        <a
-          className="link"
-          href="https://www.duolingo.com/profile/RoboOwl"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <CustomLink href="https://www.duolingo.com/profile/RoboOwl">
           see my{" "}
           <span className="languages__text-icon">
             <SiDuolingo color="#58cc02" />
           </span>{" "}
           account
-        </a>
+        </CustomLink>
         .
       </p>
 

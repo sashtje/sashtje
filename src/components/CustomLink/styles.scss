@@ -1,0 +1,13 @@
+.link {
+  font-weight: 600;
+  color: #338afc;
+
+  &:visited {
+    color: #ad27bf;
+  }
+
+  &:hover,
+  &:active {
+    color: #ff0000;
+  }
+}

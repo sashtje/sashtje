@@ -1,3 +1,5 @@
+import CustomLink from "../components/CustomLink";
+
 import theWatchImg from "../assets/images/projects/the-watch.webp";
 
 import timerCatImg from "../assets/images/projects/timer-cat-light.webp";
@@ -290,14 +292,9 @@ const rsAsyncRace = {
     <>
       Working with asynchronous requests and api. To use this app you will need
       before to start the{" "}
-      <a
-        className="link"
-        href="https://github.com/sashtje/async-race-api"
-        target="_blank"
-        rel="noreferrer"
-      >
+      <CustomLink href="https://github.com/sashtje/async-race-api">
         server
-      </a>{" "}
+      </CustomLink>{" "}
       locally. The app consists of two pages: the garage and the winners. On the
       garage page, you can create cars, modify, delete. You can start the engine
       of one car or start a race. You can also switch pages with cars if there

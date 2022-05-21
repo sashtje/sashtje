@@ -2,6 +2,8 @@ import React from "react";
 import { SiCodewars, SiReact } from "react-icons/si";
 import { GoLinkExternal } from "react-icons/go";
 
+import CustomLink from "../CustomLink";
+
 import "./styles.scss";
 
 import rsSchoolCertImg from "../../assets/images/education/RsSchool.webp";
@@ -18,15 +20,7 @@ const Education = () => {
         <p className="education__text">
           I successfully completed the course{" "}
           <b>"JavaScript / Frontend 2021 Q3"</b> from{" "}
-          <a
-            className="link"
-            href="https://rs.school/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            RsSchool
-          </a>
-          .
+          <CustomLink href="https://rs.school/">RsSchool</CustomLink>.
         </p>
 
         <div className="certificates">
@@ -57,65 +51,40 @@ const Education = () => {
 
         <ul className="education__list">
           <li className="education__list-item">
-            <a
-              className="link"
-              href="https://github.com/sashtje/basic-js"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <CustomLink href="https://github.com/sashtje/basic-js">
               BasicJS
-            </a>
+            </CustomLink>
           </li>
 
           <li className="education__list-item">
-            <a
-              className="link"
-              href="https://github.com/sashtje/basic-js-ds"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <CustomLink href="https://github.com/sashtje/basic-js-ds">
               BasicJS. Data structures
-            </a>
+            </CustomLink>
           </li>
 
           <li className="education__list-item">
-            <a
-              className="link"
-              href="https://github.com/sashtje/core-js-101"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <CustomLink href="https://github.com/sashtje/core-js-101">
               Core JS 101
-            </a>
+            </CustomLink>
           </li>
 
           <li className="education__list-item">
-            <a
-              className="link"
-              href="https://github.com/sashtje/HTML-builder"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <CustomLink href="https://github.com/sashtje/HTML-builder">
               HTML builder
-            </a>
+            </CustomLink>
           </li>
         </ul>
 
         <p className="education__text">
           The other part of the tasks was solved within the <b>CodeWars</b>{" "}
           site. So you can{" "}
-          <a
-            className="link"
-            href="https://www.codewars.com/users/sashtje"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <CustomLink href="https://www.codewars.com/users/sashtje">
             see my{" "}
             <span className="education__text-icon">
               <SiCodewars color="#b1361e" />
             </span>{" "}
             profile
-          </a>{" "}
+          </CustomLink>{" "}
           here.
         </p>
 
@@ -126,31 +95,21 @@ const Education = () => {
           it would be more useful for me to spend this time building my
           portfolio (this site), finding a job and continuing to improve my
           skills in parallel. You can{" "}
-          <a
-            className="link"
-            href="https://github.com/sashtje/rsschool-react"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <CustomLink href="https://github.com/sashtje/rsschool-react">
             see my RsSchool{" "}
             <span className="education__text-icon">
               <SiReact color="#61dafb" />
             </span>{" "}
             repo
-          </a>{" "}
+          </CustomLink>{" "}
           here.
         </p>
 
         <p className="education__text">
           Here are my two certificates from{" "}
-          <a
-            className="link"
-            href="https://www.freecodecamp.org/"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <CustomLink href="https://www.freecodecamp.org/">
             freecodecamp.org
-          </a>
+          </CustomLink>
           : <b>"Responsive Web Design"</b> and{" "}
           <b>"JavaScript Algorithms and Data Structures"</b>.
         </p>

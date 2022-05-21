@@ -378,21 +378,6 @@ $first-delay: 0s;
   }
 }
 
-.link {
-  font-weight: 600;
-  color: #338afc;
-
-  &:visited {
-    color: #ad27bf;
-  }
-
-  &:hover,
-  &:focus,
-  &:active {
-    color: #ff0000;
-  }
-}
-
 .certificates {
   padding: 0 20px;
   margin-top: 30px;
