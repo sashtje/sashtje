@@ -45,7 +45,7 @@
     &__arm {
       transform-origin: -100px 0px;
       transform: rotate(45deg);
-      animation: arm-moving 20s 4s ease-out infinite;
+      animation: arm-moving 10s 4s ease-out infinite;
 
       &-color {
         fill: #edc30d;
@@ -59,15 +59,7 @@
     transform: rotate(45deg);
   }
 
-  1% {
-    transform: rotate(0deg);
-  }
-
   2% {
-    transform: rotate(45deg);
-  }
-
-  3% {
     transform: rotate(0deg);
   }
 
@@ -75,11 +67,19 @@
     transform: rotate(45deg);
   }
 
-  5% {
+  6% {
     transform: rotate(0deg);
   }
 
-  6%,
+  8% {
+    transform: rotate(45deg);
+  }
+
+  10% {
+    transform: rotate(0deg);
+  }
+
+  12%,
   100% {
     transform: rotate(45deg);
   }
