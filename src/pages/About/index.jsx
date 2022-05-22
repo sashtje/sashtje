@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ScaleLoader } from "react-spinners";
 import {
   SiRedux,
@@ -19,6 +19,8 @@ import AnimatedLetters from "../../components/AnimatedLetters";
 import ContactControls from "../../components/ContactControls";
 import AccordionGroup from "../../components/AccordionGroup";
 
+import { useEffectOnce } from "../../hooks/useEffectOnce";
+
 import "./styles.scss";
 
 import { override } from "../../model/loader";
@@ -29,6 +31,8 @@ const About = () => {
   let [isOddSkills, setIsOddSkills] = useState(true);
   const [isCubeAnimated, setIsCubeAnimated] = useState(false);
   const [wasLaunch, setWasLaunch] = useState(false);
+
+  const stopCubeAnimation = useRef(false);
 
   const getCubeClass = (isCubeAnimated) => {
     return isCubeAnimated
@@ -56,15 +60,21 @@ const About = () => {
       setIsOddSkills((isOddSkills = !isOddSkills));
       setTimeout(() => {
         //wait for end of change skills transition
-        startCubeAnimation();
+        if (!stopCubeAnimation.current) {
+          startCubeAnimation();
+        }
       }, 1000);
     }, 17000);
   };
 
-  useEffect(() => {
+  useEffectOnce(() => {
     setTimeout(() => {
       setIsLoading(false);
     }, 2000);
+
+    return () => {
+      stopCubeAnimation.current = true;
+    };
   }, []);
 
   useEffect(() => {
