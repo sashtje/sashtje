@@ -1,23 +1,75 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import { SettingsContext } from "../../context";
+import { useEffectOnce } from "../../hooks/useEffectOnce";
 
 import "./styles.scss";
 
+import { LANG_KEY, LANG } from "../../model/const.js";
+
 const LanguageSwitcher = () => {
-  let lang = "en";
+  let { isEnLang, setIsEnLang } = useContext(SettingsContext);
+
+  const turnOnRuLang = () => {
+    setIsEnLang(false);
+    document.documentElement.setAttribute("data-lang", "ru");
+  };
+
+  const turnOnEnLang = () => {
+    setIsEnLang(true);
+    document.documentElement.removeAttribute("data-lang");
+  };
 
   const handleClickEn = () => {
-    if (lang === "en") return;
+    if (isEnLang) return;
 
-    lang = "en";
-    document.documentElement.setAttribute("data-lang", "en");
+    turnOnEnLang();
+    localStorage.setItem(LANG_KEY, LANG.EN);
   };
 
   const handleClickRu = () => {
-    if (lang === "ru") return;
+    if (!isEnLang) return;
 
-    lang = "ru";
-    document.documentElement.setAttribute("data-lang", "ru");
+    turnOnRuLang();
+    localStorage.setItem(LANG_KEY, LANG.RU);
   };
+
+  /* get preferences for LANGUAGE */
+  useEffectOnce(() => {
+    //check in Local Storage
+    const lang = localStorage.getItem(LANG_KEY);
+    if (lang) {
+      if (lang === LANG.RU) {
+        turnOnRuLang();
+      }
+
+      return;
+    }
+
+    //if there isn't anything in Local Storage, check system preferences
+    if (navigator.language === "ru-RU") {
+      turnOnRuLang();
+    }
+  }, []);
+
+  const handleSystemLangChange = () => {
+    if (navigator.language === "ru-RU") {
+      turnOnRuLang();
+    } else {
+      turnOnEnLang();
+    }
+
+    localStorage.removeItem(LANG_KEY);
+  };
+
+  /* synchronizing with the system */
+  useEffectOnce(() => {
+    window.addEventListener("languagechange", handleSystemLangChange);
+
+    return () => {
+      window.removeEventListener("languagechange", handleSystemLangChange);
+    };
+  }, []);
 
   return (
     <div className="lang-switcher">
