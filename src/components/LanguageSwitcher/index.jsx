@@ -34,24 +34,6 @@ const LanguageSwitcher = () => {
     localStorage.setItem(LANG_KEY, LANG.RU);
   };
 
-  /* get preferences for LANGUAGE */
-  useEffectOnce(() => {
-    //check in Local Storage
-    const lang = localStorage.getItem(LANG_KEY);
-    if (lang) {
-      if (lang === LANG.RU) {
-        turnOnRuLang();
-      }
-
-      return;
-    }
-
-    //if there isn't anything in Local Storage, check system preferences
-    if (navigator.language === "ru-RU") {
-      turnOnRuLang();
-    }
-  }, []);
-
   const handleSystemLangChange = () => {
     if (navigator.language === "ru-RU") {
       turnOnRuLang();

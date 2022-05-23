@@ -32,24 +32,6 @@ const ThemeSwitcher = () => {
     }
   };
 
-  /* get preferences for THEME */
-  useEffectOnce(() => {
-    //check in Local Storage
-    const theme = localStorage.getItem(THEME_KEY);
-    if (theme) {
-      if (theme === THEME.DARK) {
-        turnOnDarkTheme();
-      }
-
-      return;
-    }
-
-    //if there isn't anything in Local Storage, check system preferences
-    if (matchMedia(`(prefers-color-scheme: ${THEME.DARK})`).matches) {
-      turnOnDarkTheme();
-    }
-  }, []);
-
   const handleSystemThemeChange = ({ matches: isDark }) => {
     if (isDark) {
       turnOnDarkTheme();
