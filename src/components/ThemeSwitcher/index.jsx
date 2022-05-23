@@ -1,20 +1,83 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import { SettingsContext } from "../../context";
+import { useEffectOnce } from "../../hooks/useEffectOnce";
 
 import "./styles.scss";
 
+import { THEME_KEY, THEME } from "../../model/const.js";
+
 const ThemeSwitcher = () => {
-  let themeValue = "light";
+  let { isLightTheme, setIsLightTheme } = useContext(SettingsContext);
+
+  const turnOnDarkTheme = () => {
+    setIsLightTheme(false);
+    document.documentElement.setAttribute("data-theme", THEME.DARK);
+  };
+
+  const turnOnLightTheme = () => {
+    setIsLightTheme(true);
+    document.documentElement.removeAttribute("data-theme");
+  };
 
   const changeTheme = () => {
-    themeValue = themeValue === "light" ? "dark" : "light";
-    document.documentElement.setAttribute("data-theme", themeValue);
+    setIsLightTheme((isLightTheme = !isLightTheme));
+
+    if (isLightTheme) {
+      turnOnLightTheme();
+      localStorage.setItem(THEME_KEY, THEME.LIGHT);
+    } else {
+      turnOnDarkTheme();
+      localStorage.setItem(THEME_KEY, THEME.DARK);
+    }
   };
+
+  /* get preferences for THEME */
+  useEffectOnce(() => {
+    //check in Local Storage
+    const theme = localStorage.getItem(THEME_KEY);
+    if (theme) {
+      if (theme === THEME.DARK) {
+        turnOnDarkTheme();
+      }
+
+      return;
+    }
+
+    //if there isn't anything in Local Storage, check system preferences
+    if (matchMedia(`(prefers-color-scheme: ${THEME.DARK})`).matches) {
+      turnOnDarkTheme();
+    }
+  }, []);
+
+  const handleSystemThemeChange = ({ matches: isDark }) => {
+    if (isDark) {
+      turnOnDarkTheme();
+    } else {
+      turnOnLightTheme();
+    }
+
+    localStorage.removeItem(THEME_KEY);
+  };
+
+  /* synchronizing with the system */
+  useEffectOnce(() => {
+    window
+      .matchMedia(`(prefers-color-scheme: ${THEME.DARK})`)
+      .addEventListener("change", handleSystemThemeChange);
+
+    return () => {
+      window
+        .matchMedia(`(prefers-color-scheme: ${THEME.DARK})`)
+        .removeEventListener("change", handleSystemThemeChange);
+    };
+  }, []);
 
   return (
     <button
       className="theme-toggle"
       title="Toggles light & dark"
-      aria-label="auto"
+      aria-label={isLightTheme ? THEME.LIGHT : THEME.DARK}
       aria-live="polite"
       onClick={changeTheme}
     >
