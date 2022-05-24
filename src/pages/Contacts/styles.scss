@@ -1,4 +1,38 @@
 .contacts {
+  --contacts-color-highlight: #ff0000;
+  --contacts-color-about: #000000;
+  --contacts-github-link: #181717;
+  --contacts-banner-color: #ffffff;
+  --contacts-banner-bg: rgb(14 178 0 / 100%);
+  --contacts-banner-border: rgb(14, 154, 2);
+
+  --contacts-btn: #000000;
+  --contacts-btn-hover: rgb(161, 166, 3);
+  --contacts-btn-active: #ff0000;
+
+  --contacts-input-color: #000000;
+  --contacts-input-bg: #ffffff;
+  --contacts-input-border: #aaaaaa;
+}
+
+[data-theme="dark"] .contacts {
+  --contacts-color-highlight: #fbfd66;
+  --contacts-color-about: #dadada;
+  --contacts-github-link: #dddddd;
+  --contacts-banner-color: #e3e3e3;
+  --contacts-banner-bg: rgb(9, 116, 0);
+  --contacts-banner-border: rgb(8, 99, 0);
+
+  --contacts-btn: #b0aeae;
+  --contacts-btn-hover: #fbfd66;
+  --contacts-btn-active: #63eb4f;
+
+  --contacts-input-color: #dadada;
+  --contacts-input-bg: #003454;
+  --contacts-input-border: #565656;
+}
+
+.contacts {
   overflow: hidden;
 
   &__title {
@@ -12,12 +46,13 @@
   &__about {
     font-size: calc(16px + 12 * (100vw / 1800));
     line-height: 1.4;
+    color: var(--contacts-color-about);
     animation: fadeInUp 1s 2.8s forwards;
     opacity: 0;
 
     &_is_highlight {
       font-weight: 600;
-      color: #ff0000;
+      color: var(--contacts-color-highlight);
     }
   }
 
@@ -52,8 +87,12 @@
       border-color: #1da1f2;
     }
 
+    &_is_github {
+      color: var(--contacts-github-link);
+    }
+
     &_is_github:hover {
-      border-color: #181717;
+      border-color: var(--contacts-github-link);
     }
 
     &_is_gmail:hover {
@@ -94,22 +133,16 @@
         left: 50px;
         right: 10px;
         height: auto;
-        background-color: rgb(14 178 0 / 100%);
-        color: #ffffff;
+        background-color: var(--contacts-banner-bg);
+        color: var(--contacts-banner-color);
         padding: 10px 15px;
         z-index: 1;
         font-size: calc(16px + 12 * (100vw / 1800));
         line-height: 1.4;
         text-shadow: 0 0 3px rgba(0, 0, 0, 1);
-        border: 3px solid rgb(14, 154, 2);
+        border: 3px solid var(--contacts-banner-border);
         opacity: 0;
         animation: fadeInUp 1s 5.6s forwards;
-      }
-
-      &-popup-icon {
-        font-size: 2rem;
-        margin-right: 3px;
-        color: #a3a70c;
       }
     }
 
@@ -171,6 +204,9 @@
 
   &__input,
   &__textarea {
+    background-color: var(--contacts-input-bg);
+    color: var(--contacts-input-color);
+    border: 1px solid var(--contacts-input-border);
     display: block;
     width: 100%;
     font-family: inherit;
@@ -193,7 +229,8 @@
     font-size: calc(15px + 3 * (100vw / 1800));
     font-weight: 600;
     letter-spacing: 2px;
-    border: 1px solid #000000;
+    color: var(--contacts-btn);
+    border: 1px solid var(--contacts-btn);
     padding: 10px 15px;
     background-color: transparent;
     cursor: pointer;
@@ -201,13 +238,13 @@
     transition: 0.3s;
 
     &:hover {
-      color: rgb(161, 166, 3);
-      border-color: rgb(161, 166, 3);
+      color: var(--contacts-btn-hover);
+      border-color: var(--contacts-btn-hover);
     }
 
     &:active {
-      color: #ff0000;
-      border-color: #ff0000;
+      color: var(--contacts-btn-active);
+      border-color: var(--contacts-btn-active);
     }
   }
 }

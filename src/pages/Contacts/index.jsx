@@ -123,7 +123,7 @@ const Contacts = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <SiGithub color="#181717" />
+            <SiGithub />
           </a>
 
           <a
