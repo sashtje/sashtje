@@ -1,12 +1,25 @@
 .sidebar {
+  --sidebar-bg-color: rgba(243, 243, 243, 0.5);
+  --sidebar-shadow: rgba(0, 0, 0, 0.3);
+  --sidebar-link: #aaaaaa;
+  --sidebar-hover-link: #c9cd02;
+  --sidebar-active-link: #ff0000;
+}
+
+[data-theme="dark"] .sidebar {
+  --sidebar-bg-color: rgba(99, 99, 99, 0.5);
+  --sidebar-active-link: #63eb4f;
+}
+
+.sidebar {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: auto;
   width: 60px;
-  background-color: rgba(243, 243, 243, 0.5);
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  background-color: var(--sidebar-bg-color);
+  box-shadow: 0 3px 5px var(--sidebar-shadow);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +29,7 @@
     right: 0;
     width: auto;
     height: 60px;
-    box-shadow: -3px 0 5px rgb(0 0 0 / 30%);
+    box-shadow: -3px 0 5px var(--sidebar-shadow);
   }
 }
 
@@ -40,7 +53,7 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #aaaaaa;
+    color: var(--sidebar-link);
     font-size: 1.5rem;
     transition: 0.3s;
 
@@ -54,11 +67,11 @@
     }
 
     &:hover {
-      color: #c9cd02;
+      color: var(--sidebar-hover-link);
     }
 
     &_is_active {
-      color: #ff0000;
+      color: var(--sidebar-active-link);
 
       &:nth-child(1) ~ .sidebar-nav__marker {
         top: 0;
