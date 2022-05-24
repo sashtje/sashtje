@@ -72,7 +72,7 @@ const Home = () => {
             x="-834.483"
             xmlSpace="preserve"
             fontSize="1260.441"
-            fontFamily="sans-serif"
+            fontFamily="Arial, sans-serif"
             letterSpacing="0"
             wordSpacing="0"
             fill="#c9cd02"

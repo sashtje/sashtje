@@ -1,18 +1,30 @@
 @import "https://unpkg.com/open-props/easings.min.css";
 @import "animate.css";
 
+@font-face {
+  font-family: "Arial";
+  src: url("./assets/fonts/ArialMT.eot");
+  src: local("Arial"), local("ArialMT"),
+    url("./assets/fonts/ArialMT.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/ArialMT.woff2") format("woff2"),
+    url("./assets/fonts/ArialMT.woff") format("woff"),
+    url("./assets/fonts/ArialMT.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   box-sizing: border-box;
   font-size: 16px;
   scroll-behavior: smooth;
 
   --main-bg-color: #fffff6;
+  --main-color: #000000;
 }
 
 :root[data-theme="dark"] {
-  color-scheme: dark;
-
-  --main-bg-color: #00212b;
+  --main-bg-color: #022b41;
+  --main-color: #ffffff;
 }
 
 *,
@@ -25,6 +37,7 @@ body {
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
   background-color: var(--main-bg-color);
+  color: var(--main-color);
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
