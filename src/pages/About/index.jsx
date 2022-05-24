@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useContext } from "react";
 import { ScaleLoader } from "react-spinners";
 import {
   SiRedux,
@@ -25,6 +25,7 @@ import "./styles.scss";
 
 import { override } from "../../model/loader";
 import myphoto from "../../assets/Aleksandra.jpg";
+import { SettingsContext } from "../../context";
 
 const About = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -33,6 +34,8 @@ const About = () => {
   const [wasLaunch, setWasLaunch] = useState(false);
 
   const stopCubeAnimation = useRef(false);
+
+  let { isLightTheme, isEnLang } = useContext(SettingsContext);
 
   const getCubeClass = (isCubeAnimated) => {
     return isCubeAnimated
@@ -219,7 +222,7 @@ const About = () => {
 
       <ScaleLoader
         size={100}
-        color={"#b2b604"}
+        color={isLightTheme ? "#b2b604" : "#fbfd66"}
         css={override}
         loading={isLoading}
         speedMultiplier={2}

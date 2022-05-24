@@ -1,12 +1,14 @@
 .contact-controls {
   --contact-controls-btn-color: #000000;
   --contact-controls-btn-bg-hover: #c9cd02;
+  --contact-controls-btn-hover: #000000;
   --contact-controls-btn-active: #ffffff;
 }
 
 [data-theme="dark"] .contact-controls {
   --contact-controls-btn-color: #b0aeae;
   --contact-controls-btn-bg-hover: #336d04;
+  --contact-controls-btn-hover: #ffffff;
   --contact-controls-btn-active: #ffffff;
 }
 
@@ -41,6 +43,10 @@
 
     &:hover::after {
       left: 0;
+    }
+
+    &:hover {
+      color: var(--contact-controls-btn-hover);
     }
 
     &:active {

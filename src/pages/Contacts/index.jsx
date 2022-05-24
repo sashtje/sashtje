@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useContext } from "react";
 import { CircleLoader } from "react-spinners";
 import { SiLinkedin, SiTwitter, SiGithub, SiGmail } from "react-icons/si";
 import { BsBuilding } from "react-icons/bs";
@@ -11,6 +11,7 @@ import ModalWindow from "../../components/ModalWindow";
 import "./styles.scss";
 
 import { override } from "../../model/loader";
+import { SettingsContext } from "../../context";
 
 const Contacts = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -18,6 +19,8 @@ const Contacts = () => {
   const [messageForModalWindow, setMessageForModalWindow] = useState("");
 
   const form = useRef();
+
+  let { isLightTheme, isEnLang } = useContext(SettingsContext);
 
   useEffect(() => {
     setTimeout(() => {
@@ -208,7 +211,7 @@ const Contacts = () => {
 
       <CircleLoader
         size={100}
-        color={"#b2b604"}
+        color={isLightTheme ? "#b2b604" : "#fbfd66"}
         css={override}
         loading={isLoading}
         speedMultiplier={2}

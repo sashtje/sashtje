@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { RingLoader } from "react-spinners";
 
 import AnimatedLetters from "./../../components/AnimatedLetters/";
@@ -7,9 +7,12 @@ import ContactControls from "../../components/ContactControls";
 import "./styles.scss";
 
 import { override } from "../../model/loader";
+import { SettingsContext } from "../../context";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
+
+  let { isLightTheme, isEnLang } = useContext(SettingsContext);
 
   useEffect(() => {
     setTimeout(() => {
@@ -188,7 +191,7 @@ const Home = () => {
 
       <RingLoader
         size={100}
-        color={"#b2b604"}
+        color={isLightTheme ? "#b2b604" : "#fbfd66"}
         css={override}
         loading={isLoading}
       />
