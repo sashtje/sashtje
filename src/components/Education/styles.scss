@@ -1,10 +1,24 @@
 .education {
+  --education-text: #000000;
+  --education-section-delimiter: #000000;
+
+  --education-highlight-bg: #e4a120;
+}
+
+[data-theme="dark"] .education {
+  --education-text: #dadada;
+  --education-section-delimiter: #929292;
+
+  --education-highlight-bg: #8d7700;
+}
+
+.education {
   font-size: calc(16px + 5 * (100vw / 1800));
   line-height: 1.6;
 
   &__section {
     & + .education__section {
-      border-top: 1px solid #000000;
+      border-top: 1px solid var(--education-section-delimiter);
       margin-top: 30px;
     }
   }
@@ -17,6 +31,7 @@
   }
 
   &__text {
+    color: var(--education-text);
     margin: 20px 0;
     vertical-align: middle;
 
@@ -41,7 +56,7 @@
     }
 
     b {
-      background-color: #e4a120;
+      background-color: var(--education-highlight-bg);
       color: #ffffff;
       padding: 0 5px;
       border-radius: 5px;

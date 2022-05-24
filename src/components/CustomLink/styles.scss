@@ -1,13 +1,25 @@
 .link {
+  --link-color: #338afc;
+  --link-visited: #ad27bf;
+  --link-active: #ff0000;
+}
+
+[data-theme="dark"] .link {
+  --link-color: #d5d756;
+  --link-visited: #469ca1;
+  --link-active: #63eb4f;
+}
+
+.link {
   font-weight: 600;
-  color: #338afc;
+  color: var(--link-color);
 
   &:visited {
-    color: #ad27bf;
+    color: var(--link-visited);
   }
 
   &:hover,
   &:active {
-    color: #ff0000;
+    color: var(--link-active);
   }
 }
