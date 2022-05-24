@@ -1,9 +1,21 @@
 .skills {
+  --skills-delimiter: #000000;
+  --skills-hover: rgba(0, 0, 0, 0.5);
+  --skills-color: #000000;
+}
+
+[data-theme="dark"] .skills {
+  --skills-delimiter: #929292;
+  --skills-hover: rgba(255, 255, 255, 0.5);
+  --skills-color: #dadada;
+}
+
+.skills {
   font-size: calc(16px + 7 * (100vw / 1800));
 
   &__section {
     & + .skills__section {
-      border-top: 1px solid #000;
+      border-top: 1px solid var(--skills-delimiter);
       margin-top: 30px;
     }
 
@@ -35,7 +47,7 @@
 
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 7px var(--skills-hover);
     }
   }
 
@@ -48,5 +60,6 @@
   }
 
   &__subtitle {
+    color: var(--skills-color);
   }
 }
