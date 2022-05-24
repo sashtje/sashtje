@@ -1,4 +1,16 @@
 .contact-controls {
+  --contact-controls-btn-color: #000000;
+  --contact-controls-btn-bg-hover: #c9cd02;
+  --contact-controls-btn-active: #ffffff;
+}
+
+[data-theme="dark"] .contact-controls {
+  --contact-controls-btn-color: #b0aeae;
+  --contact-controls-btn-bg-hover: #336d04;
+  --contact-controls-btn-active: #ffffff;
+}
+
+.contact-controls {
   display: flex;
   gap: 20px;
 
@@ -7,10 +19,10 @@
     position: relative;
     background-color: transparent;
     padding: 10px 15px;
-    border: 1px solid #000000;
+    border: 1px solid var(--contact-controls-btn-color);
     font-size: calc(16px + 8 * (100vw / 2000));
     text-decoration: none;
-    color: #000000;
+    color: var(--contact-controls-btn-color);
     overflow: hidden;
     transition: color 0.3s;
 
@@ -22,7 +34,7 @@
       display: block;
       width: 100%;
       height: calc(100% + 2px);
-      background-color: #c9cd02;
+      background-color: var(--contact-controls-btn-bg-hover);
       z-index: -1;
       transition: left 0.3s;
     }
@@ -32,7 +44,7 @@
     }
 
     &:active {
-      color: #ffffff;
+      color: var(--contact-controls-btn-active);
     }
   }
 }

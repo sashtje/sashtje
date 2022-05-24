@@ -70,6 +70,10 @@
       color: var(--sidebar-hover-link);
     }
 
+    &:focus {
+      color: var(--sidebar-active-link);
+    }
+
     &_is_active {
       color: var(--sidebar-active-link);
 
