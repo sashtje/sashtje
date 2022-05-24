@@ -8,6 +8,28 @@ $first-delay: 0s;
 }
 
 .about {
+  --about-text-color: #000000;
+  --about-text-first-letter: #ff0000;
+
+  --about-my-photo-shadow: rgba(0, 0, 0, 0.5);
+
+  --about-cube-face-bg: rgb(255 255 255 / 70%);
+  --about-cube-face-border: #c5cd94;
+  --about-cube-face-shadow: rgba(236, 248, 154, 0.5);
+}
+
+[data-theme="dark"] .about {
+  --about-text-color: #dadada;
+  --about-text-first-letter: #63eb4f;
+
+  --about-my-photo-shadow: rgba(141, 141, 141, 0.5);
+
+  --about-cube-face-bg: rgba(116, 104, 86, 0.47);
+  --about-cube-face-border: #c5cd94;
+  --about-cube-face-shadow: rgba(236, 248, 154, 0.5);
+}
+
+.about {
   overflow: hidden;
 
   &__title {
@@ -59,7 +81,7 @@ $first-delay: 0s;
     margin: 0 20px 10px 0;
     border-radius: 20px;
     filter: grayscale(0);
-    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0px 30px var(--about-my-photo-shadow);
     cursor: pointer;
     animation: fadeInLeft 1s 3.3s backwards;
     transition: 0.3s;
@@ -79,13 +101,14 @@ $first-delay: 0s;
   }
 
   &__text {
+    color: var(--about-text-color);
     margin: 0 0 20px 0;
     text-indent: 50px;
     animation: fadeInLeft 1s 2.3s backwards;
 
     &:first-letter {
       font-weight: 600;
-      color: #ff0000;
+      color: var(--about-text-first-letter);
       font-size: calc(16px + 7 * (100vw / 1800));
       text-shadow: 1px 1px 2px #000000;
     }
@@ -179,9 +202,9 @@ $first-delay: 0s;
     cursor: pointer;
     width: calc(1px * var(--cube-side));
     height: calc(1px * var(--cube-side));
-    border: 1px solid #c5cd94;
-    background-color: rgb(255 255 255 / 70%);
-    box-shadow: 0 0 20px 0px rgba(236, 248, 154, 0.5);
+    border: 1px solid var(--about-cube-face-border);
+    background-color: var(--about-cube-face-bg);
+    box-shadow: 0 0 20px 0px var(--about-cube-face-shadow);
     display: flex;
     justify-content: center;
     align-items: center;
