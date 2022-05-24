@@ -1,4 +1,12 @@
 .home {
+  --home-subtitle-color: #000000;
+}
+
+[data-theme="dark"] .home {
+  --home-subtitle-color: #dadada;
+}
+
+.home {
   display: grid;
   grid-template-columns: repeat(2, 50%);
 
@@ -133,6 +141,7 @@
   &__subtitle {
     font-size: calc(16px + 12 * (100vw / 1800));
     font-style: italic;
+    color: var(--home-subtitle-color);
     margin: 20px 0 50px 0;
     animation: fadeIn 1s 6s backwards;
   }

@@ -1,7 +1,15 @@
 .theme-toggle {
-  --size: 2rem;
   --icon-fill: #c9cd02;
   --icon-fill-hover: #e3e706;
+}
+
+[data-theme="dark"] .theme-toggle {
+  --icon-fill: rgb(0, 120, 220);
+  --icon-fill-hover: rgb(0, 145, 255);
+}
+
+.theme-toggle {
+  --size: 2rem;
 
   position: absolute;
   top: 10px;
@@ -97,9 +105,6 @@
 
 [data-theme="dark"] {
   .theme-toggle {
-    --icon-fill: rgb(5, 97, 177);
-    --icon-fill-hover: rgb(4, 144, 250);
-
     &__sun {
       transform: scale(1.75);
       transition-timing-function: var(--ease-3);
