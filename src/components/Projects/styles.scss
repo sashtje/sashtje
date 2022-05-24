@@ -1,4 +1,40 @@
 .projects {
+  --projects-bg: #ffffff;
+  --projects-shadow: rgba(147, 137, 82, 0.5);
+  --projects-hover: rgba(14, 14, 14, 1);
+
+  --projects-photo-outline: #ff0000;
+
+  --projects-code-link: #8f09eb;
+  --projects-code-link-hover: #ff0000;
+  --projects-code-link-shadow: rgba(0, 0, 0, 0.5);
+
+  --projects-tag-color: #ffffff;
+  --projects-tag-bg: #b3b735;
+
+  --projects-text-color: #000000;
+  --projects-text-first-letter: #8f09eb;
+}
+
+[data-theme="dark"] .projects {
+  --projects-bg: #0e4356;
+  --projects-shadow: rgba(14, 14, 14, 1);
+  --projects-hover: rgba(255, 255, 255, 0.5);
+
+  --projects-photo-outline: #63eb4f;
+
+  --projects-code-link: #fbfd66;
+  --projects-code-link-hover: #63eb4f;
+  --projects-code-link-shadow: rgba(255, 255, 255, 0.5);
+
+  --projects-tag-color: #ffffff;
+  --projects-tag-bg: #898d03;
+
+  --projects-text-color: #dadada;
+  --projects-text-first-letter: #fbfd66;
+}
+
+.projects {
   &__container {
     display: grid;
     grid-template-columns: repeat(2, calc(50% - 20px));
@@ -23,13 +59,13 @@
   font-size: calc(16px + 5 * (100vw / 2000));
   line-height: 1.4;
   padding: 10px 15px;
-  box-shadow: 0 0 15px rgba(147, 137, 82, 0.5);
-  background-color: #ffffff;
+  box-shadow: 0 0 15px var(--projects-shadow);
+  background-color: var(--projects-bg);
   border-radius: 20px;
   transition: 0.3s;
 
   &:hover {
-    box-shadow: 0 0 15px rgba(14, 14, 14, 1);
+    box-shadow: 0 0 15px var(--projects-hover);
   }
 
   &__title {
@@ -48,7 +84,7 @@
 
     &:hover {
       background-position: bottom center;
-      outline: 3px solid #ff0000;
+      outline: 3px solid var(--projects-photo-outline);
       outline-offset: 5px;
     }
   }
@@ -63,12 +99,12 @@
   &__code-link {
     display: block;
     padding: 5px;
-    color: #8f09eb;
+    color: var(--projects-code-link);
     transition: 0.3s;
 
     &:hover {
-      color: #ff0000;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      color: var(--projects-code-link-hover);
+      box-shadow: 0 0 5px var(--projects-code-link-shadow);
     }
 
     svg {
@@ -85,12 +121,13 @@
 
   &__tag-item {
     padding: 2px 10px;
-    background-color: #b3b735;
-    color: #ffffff;
+    background-color: var(--projects-tag-bg);
+    color: var(--projects-tag-color);
     border-radius: 5px;
   }
 
   &__text {
+    color: var(--projects-text-color);
     text-indent: 30px;
     margin: 10px 0 20px 0;
     line-height: 1.6;
@@ -99,7 +136,7 @@
       font-size: calc(16px + 9 * (100vw / 1800));
       margin-right: 1px;
       font-weight: 600;
-      color: #8f09eb;
+      color: var(--projects-text-first-letter);
       text-shadow: 1px 1px 2px #000000;
     }
   }
