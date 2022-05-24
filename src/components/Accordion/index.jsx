@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { BsFillArrowUpSquareFill } from "react-icons/bs";
 
 import "./styles.scss";
 
+import { SettingsContext } from "../../context";
+
 const Accordion = ({ number, icon, title, content, expanded, setExpanded }) => {
   const isOpen = number === expanded;
+
+  let { isLightTheme } = useContext(SettingsContext);
 
   const iconVariants = {
     visible: { opacity: 1 },
@@ -22,12 +26,20 @@ const Accordion = ({ number, icon, title, content, expanded, setExpanded }) => {
     setExpanded(isOpen ? false : number);
   };
 
+  const getAccordionColor = (isOpen, isLightTheme) => {
+    if (isOpen) {
+      return isLightTheme ? "#c3ffcf" : "rgb(11, 154, 120)";
+    }
+
+    return isLightTheme ? "#feffb6" : "rgb(46, 123, 131)";
+  };
+
   return (
     <>
       <motion.button
         className="accordion__header-btn"
         initial={false}
-        animate={{ backgroundColor: isOpen ? "#c3ffcf" : "#feffb6" }}
+        animate={{ backgroundColor: getAccordionColor(isOpen, isLightTheme) }}
         onClick={handleExpandAccordion}
       >
         {icon}

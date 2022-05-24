@@ -1,15 +1,38 @@
 .accordion {
+  --accordion-bg: #feffb6;
+  --accordion-color: #000000;
+  --accordion-hover: #ff0000;
+  --accordion-border: #000000;
+  --accordion-shadow: rgba(0, 0, 0, 0.5);
+
+  --accordion-btn-close: rgb(109, 176, 122);
+  --acoordion-btn-close-hover: lightcoral;
+}
+
+[data-theme="dark"] .accordion {
+  --accordion-bg: rgb(46, 123, 131);
+  --accordion-color: #ffffff;
+  --accordion-hover: #fbfd66;
+  --accordion-border: #949494;
+  --accordion-shadow: #000000;
+
+  --accordion-btn-close: #fbfd66;
+  --acoordion-btn-close-hover: #63eb4f;
+}
+
+.accordion {
   & + .accordion {
     margin-top: 30px;
   }
 
   &__header-btn {
+    color: var(--accordion-color);
     position: relative;
     display: block;
     width: 100%;
-    background-color: #feffb6;
+    background-color: var(--accordion-bg);
 
-    border: 1px solid #000000;
+    border: 1px solid var(--accordion-border);
     font-size: calc(16px + 5 * (100vw / 1800));
     padding: 20px;
     cursor: pointer;
@@ -18,12 +41,12 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px var(--accordion-shadow);
     transition: 0.3s;
 
     &:hover {
-      color: #ff0000;
-      border-color: #ff0000;
+      color: var(--accordion-hover);
+      border-color: var(--accordion-hover);
     }
   }
 
@@ -52,14 +75,14 @@
     padding: 0;
     border: none;
     font-size: 2rem;
-    color: rgb(109, 176, 122);
+    color: var(--accordion-btn-close);
     cursor: pointer;
     float: right;
     margin: 20px;
     transition: 0.3s;
 
     &:hover {
-      color: lightcoral;
+      color: var(--acoordion-btn-close-hover);
     }
 
     svg {
