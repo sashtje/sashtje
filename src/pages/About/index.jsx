@@ -154,7 +154,7 @@ const About = () => {
                 <div className="skills-cube__complex-face">
                   <div className="skills-cube__face skills-cube__face1">
                     <span className={getOddGroupClass(isOddSkills)}>
-                      <SiRedux color="#764abc" title="Redux" />
+                      <SiRedux color="#925ce8" title="Redux" />
                     </span>
 
                     <span className={getEvenGroupClass(isOddSkills)}>
