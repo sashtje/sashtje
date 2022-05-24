@@ -1,19 +1,29 @@
+.text-animate-hover {
+  --text-animate-hover: #ff0000;
+}
+
+[data-theme="dark"] .text-animate-hover {
+  --text-animate-hover: #63eb4f;
+}
+
 .text-animate {
   display: inline-block;
   opacity: 0;
   animation: bounceIn 1s;
   animation-fill-mode: forwards;
   min-width: 10px;
+  text-align: center;
 
   &-hover {
     min-width: 10px;
     display: inline-block;
+    text-align: center;
     animation-fill-mode: both;
     transition: 0.3s;
 
     &:hover {
       animation: rubberBand 1s;
-      color: #ff0000;
+      color: var(--text-animate-hover);
     }
   }
 
