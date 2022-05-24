@@ -5,7 +5,13 @@ import { useEffectOnce } from "../../hooks/useEffectOnce";
 
 import "./styles.scss";
 
-import { THEME_KEY, THEME } from "../../model/const.js";
+import {
+  THEME_KEY,
+  THEME,
+  metaThemeTag,
+  LIGHT_THEME_TOP,
+  DARK_THEME_TOP,
+} from "../../model/const.js";
 
 const ThemeSwitcher = () => {
   let { isLightTheme, setIsLightTheme } = useContext(SettingsContext);
@@ -13,11 +19,13 @@ const ThemeSwitcher = () => {
   const turnOnDarkTheme = () => {
     setIsLightTheme(false);
     document.documentElement.setAttribute("data-theme", THEME.DARK);
+    metaThemeTag.setAttribute("content", DARK_THEME_TOP);
   };
 
   const turnOnLightTheme = () => {
     setIsLightTheme(true);
     document.documentElement.removeAttribute("data-theme");
+    metaThemeTag.setAttribute("content", LIGHT_THEME_TOP);
   };
 
   const changeTheme = () => {
