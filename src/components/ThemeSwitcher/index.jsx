@@ -14,7 +14,7 @@ import {
 } from "../../model/const.js";
 
 const ThemeSwitcher = () => {
-  let { isLightTheme, setIsLightTheme } = useContext(SettingsContext);
+  let { isLightTheme, setIsLightTheme, isEnLang } = useContext(SettingsContext);
 
   const turnOnDarkTheme = () => {
     setIsLightTheme(false);
@@ -63,11 +63,21 @@ const ThemeSwitcher = () => {
     };
   }, []);
 
+  const getAreaLabel = (isLightTheme, isEnLang) => {
+    if (isLightTheme) {
+      return isEnLang ? THEME.LIGHT : THEME.LIGHT_RU;
+    } else {
+      return isEnLang ? THEME.DARK : THEME.DARK_RU;
+    }
+  };
+
   return (
     <button
       className="theme-toggle"
-      title="Toggles light & dark"
-      aria-label={isLightTheme ? THEME.LIGHT : THEME.DARK}
+      title={
+        isEnLang ? "Toggles light & dark" : "Переключает светлую и тёмную темы"
+      }
+      aria-label={getAreaLabel(isLightTheme, isEnLang)}
       aria-live="polite"
       onClick={changeTheme}
     >

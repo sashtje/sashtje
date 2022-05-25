@@ -2,7 +2,12 @@
 export const THEME_KEY = "sashtje_sashtje_mycv_theme";
 export const LANG_KEY = "sashtje_sashtje_mycv_lang";
 
-export const THEME = { LIGHT: "light", DARK: "dark" };
+export const THEME = {
+  LIGHT: "light",
+  DARK: "dark",
+  LIGHT_RU: "светлая",
+  DARK_RU: "тёмная",
+};
 export const LANG = { EN: "en", RU: "ru" };
 
 export const metaThemeTag = document.querySelector('meta[name="theme-color"]');
