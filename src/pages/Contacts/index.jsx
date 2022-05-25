@@ -48,16 +48,13 @@ const Contacts = () => {
         () => {
           setMessageForModalWindow(isEnLang ? EMAIL_SUCCESS : EMAIL_SUCCESS_RU);
           setIsModalWindowShown(true);
+          form.current.reset();
         },
         () => {
           setMessageForModalWindow(isEnLang ? EMAIL_FAIL : EMAIL_FAIL_RU);
           setIsModalWindowShown(true);
         }
-      )
-      .finally(() => {
-        //clean the form
-        form.current.reset();
-      });
+      );
   };
 
   const closeModalWindow = () => {
