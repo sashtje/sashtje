@@ -20,18 +20,15 @@
     transform: translateY(-50%) translateX(-50%);
     max-width: 90vw;
     width: 600px;
-    height: 300px;
     max-height: 90vh;
     overflow-y: auto;
     background-color: #ffffff;
-    padding: 20px 55px 20px 30px;
-    display: flex;
-    align-items: center;
+    padding: 55px 20px;
     background-color: #ffffed;
     box-shadow: 3px 3px 50px antiquewhite;
 
     @media (hover: none) {
-      padding: 20px 60px 20px 30px;
+      padding: 60px 20px;
     }
   }
 

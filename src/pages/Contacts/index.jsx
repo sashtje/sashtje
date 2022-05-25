@@ -12,6 +12,12 @@ import "./styles.scss";
 
 import { override } from "../../model/loader";
 import { SettingsContext } from "../../context";
+import {
+  EMAIL_SUCCESS,
+  EMAIL_SUCCESS_RU,
+  EMAIL_FAIL,
+  EMAIL_FAIL_RU,
+} from "../../model/const.js";
 
 const Contacts = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -40,15 +46,11 @@ const Contacts = () => {
       )
       .then(
         () => {
-          setMessageForModalWindow(
-            "Your email was sent successfully. Thank you for your message :)"
-          );
+          setMessageForModalWindow(isEnLang ? EMAIL_SUCCESS : EMAIL_SUCCESS_RU);
           setIsModalWindowShown(true);
         },
         () => {
-          setMessageForModalWindow(
-            "Sorry, something went wrong :( your email wasn't sent. Please, try again or contact me any other way above."
-          );
+          setMessageForModalWindow(isEnLang ? EMAIL_FAIL : EMAIL_FAIL_RU);
           setIsModalWindowShown(true);
         }
       )
