@@ -38,6 +38,7 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   background-color: var(--main-bg-color);
   color: var(--main-color);
+  word-spacing: 1px;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

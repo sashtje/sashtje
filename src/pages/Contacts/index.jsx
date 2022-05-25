@@ -93,11 +93,30 @@ const Contacts = () => {
           />
         </h1>
         <p className="contacts__about">
-          I'm looking for a{" "}
-          <span className="contacts__about_is_highlight">full time remote</span>{" "}
-          job as <span className="contacts__about_is_highlight">React</span>{" "}
-          Developer. However, if you have other interesting offers or questions,
-          don't hesitate to contact me using any convenient way for you.
+          {isEnLang ? (
+            <>
+              I'm looking for a{" "}
+              <span className="contacts__about_is_highlight">
+                full time remote
+              </span>{" "}
+              job as <span className="contacts__about_is_highlight">React</span>{" "}
+              Developer. However, if you have other interesting offers or
+              questions, don't hesitate to contact me using any convenient way
+              for you.
+            </>
+          ) : (
+            <>
+              Ищу{" "}
+              <span className="contacts__about_is_highlight">
+                удаленную работу с полным рабочим днём
+              </span>{" "}
+              в качестве{" "}
+              <span className="contacts__about_is_highlight">React</span>{" "}
+              Developer. Однако, если у вас есть другие интересные предложения
+              или какие-либо вопросы, не стесняйтесь связаться со мной,
+              используя любой из моих контактов ниже.
+            </>
+          )}
         </p>
 
         <div className="contacts__contacts-block">
@@ -143,7 +162,7 @@ const Contacts = () => {
             <div className="contacts__container-map-banner">
               {isEnLang
                 ? "Currently I live in Moscow, but I'm ready to consider relocation"
-                : "В настоящий момент живу в Москве, но готова рассмотреть вариант с переездом"}
+                : "В настоящий момент живу в Москве, но готова рассмотреть варианты с переездом"}
             </div>
 
             <MapContainer center={[55.75232, 37.6116908]} zoom={5}>
