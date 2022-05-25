@@ -5,7 +5,7 @@ function getPreferenceLang() {
   const lang = localStorage.getItem(LANG_KEY);
   if (lang) {
     if (lang === LANG.RU) {
-      document.documentElement.setAttribute("data-lang", "ru");
+      document.documentElement.setAttribute("lang", "ru");
 
       return false;
     }
@@ -15,7 +15,7 @@ function getPreferenceLang() {
 
   //if there isn't anything in Local Storage, check system preferences
   if (navigator.language === "ru-RU") {
-    document.documentElement.setAttribute("data-lang", "ru");
+    document.documentElement.setAttribute("lang", "ru");
 
     return false;
   }

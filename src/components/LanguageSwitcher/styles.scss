@@ -65,7 +65,7 @@
     color: #ffffff;
   }
 
-  [data-lang="ru"] & {
+  [lang="ru"] & {
     &__svg-item {
       transform: translateX(94px);
     }

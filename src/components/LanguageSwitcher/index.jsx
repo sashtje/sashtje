@@ -12,12 +12,12 @@ const LanguageSwitcher = () => {
 
   const turnOnRuLang = () => {
     setIsEnLang(false);
-    document.documentElement.setAttribute("data-lang", "ru");
+    document.documentElement.setAttribute("lang", "ru");
   };
 
   const turnOnEnLang = () => {
     setIsEnLang(true);
-    document.documentElement.removeAttribute("data-lang");
+    document.documentElement.setAttribute("lang", "en");
   };
 
   const handleClickEn = () => {
@@ -119,12 +119,14 @@ const LanguageSwitcher = () => {
       <button
         className="lang-switcher__btn lang-switcher__btn-en"
         onClick={handleClickEn}
+        title={isEnLang ? "English" : "Английский"}
       >
         En
       </button>
       <button
         className="lang-switcher__btn lang-switcher__btn-ru"
         onClick={handleClickRu}
+        title={isEnLang ? "Russian" : "Русский"}
       >
         Ru
       </button>
