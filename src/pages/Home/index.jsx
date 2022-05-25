@@ -215,7 +215,7 @@ const Home = () => {
             />
           </h1>
 
-          <p className="home-content__subtitle">
+          <p className="home-content__subtitle" lang="en">
             React / TypeScript / JavaScript
           </p>
 

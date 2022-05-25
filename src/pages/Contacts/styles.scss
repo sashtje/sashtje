@@ -144,6 +144,12 @@
         opacity: 0;
         animation: fadeInUp 1s 5.6s forwards;
       }
+
+      &-popup-icon {
+        font-size: 2rem;
+        margin-right: 3px;
+        color: #a3a70c;
+      }
     }
 
     &-form {
