@@ -9,3 +9,6 @@ export const metaThemeTag = document.querySelector('meta[name="theme-color"]');
 
 export const LIGHT_THEME_TOP = "#ff0000";
 export const DARK_THEME_TOP = "#022b41";
+
+export const HREF_CV_EN = `${process.env.PUBLIC_URL}/cv/CV Aleksandra Rogova (Sashtje).txt`;
+export const HREF_CV_RU = `${process.env.PUBLIC_URL}/cv/CV Александра Рогова (Sashtje).txt`;

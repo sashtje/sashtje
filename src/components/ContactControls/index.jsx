@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./styles.scss";
 
 import { SettingsContext } from "../../context";
+import { HREF_CV_EN, HREF_CV_RU } from "../../model/const.js";
 
 const ContactControls = () => {
   let { isEnLang } = useContext(SettingsContext);
@@ -18,7 +19,7 @@ const ContactControls = () => {
       </Link>
       <a
         className="contact-controls__btn contact-controls__download-cv"
-        href={`${process.env.PUBLIC_URL}/cv/CV Aleksandra Rogova (Sashtje).txt`}
+        href={isEnLang ? HREF_CV_EN : HREF_CV_RU}
         download={true}
       >
         {isEnLang ? "Download CV" : "Скачать CV"}
