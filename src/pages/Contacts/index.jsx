@@ -170,14 +170,14 @@ const Contacts = () => {
                   className="contacts-form__input"
                   type="text"
                   name="name"
-                  placeholder="Name"
+                  placeholder={isEnLang ? "Name" : "Имя"}
                   required
                 />
                 <input
                   className="contacts-form__input"
                   type="email"
                   name="email"
-                  placeholder="Email"
+                  placeholder={isEnLang ? "Email" : "Эл. почта"}
                   required
                 />
               </div>
@@ -186,21 +186,21 @@ const Contacts = () => {
                 className="contacts-form__input"
                 type="text"
                 name="subject"
-                placeholder="Subject"
+                placeholder={isEnLang ? "Subject" : "Тема"}
                 required
               />
 
               <textarea
                 className="contacts-form__textarea"
                 name="message"
-                placeholder="Message"
+                placeholder={isEnLang ? "Message" : "Сообщение"}
                 required
               />
 
               <input
                 className="contacts-form__btn-submit"
                 type="submit"
-                value="SEND"
+                value={isEnLang ? "SEND" : "Отправить"}
               />
             </div>
           </form>
