@@ -141,7 +141,9 @@ const Contacts = () => {
         <div className="contacts__container">
           <div className="contacts__container-map">
             <div className="contacts__container-map-banner">
-              Currently I live in Moscow, but I'm ready to consider relocation
+              {isEnLang
+                ? "Currently I live in Moscow, but I'm ready to consider relocation"
+                : "В настоящий момент живу в Москве, но готова рассмотреть вариант с переездом"}
             </div>
 
             <MapContainer center={[55.75232, 37.6116908]} zoom={5}>
@@ -151,7 +153,7 @@ const Contacts = () => {
                   <span className="contacts__container-map-popup-icon">
                     <BsBuilding />
                   </span>{" "}
-                  Moscow, Russia
+                  {isEnLang ? "Moscow, Russia" : "Москва, Россия"}
                 </Popup>
               </Marker>
             </MapContainer>
