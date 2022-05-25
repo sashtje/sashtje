@@ -172,6 +172,41 @@
   }
 }
 
+[data-theme="dark"] {
+  .leaflet-popup-content-wrapper,
+  .leaflet-popup-tip {
+    background-color: #022b41;
+  }
+
+  .leaflet-popup-content {
+    color: #dadada;
+  }
+
+  .leaflet-container a.leaflet-popup-close-button {
+    color: #b2b2b2;
+
+    &:hover,
+    &:focus {
+      color: #dadada;
+    }
+  }
+
+  .leaflet-touch .leaflet-control-layers,
+  .leaflet-touch .leaflet-bar {
+    border-color: #dadada;
+  }
+
+  .leaflet-bar a {
+    background-color: #022b41;
+    border-color: #dadada;
+    color: #dadada;
+
+    &:hover {
+      background-color: #047805;
+    }
+  }
+}
+
 .leaflet-popup-content {
   font-size: 1rem;
   width: 160px;
