@@ -63,6 +63,23 @@
   .contact-controls__download-cv {
     animation: fadeIn 1s 6.2s backwards;
   }
+
+  @media (max-width: 325px) {
+    .contact-controls {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
+[data-lang="ru"] .home {
+  .contact-controls__contact-me {
+    animation: fadeIn 1s 6.6s backwards;
+  }
+
+  .contact-controls__download-cv {
+    animation: fadeIn 1s 6.7s backwards;
+  }
 }
 
 .about {

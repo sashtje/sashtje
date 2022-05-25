@@ -102,37 +102,71 @@ const Home = () => {
         <section className="home-content">
           <h1 className="home-content__title">
             <AnimatedLetters
-              strArray={[
-                ["H", ""],
-                ["i,", ""],
-              ]}
+              strArray={
+                isEnLang
+                  ? [
+                      ["H", ""],
+                      ["i,", ""],
+                    ]
+                  : [
+                      ["П", ""],
+                      ["р", ""],
+                      ["и", ""],
+                      ["в", ""],
+                      ["е", ""],
+                      ["т,", ""],
+                    ]
+              }
               startDelay={1.5}
-              timeBeforeHoverActive={2.7}
+              timeBeforeHoverActive={isEnLang ? 2.7 : 3.1}
             />
             <br />
             <AnimatedLetters
-              strArray={[
-                ["I", ""],
-                ["'m", ""],
-              ]}
-              startDelay={1.7}
-              timeBeforeHoverActive={2.9}
+              strArray={
+                isEnLang
+                  ? [
+                      ["I", ""],
+                      ["'m", ""],
+                    ]
+                  : [
+                      ["я", ""],
+                      [" ", ""],
+                      ["—", ""],
+                    ]
+              }
+              startDelay={isEnLang ? 1.7 : 2.1}
+              timeBeforeHoverActive={isEnLang ? 2.9 : 3.4}
             />{" "}
             <AnimatedLetters
-              strArray={[
-                ["A", ""],
-                ["l", ""],
-                ["e", ""],
-                ["k", ""],
-                ["s", ""],
-                ["a", ""],
-                ["n", ""],
-                ["d", ""],
-                ["r", ""],
-                ["a", ""],
-              ]}
-              startDelay={2}
-              timeBeforeHoverActive={4}
+              strArray={
+                isEnLang
+                  ? [
+                      ["A", ""],
+                      ["l", ""],
+                      ["e", ""],
+                      ["k", ""],
+                      ["s", ""],
+                      ["a", ""],
+                      ["n", ""],
+                      ["d", ""],
+                      ["r", ""],
+                      ["a", ""],
+                    ]
+                  : [
+                      ["А", ""],
+                      ["л", ""],
+                      ["е", ""],
+                      ["к", ""],
+                      ["с", ""],
+                      ["а", ""],
+                      ["н", ""],
+                      ["д", ""],
+                      ["р", ""],
+                      ["а", ""],
+                    ]
+              }
+              startDelay={isEnLang ? 2 : 2.5}
+              timeBeforeHoverActive={isEnLang ? 4 : 4.5}
             />{" "}
             <AnimatedLetters
               strArray={[
@@ -146,8 +180,8 @@ const Home = () => {
                 ["e", ""],
                 [")", ""],
               ]}
-              startDelay={3.1}
-              timeBeforeHoverActive={5}
+              startDelay={isEnLang ? 3.1 : 3.6}
+              timeBeforeHoverActive={isEnLang ? 5 : 5.5}
             />
             <br />
             <AnimatedLetters
@@ -161,8 +195,8 @@ const Home = () => {
                 ["n", ""],
                 ["d", ""],
               ]}
-              startDelay={4}
-              timeBeforeHoverActive={5.8}
+              startDelay={isEnLang ? 4 : 4.5}
+              timeBeforeHoverActive={isEnLang ? 5.8 : 6.3}
             />{" "}
             <AnimatedLetters
               strArray={[
@@ -176,8 +210,8 @@ const Home = () => {
                 ["e", ""],
                 ["r", ""],
               ]}
-              startDelay={4.9}
-              timeBeforeHoverActive={6.8}
+              startDelay={isEnLang ? 4.9 : 5.4}
+              timeBeforeHoverActive={isEnLang ? 6.8 : 7.3}
             />
           </h1>
 

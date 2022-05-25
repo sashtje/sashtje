@@ -146,3 +146,7 @@
     animation: fadeIn 1s 6s backwards;
   }
 }
+
+[data-lang="ru"] .home-content__subtitle {
+  animation: fadeIn 1s 6.5s backwards;
+}
