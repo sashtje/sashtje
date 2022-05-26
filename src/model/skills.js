@@ -78,22 +78,27 @@ const otherSkills = [
 const skills = [
   {
     title: "Code:",
+    titleRu: "Код:",
     skillsArray: codeSkills,
   },
   {
     title: "Libs:",
+    titleRu: "Библиотеки:",
     skillsArray: libsSkills,
   },
   {
     title: "Tools:",
+    titleRu: "Инструменты:",
     skillsArray: toolsSkills,
   },
   {
     title: "Tests:",
+    titleRu: "Тесты:",
     skillsArray: testsSkills,
   },
   {
     title: "Other:",
+    titleRu: "Другое:",
     skillsArray: otherSkills,
   },
 ];
