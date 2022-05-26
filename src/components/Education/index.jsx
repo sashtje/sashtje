@@ -200,14 +200,30 @@ const Education = () => {
       </section>
 
       <section className="education__section">
-        <h2 className="education__title">Experience as a programmer:</h2>
+        <h2 className="education__title">
+          {isEnLang
+            ? "Experience as a programmer:"
+            : "Опыт работы программистом:"}
+        </h2>
 
         <p className="education__text">
-          I worked as a <b>1C programmer</b>, improved the current configuration
-          of the enterprise system, maintained and improved the old code, and
-          also wrote new functionality. I also maintained 2 existing projects in{" "}
-          <b>C#</b> and wrote in <b>C#</b> from scratch a site parser through a
-          proxy.
+          {isEnLang ? (
+            <>
+              I worked as a <b>1C programmer</b>, improved the current
+              configuration of the enterprise system, maintained and improved
+              the old code, and also wrote new functionality. I also maintained
+              2 existing projects in <b>C#</b> and wrote in <b>C#</b> from
+              scratch a site parser through a proxy.
+            </>
+          ) : (
+            <>
+              Работала <b>программистом 1С</b>, улучшала существующую
+              конфигурацию корпоративной системы, поддерживала и оптимизировала
+              старый код, писала новый функционал. Также поддерживала 2
+              существующих проекта на <b>C#</b> и написала на <b>C#</b> парсер
+              сайта через прокси.
+            </>
+          )}
         </p>
       </section>
 
