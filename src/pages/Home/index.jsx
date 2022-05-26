@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { RingLoader } from "react-spinners";
 
 import AnimatedLetters from "./../../components/AnimatedLetters/";
