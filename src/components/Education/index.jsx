@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { SiCodewars, SiReact } from "react-icons/si";
 
 import CustomLink from "../CustomLink";
@@ -11,17 +11,29 @@ import rsSchoolCertImg from "../../assets/images/education/RsSchool.webp";
 import fccRwdImg from "../../assets/images/education/fcc-resp-web-design.webp";
 import fccAdsImg from "../../assets/images/education/fcc-al-str.webp";
 import myDiplomaImg from "../../assets/images/education/diploma.webp";
+import { SettingsContext } from "../../context";
 
 const Education = () => {
+  let { isEnLang } = useContext(SettingsContext);
+
   return (
     <div className="education">
       <section className="education__section">
-        <h2 className="education__title">Courses:</h2>
+        <h2 className="education__title">{isEnLang ? "Courses:" : "Курсы:"}</h2>
 
         <p className="education__text">
-          I successfully completed the course{" "}
-          <b>"JavaScript / Frontend 2021 Q3"</b> from{" "}
-          <CustomLink href="https://rs.school/">RsSchool</CustomLink>.
+          {isEnLang ? (
+            <>
+              I successfully completed the course{" "}
+              <b>"JavaScript / Frontend 2021 Q3"</b> from{" "}
+              <CustomLink href="https://rs.school/">RsSchool</CustomLink>.
+            </>
+          ) : (
+            <>
+              Я успешно закончила курс <b>"JavaScript / Frontend 2021 Q3"</b> от{" "}
+              <CustomLink href="https://rs.school/">RsSchool</CustomLink>.
+            </>
+          )}
         </p>
 
         <Certificates isTable={false}>
@@ -35,10 +47,21 @@ const Education = () => {
         </Certificates>
 
         <p className="education__text">
-          As part of my studies at <b>RsSchool</b>, I solved problems on
-          algorithms and data structures in <b>Javascript</b> and some base
-          problems in <b>Node.js</b>. Tasks and my solutions can be found in
-          these four repositories:
+          {isEnLang ? (
+            <>
+              As part of my studies at <b>RsSchool</b>, I solved problems on
+              algorithms and data structures in <b>Javascript</b> and some base
+              problems in <b>Node.js</b>. Tasks and my solutions can be found in
+              these four repositories:
+            </>
+          ) : (
+            <>
+              Во время учёбы в <b>RsSchool</b> я решала задачи по алгоритмам и
+              структурам данных на <b>Javascript</b> и некоторые базовые
+              проблемы на <b>Node.js</b>. Задачи и мои решения можно найти в
+              этих четырёх репозиториях:
+            </>
+          )}
         </p>
 
         <ul className="education__list">
@@ -68,42 +91,93 @@ const Education = () => {
         </ul>
 
         <p className="education__text">
-          The other part of the tasks was solved within the <b>CodeWars</b>{" "}
-          site. So you can{" "}
-          <CustomLink href="https://www.codewars.com/users/sashtje">
-            see my{" "}
-            <span className="education__text-icon">
-              <SiCodewars color="#b1361e" />
-            </span>{" "}
-            profile
-          </CustomLink>{" "}
-          here.
+          {isEnLang ? (
+            <>
+              The other part of the tasks was solved within the <b>CodeWars</b>{" "}
+              site. So you can{" "}
+              <CustomLink href="https://www.codewars.com/users/sashtje">
+                see my{" "}
+                <span className="education__text-icon">
+                  <SiCodewars color="#b1361e" />
+                </span>{" "}
+                profile
+              </CustomLink>{" "}
+              here.
+            </>
+          ) : (
+            <>
+              Остальная часть задач решалась в рамках сайта <b>CodeWars</b>. Так
+              что вы можете{" "}
+              <CustomLink href="https://www.codewars.com/users/sashtje">
+                посмотреть мой{" "}
+                <span className="education__text-icon">
+                  <SiCodewars color="#b1361e" />
+                </span>{" "}
+                профиль
+              </CustomLink>{" "}
+              здесь.
+            </>
+          )}
         </p>
 
         <p className="education__text education__text_is_big-margins">
-          I also took a course on <b>React</b> from <b>RsSchool</b>, completed
-          all the tasks except the last one. I left before the last task because
-          I already have a similar big team project in React and I decided that
-          it would be more useful for me to spend this time building my
-          portfolio (this site), finding a job and continuing to improve my
-          skills in parallel. You can{" "}
-          <CustomLink href="https://github.com/sashtje/rsschool-react">
-            see my RsSchool{" "}
-            <span className="education__text-icon">
-              <SiReact color="#61dafb" />
-            </span>{" "}
-            repo
-          </CustomLink>{" "}
-          here.
+          {isEnLang ? (
+            <>
+              I also took a course on <b>React</b> from <b>RsSchool</b>,
+              completed all the tasks except the last one. I left before the
+              last task because I already have a similar big team project in
+              React and I decided that it would be more useful for me to spend
+              this time building my portfolio (this site), finding a job and
+              continuing to improve my skills in parallel. You can{" "}
+              <CustomLink href="https://github.com/sashtje/rsschool-react">
+                see my RsSchool{" "}
+                <span className="education__text-icon">
+                  <SiReact color="#61dafb" />
+                </span>{" "}
+                repo
+              </CustomLink>{" "}
+              here.
+            </>
+          ) : (
+            <>
+              Я также прошла курс по <b>React</b> от <b>RsSchool</b>, выполнила
+              все задания, кроме последнего. Я ушла перед последним заданием,
+              потому что у меня уже есть подобный большой командный проект на
+              React, и я решила, что мне будет полезнее потратить это время на
+              создание своего сайта портфолио (этот сайт), поиск работы и
+              параллельно продолжать совершенствовать свои навыки. Вы можете{" "}
+              <CustomLink href="https://github.com/sashtje/rsschool-react">
+                посмотреть мой RsSchool{" "}
+                <span className="education__text-icon">
+                  <SiReact color="#61dafb" />
+                </span>{" "}
+                репозиторий
+              </CustomLink>{" "}
+              здесь.
+            </>
+          )}
         </p>
 
         <p className="education__text">
-          Here are my two certificates from{" "}
-          <CustomLink href="https://www.freecodecamp.org/">
-            freecodecamp.org
-          </CustomLink>
-          : <b>"Responsive Web Design"</b> and{" "}
-          <b>"JavaScript Algorithms and Data Structures"</b>.
+          {isEnLang ? (
+            <>
+              Here are my two certificates from{" "}
+              <CustomLink href="https://www.freecodecamp.org/">
+                freecodecamp.org
+              </CustomLink>
+              : <b>"Responsive Web Design"</b> and{" "}
+              <b>"JavaScript Algorithms and Data Structures"</b>.
+            </>
+          ) : (
+            <>
+              Мои сертификаты от{" "}
+              <CustomLink href="https://www.freecodecamp.org/">
+                freecodecamp.org
+              </CustomLink>
+              : <b>"Отзывчивый веб-дизайн"</b> и{" "}
+              <b>"JavaScript алгоритмы и структуры данных"</b>.
+            </>
+          )}
         </p>
 
         <Certificates isTable={true}>
