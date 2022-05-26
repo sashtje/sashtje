@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { SiDuolingo } from "react-icons/si";
 
 import CustomLink from "../CustomLink";
@@ -12,15 +12,20 @@ import elemImg from "../../assets/images/languages/elementary.webp";
 import preInterImg from "../../assets/images/languages/pre-intermediate.webp";
 import interImg from "../../assets/images/languages/intermediate.webp";
 import upperInterImg from "../../assets/images/languages/upper-intermediate.webp";
+import { SettingsContext } from "../../context";
 
 const Languages = () => {
+  let { isEnLang } = useContext(SettingsContext);
+
   return (
     <div className="languages">
       <div className="languages__block">
         <div className="languages__language">
           <div className="languages__language-title">RU</div>
 
-          <div className="languages__language-subtitle">native</div>
+          <div className="languages__language-subtitle">
+            {isEnLang ? "native" : "родной"}
+          </div>
         </div>
 
         <div className="languages__language">
@@ -32,7 +37,7 @@ const Languages = () => {
 
       <section className="languages__section">
         <h2 className="languages__section-title">
-          Certificate from{" "}
+          {isEnLang ? "Certificate from" : "Сертификат от"}{" "}
           <CustomLink href="https://www.efset.org/ef-set-50/">EF</CustomLink>:
         </h2>
 
@@ -49,7 +54,7 @@ const Languages = () => {
 
       <section className="languages__section">
         <h2 className="languages__section-title">
-          Certificates from{" "}
+          {isEnLang ? "Certificates from" : "Сертификаты от"}{" "}
           <CustomLink href="https://apps.apple.com/ca/app/english-learning-with-simpler/id1265670676">
             Simpler app
           </CustomLink>
@@ -88,25 +93,54 @@ const Languages = () => {
       </section>
 
       <p className="languages__text">
-        I have experience of correspondence and communication with native
-        speakers.
+        {isEnLang ? (
+          <>
+            I have experience of correspondence and communication with native
+            speakers.
+          </>
+        ) : (
+          <>
+            У меня есть опыт переписки и общения с носителями английского языка.
+          </>
+        )}
       </p>
 
       <p className="languages__text">
-        I enjoy constantly improving my English using different platforms and
-        books. Here you can{" "}
-        <CustomLink href="https://www.duolingo.com/profile/RoboOwl">
-          see my{" "}
-          <span className="languages__text-icon">
-            <SiDuolingo color="#58cc02" />
-          </span>{" "}
-          account
-        </CustomLink>
-        .
+        {isEnLang ? (
+          <>
+            I enjoy constantly improving my English using different platforms
+            and books. Here you can{" "}
+            <CustomLink href="https://www.duolingo.com/profile/RoboOwl">
+              see my{" "}
+              <span className="languages__text-icon">
+                <SiDuolingo color="#58cc02" />
+              </span>{" "}
+              account
+            </CustomLink>
+            .
+          </>
+        ) : (
+          <>
+            Мне нравится постоянно улучшать свой английский, используя разные
+            приложения, видео и книги. Здесь вы можете{" "}
+            <CustomLink href="https://www.duolingo.com/profile/RoboOwl">
+              посмотреть мой{" "}
+              <span className="languages__text-icon">
+                <SiDuolingo color="#58cc02" />
+              </span>{" "}
+              профиль
+            </CustomLink>
+            .
+          </>
+        )}
       </p>
 
       <p className="languages__text">
-        If it is necessary, I will be happy to learn any other languages.
+        {isEnLang ? (
+          <>If it is necessary, I will be happy to learn any other languages.</>
+        ) : (
+          <>Если будет нужно, с радостью выучу любые другие языки.</>
+        )}
       </p>
     </div>
   );
