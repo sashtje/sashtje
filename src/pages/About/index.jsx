@@ -141,7 +141,7 @@ const About = () => {
             <p className="about-me__text">
               {isEnLang
                 ? "I am passionate about Web development and design, enjoy coding and learning new things."
-                : "Я увлечена веб-разработкой и дизайном, получаю удовольствие от написания кода и изучения новых вещей."}
+                : "Я увлечена веб-разработкой и дизайном, люблю писать код и изучать новые технологии."}
             </p>
 
             <p className="about-me__text">
@@ -156,7 +156,7 @@ const About = () => {
                 : "Я самостоятельный, ответственный, настойчивый, коммуникабельный и ориентированный на результат человек. Для меня важно делать свою работу качественно."}
             </p>
 
-            <p className="about-me__text">
+            <p className="about-me__text about-me__text_big_margin-bottom">
               {isEnLang
                 ? "I would be happy to find a development team to work together on modern interesting projects and to continuously improving my skills."
                 : "Буду рада найти команду разработчиков для совместной работы над современными интересными проектами и постоянного совершенствования своих навыков."}

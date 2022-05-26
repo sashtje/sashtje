@@ -43,7 +43,7 @@ $first-delay: 0s;
   &__about-me {
     max-width: 1220px;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     display: grid;
     grid-template-columns: repeat(2, calc(50% - 10px));
     grid-gap: 20px;
@@ -111,6 +111,10 @@ $first-delay: 0s;
       color: var(--about-text-first-letter);
       font-size: calc(16px + 7 * (100vw / 1800));
       text-shadow: 1px 1px 2px #000000;
+    }
+
+    &_big_margin-bottom {
+      margin-bottom: 30px;
     }
   }
 }

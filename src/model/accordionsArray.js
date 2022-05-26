@@ -8,10 +8,30 @@ import Education from "./../components/Education";
 import Languages from "./../components/Languages";
 
 const accordionsArray = [
-  { icon: <GiBrickWall />, title: "Skills", content: <Skills /> },
-  { icon: <BsFillBriefcaseFill />, title: "Projects", content: <Projects /> },
-  { icon: <FaGraduationCap />, title: "Education", content: <Education /> },
-  { icon: <BsGlobe />, title: "Languages", content: <Languages /> },
+  {
+    icon: <GiBrickWall />,
+    title: "Skills",
+    content: <Skills />,
+    titleRu: "Навыки",
+  },
+  {
+    icon: <BsFillBriefcaseFill />,
+    title: "Projects",
+    content: <Projects />,
+    titleRu: "Проекты",
+  },
+  {
+    icon: <FaGraduationCap />,
+    title: "Education",
+    content: <Education />,
+    titleRu: "Образование",
+  },
+  {
+    icon: <BsGlobe />,
+    title: "Languages",
+    content: <Languages />,
+    titleRu: "Языки",
+  },
 ];
 
 export default accordionsArray;
