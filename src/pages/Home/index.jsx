@@ -1,8 +1,9 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { RingLoader } from "react-spinners";
 
 import AnimatedLetters from "./../../components/AnimatedLetters/";
 import ContactControls from "../../components/ContactControls";
+import { useEffectOnce } from "../../hooks/useEffectOnce";
 
 import "./styles.scss";
 
@@ -14,7 +15,9 @@ const Home = () => {
 
   let { isLightTheme, isEnLang } = useContext(SettingsContext);
 
-  useEffect(() => {
+  useEffectOnce(() => {
+    window.scrollTo(0, -1);
+
     setTimeout(() => {
       setIsLoading(false);
     }, 2000);

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useContext } from "react";
+import React, { useRef, useState, useContext } from "react";
 import { CircleLoader } from "react-spinners";
 import { SiLinkedin, SiTwitter, SiGithub, SiGmail } from "react-icons/si";
 import { BsBuilding } from "react-icons/bs";
@@ -7,6 +7,7 @@ import emailjs from "@emailjs/browser";
 
 import AnimatedLetters from "../../components/AnimatedLetters";
 import ModalWindow from "../../components/ModalWindow";
+import { useEffectOnce } from "../../hooks/useEffectOnce";
 
 import "./styles.scss";
 
@@ -28,7 +29,9 @@ const Contacts = () => {
 
   let { isLightTheme, isEnLang } = useContext(SettingsContext);
 
-  useEffect(() => {
+  useEffectOnce(() => {
+    window.scrollTo(0, 0);
+
     setTimeout(() => {
       setIsLoading(false);
     }, 2000);

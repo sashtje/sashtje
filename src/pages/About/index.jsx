@@ -71,6 +71,8 @@ const About = () => {
   };
 
   useEffectOnce(() => {
+    window.scrollTo(0, 0);
+
     setTimeout(() => {
       setIsLoading(false);
     }, 2000);
