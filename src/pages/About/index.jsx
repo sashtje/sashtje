@@ -95,23 +95,39 @@ const About = () => {
       <main className="page__content about">
         <h1 className="about__title">
           <AnimatedLetters
-            strArray={[
-              ["A", ""],
-              ["b", ""],
-              ["o", ""],
-              ["u", ""],
-              ["t", ""],
-            ]}
+            strArray={
+              isEnLang
+                ? [
+                    ["A", ""],
+                    ["b", ""],
+                    ["o", ""],
+                    ["u", ""],
+                    ["t", ""],
+                  ]
+                : [
+                    ["О", ""],
+                    ["б", ""],
+                    ["о", ""],
+                  ]
+            }
             startDelay={1.5}
-            timeBeforeHoverActive={3}
+            timeBeforeHoverActive={isEnLang ? 3 : 2.8}
           />{" "}
           <AnimatedLetters
-            strArray={[
-              ["m", ""],
-              ["e", ""],
-            ]}
-            startDelay={2.1}
-            timeBeforeHoverActive={3.3}
+            strArray={
+              isEnLang
+                ? [
+                    ["m", ""],
+                    ["e", ""],
+                  ]
+                : [
+                    ["м", ""],
+                    ["н", ""],
+                    ["е", ""],
+                  ]
+            }
+            startDelay={isEnLang ? 2.1 : 1.9}
+            timeBeforeHoverActive={isEnLang ? 3.3 : 3.2}
           />
         </h1>
 
