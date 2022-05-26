@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { HiCode } from "react-icons/hi";
+
+import { SettingsContext } from "../../../context";
 
 const ProjectsItem = ({
   title,
@@ -9,7 +11,10 @@ const ProjectsItem = ({
   codeLink,
   tags,
   description,
+  descriptionRu,
 }) => {
+  let { isEnLang } = useContext(SettingsContext);
+
   return (
     <section className="projects__item projects-item">
       <h2 className="projects-item__title">{title}</h2>
@@ -41,7 +46,7 @@ const ProjectsItem = ({
         ))}
       </div>
 
-      {description.map((item, index) => (
+      {(isEnLang ? description : descriptionRu).map((item, index) => (
         <p key={index} className="projects-item__text">
           {item}
         </p>

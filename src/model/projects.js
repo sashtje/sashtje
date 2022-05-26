@@ -63,6 +63,16 @@ const theWatch = {
       watch is drawn with only html and css, responsive.
     </>,
   ],
+  descriptionRu: [
+    <>
+      Золотые часы — моя идея от дизайна до воплощения. Часы можно открыть,
+      нажав на крышку, и закрыть, нажав на кнопку, которая появляется, когда
+      часы открываются. Для вращения крышки использовалась 3D трансформация.
+      Часы показывают время тремя стрелками, а также отображает текущую дату.
+      Есть функция включения звука. Часы нарисованы с помощью html и css,
+      отзывчивый дизайн.
+    </>,
+  ],
 };
 
 const timerCat = {
@@ -82,6 +92,16 @@ const timerCat = {
       drawn with only html and css, responsive.
     </>,
   ],
+  descriptionRu: [
+    <>
+      Кошка-таймер — тоже моя идея от дизайна до реализации. Есть два режима:
+      светлый и тёмный. Когда пользователь закрывает вкладку, таймер запоминает
+      какой режим был включен последним и при повторном открытии сразу включает
+      последний выбранный режим. Глаза кошки могут следить за курсором и
+      моргать, кошка спит, когда таймер включен, и мяукает, когда время истекло.
+      Таймер нарисован только с помощью html и css, отзывчивый дизайн.
+    </>,
+  ],
 };
 
 const birthdayCard = {
@@ -96,6 +116,13 @@ const birthdayCard = {
       Birthday card was made for my Belgian friend. The site is made in Dutch,
       you can turn on congratulatory music and a song. There are some simple
       animations. Responsive.
+    </>,
+  ],
+  descriptionRu: [
+    <>
+      Открытка на День Рождения была сделана для моего бельгийского друга. Сайт
+      сделан на нидерландском языке, можно включить поздравительную музыку и
+      песню. Есть несколько простых анимаций. Отзывчивый дизайн.
     </>,
   ],
 };
@@ -114,6 +141,15 @@ const rsLang = {
       following main parts: main page, auth, textbook, 2 games, statistics and
       page about us. To learn more details click on the button with code to go
       to my GitHub.
+    </>,
+  ],
+  descriptionRu: [
+    <>
+      RsLang - приложение для изучения английского языка. Это была командная
+      задача от RsSchool, где я была тимлидом. Приложение состоит из следующих
+      основных частей: главная страница, авторизация, учебник, 2 игры,
+      статистика и страница о нас. Чтобы узнать подробнее нажмите на кнопку с
+      кодом для перехода на мой GitHub.
     </>,
   ],
 };
@@ -147,6 +183,16 @@ const rsReact = {
       Flickr Api.
     </>,
   ],
+  descriptionRu: [
+    <>
+      Несколько задач из курса React RsSchool. В ходе курса были изучены
+      управляемые и неуправляемые компоненты, классовые и функциональные
+      компоненты, работа с формами, порталами, Redux, тесты писались с
+      использованием Jest и React Testing Library. Также я использовала
+      LocationIq, чтобы найти место, где была сделана фотография по базовым
+      координатам широты и долготы, полученным из Flickr Api.
+    </>,
+  ],
 };
 
 const rsCv = {
@@ -161,6 +207,13 @@ const rsCv = {
       CV as a study project from RsSchool. When you click on a photo, another
       one appears. When the page loads, the logo, moon, and menu or burger menu
       buttons will animate.
+    </>,
+  ],
+  descriptionRu: [
+    <>
+      CV как учебный проект от RsSchool. Если нажать на фотографию, она
+      повернётся и откроет вторую. Используется анимация для появления логотипа,
+      луны и кнопок меню (или бургер-меню).
     </>,
   ],
 };
@@ -186,6 +239,12 @@ const rsMuseum = {
       The site is adapted, a different look for different resolutions.
     </>,
   ],
+  descriptionRu: [
+    <>
+      Аналог сайта Лувра. Это было задание от RsSchool в 3-х частях. Сайт
+      адаптирован, разный вид для разных разрешений.
+    </>,
+  ],
 };
 
 const rsMomentum = {
@@ -206,11 +265,23 @@ const rsMomentum = {
   description: [
     <>
       Analogue of the extension of the same name for Chrome. The site shows the
-      date, time, a wish for a good time of the day, allows you to enter a name
-      and remembers it. Also shows the weather, quotes (can be changed). There
-      are buttons for sliding background photos. In the settings, you can select
-      the language of the site, the source of photos: a repository from github,
-      flickr or unsplash, and you can also remove or add all these widgets.
+      date, time, a wish for a good time of the day, a custom audio player,
+      allows you to enter a name and remembers it. Also shows the weather,
+      quotes (can be changed). There are buttons for sliding background photos.
+      In the settings, you can select the language of the site, the source of
+      photos: a repository from Github, Flickr or Unsplash, and you can also
+      remove or add all these widgets.
+    </>,
+  ],
+  descriptionRu: [
+    <>
+      Аналог одноимённого расширения для Chrome. На сайте представлены: дата,
+      время, пожелание доброго времени суток, аудиоплеер. Сайт позволяет ввести
+      имя и запоминает его. Также показывает погоду и цитату дня (можно менять).
+      Есть возможность перелистывать фоновые фотографии. В настройках можно
+      выбрать язык сайта, источник фотографий: репозиторий с GitHub, Flickr или
+      Unsplash, а также можно управлять отображением всех этих виджетов на
+      странице.
     </>,
   ],
 };
@@ -233,6 +304,17 @@ const rsArtQuiz = {
       download it to your computer.
     </>,
   ],
+  descriptionRu: [
+    <>
+      Викторина (SPA). Это задание от RsSchool. В ходе игры нужно либо угадать
+      художника по картине, либо картину по художнику. Если вы разыграете одну
+      из категорий, после завершения игры появится иконка с количеством
+      правильных ответов. При нажатии на эту иконку откроется страница с
+      результатами, где можно увидеть подробную информацию о картинах этой
+      категории (если на них нажать). Также можно будет открыть картину на весь
+      экран или скачать её на свой компьютер.
+    </>,
+  ],
 };
 
 const rsNewsPortal = {
@@ -248,6 +330,14 @@ const rsNewsPortal = {
       vanilla JavaScript to TypeScript and make its appearance better and
       adaptive. I added a menu with letters for a more compact and convenient
       selection of news.
+    </>,
+  ],
+  descriptionRu: [
+    <>
+      Задание от RsSchool. Существующее приложение необходимо было мигрировать с
+      ванильного JavaScript в TypeScript и сделать его внешний вид приятнее и
+      адаптировать. Для улучшения внешнего вида, более компактного и удобного
+      поиска новостей я добавила меню с буквами алфавита.
     </>,
   ],
 };
@@ -279,6 +369,17 @@ const rsChristmasTask = {
       developed for the latest version of Chrome.
     </>,
   ],
+  descriptionRu: [
+    <>
+      Задание от RsSchool. Это приложение состоит из 3 страниц: домашняя
+      страница, страница с игрушками и страница с ёлкой. На странице с игрушками
+      вы можете выбирать и сортировать игрушки, которыми потом будете украшать
+      ёлку. На странице с ёлкой можно выбрать: тип ёлки, фон, гирлянду, включить
+      Рождественскую музыку, снег. А ещё можно повесить шарики на ёлку и снять
+      их. Приложение адаптировано от 768px в ширину и выше, и было разработано
+      для последней версии Chrome.
+    </>,
+  ],
 };
 
 const rsAsyncRace = {
@@ -302,6 +403,22 @@ const rsAsyncRace = {
       page. The winners can be sorted in the table.
     </>,
   ],
+  descriptionRu: [
+    <>
+      Гонки. Работа с асинхронными запросами и API. Прежде чем использовать это
+      приложение Вам понадобится запустить{" "}
+      <CustomLink href="https://github.com/sashtje/async-race-api">
+        {" "}
+        сервер
+      </CustomLink>{" "}
+      локально. Приложение состоит из двух страниц: гараж и победители. На
+      странице гаража вы можете создавать автомобили, изменять их и удалять.
+      Также Вы можете запустить двигатель одной машины или начать гонку. Есть
+      возможность листать страницы гаража с машинами и запускать гонку на любой
+      их этих страниц. Машины, выигравшие гонку, добавляются в таблицу
+      победителей. Победителей можно сортировать при клике на шапку таблицы.
+    </>,
+  ],
 };
 
 const rsCssMemSlider = {
@@ -315,6 +432,12 @@ const rsCssMemSlider = {
     <>
       Slider with animated switching of pictures and captions to them. The task
       was to make a slider without using JavaScript.
+    </>,
+  ],
+  descriptionRu: [
+    <>
+      Слайдер с анимированным переключением картинок и подписей к ним. Задание
+      заключалось в том, чтобы сделать слайдер без использования JavaScript.
     </>,
   ],
 };
@@ -333,6 +456,13 @@ const rsPresentationSVG = {
       recorded a video with my performance in English.
     </>,
   ],
+  descriptionRu: [
+    <>
+      Презентация на английском, задание от RsSchool. Я сделала презентацию
+      "SVG: Режимы, Координаты, Базовые фигуры, Доступность, Анимация» на
+      английском и записал видео с моим выступлением на английском языке.
+    </>,
+  ],
 };
 
 const bicycleLandingPage = {
@@ -344,6 +474,12 @@ const bicycleLandingPage = {
   tags: ["html", "css", "scss", "bem", "js"],
   description: [
     <>Landing page. Just a training layout. Responsive with burger menu.</>,
+  ],
+  descriptionRu: [
+    <>
+      Целевая страница. Просто тренировочный макет для вёрстки. Отзывчивый
+      дизайн с гамбургер-меню.
+    </>,
   ],
 };
 
@@ -360,6 +496,12 @@ const cocktails = {
       upload a photo. Responsive.
     </>,
   ],
+  descriptionRu: [
+    <>
+      Целевая страница. Просто обучающий макет со слайдерами и возможностью
+      загрузить фото. Отзывчивый дизайн.
+    </>,
+  ],
 };
 
 const lionInDesert = {
@@ -370,6 +512,7 @@ const lionInDesert = {
   codeLink: "https://codepen.io/sashtje/pen/KKgpKPw",
   tags: ["html", "css"],
   description: [<>Landing page. Just a simple training layout. Responsive.</>],
+  descriptionRu: [<>Целевая страница. Тренировочный макет. Адаптированный.</>],
 };
 
 const surveyForm = {
@@ -382,6 +525,12 @@ const surveyForm = {
   description: [
     <>
       My work for freecodecamp site to get "Responsive Web Design" certificate.
+    </>,
+  ],
+  descriptionRu: [
+    <>
+      Моя работа для курса с сайта freecodecamp для получения сертификата
+      "Отзывчивый веб-дизайн".
     </>,
   ],
 };
@@ -398,6 +547,12 @@ const musicWorld = {
       My work for freecodecamp site to get "Responsive Web Design" certificate.
     </>,
   ],
+  descriptionRu: [
+    <>
+      Моя работа для курса с сайта freecodecamp для получения сертификата
+      "Отзывчивый веб-дизайн".
+    </>,
+  ],
 };
 
 const techDoc = {
@@ -410,6 +565,12 @@ const techDoc = {
   description: [
     <>
       My work for freecodecamp site to get "Responsive Web Design" certificate.
+    </>,
+  ],
+  descriptionRu: [
+    <>
+      Моя работа для курса с сайта freecodecamp для получения сертификата
+      "Отзывчивый веб-дизайн".
     </>,
   ],
 };
@@ -426,6 +587,12 @@ const tributePage = {
       My work for freecodecamp site to get "Responsive Web Design" certificate.
     </>,
   ],
+  descriptionRu: [
+    <>
+      Моя работа для курса с сайта freecodecamp для получения сертификата
+      "Отзывчивый веб-дизайн".
+    </>,
+  ],
 };
 
 const fakePortfolio = {
@@ -440,6 +607,12 @@ const fakePortfolio = {
       My work for freecodecamp site to get "Responsive Web Design" certificate.
     </>,
   ],
+  descriptionRu: [
+    <>
+      Моя работа для курса с сайта freecodecamp для получения сертификата
+      "Отзывчивый веб-дизайн".
+    </>,
+  ],
 };
 
 const travelSite = {
@@ -450,6 +623,9 @@ const travelSite = {
   codeLink: "https://github.com/AleksaWebDev/travel-project",
   tags: ["html", "css"],
   description: [<>Landing page. Just a simple training layout. Responsive.</>],
+  descriptionRu: [
+    <>Целевая страница. Простой тренировочный макет. Отзывчивый дизайн.</>,
+  ],
 };
 
 const projects = [
