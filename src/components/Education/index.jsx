@@ -212,40 +212,69 @@ const Education = () => {
               I worked as a <b>1C programmer</b>, improved the current
               configuration of the enterprise system, maintained and improved
               the old code, and also wrote new functionality. I also maintained
-              2 existing projects in <b>C#</b> and wrote in <b>C#</b> from
-              scratch a site parser through a proxy.
+              2 existing projects in <b>C#</b> and wrote in <b>C#</b> with{" "}
+              <b>SQL</b> from scratch a site parser through a proxy.
             </>
           ) : (
             <>
               Работала <b>программистом 1С</b>, улучшала существующую
               конфигурацию корпоративной системы, поддерживала и оптимизировала
               старый код, писала новый функционал. Также поддерживала 2
-              существующих проекта на <b>C#</b> и написала на <b>C#</b> парсер
-              сайта через прокси.
+              существующих проекта на <b>C#</b> и написала на <b>C#</b> с
+              использованием <b>SQL</b> парсер сайта через прокси.
             </>
           )}
         </p>
       </section>
 
       <section className="education__section">
-        <h2 className="education__title">University:</h2>
+        <h2 className="education__title">
+          {isEnLang ? "University:" : "Университет:"}
+        </h2>
 
         <p className="education__text">
-          I have graduated from <b>Lomonosov Moscow State University</b>, have
-          successfully completed Specialist programme in{" "}
-          <b>"Applied Mathematics and Computer Science"</b> and have been
-          awarded the qualification of{" "}
-          <b>"Specialist in Mathematics and System Programming"</b>.
+          {isEnLang ? (
+            <>
+              I have graduated from <b>Lomonosov Moscow State University</b>,
+              have successfully completed Specialist programme in{" "}
+              <b>"Applied Mathematics and Computer Science"</b> and have been
+              awarded the qualification of{" "}
+              <b>"Specialist in Mathematics and System Programming"</b>.
+            </>
+          ) : (
+            <>
+              Я окончила{" "}
+              <b>Московский государственный университет им. М.В. Ломоносова</b>{" "}
+              (специалитет) по специальности{" "}
+              <b>"Прикладная математика и информатика"</b>, и мне присвоена
+              квалификация <b>"Математик, системный программист"</b>.
+            </>
+          )}
         </p>
 
         <p className="education__text">
-          My diploma <b>"Tools for teaching logic programming"</b> consisted
-          from the development and implementation of a graphical tracing system
-          for the Prolog language. The system traces programs written in Prolog
-          and displays the result in the form of a proof tree. The
-          implementation of the tracer was written in <b>SWI-Prolog</b> with an
-          object-oriented library <b>XPCE</b>, with which a graphical user
-          interface was created.
+          {isEnLang ? (
+            <>
+              My diploma <b>"Tools for teaching logic programming"</b> consisted
+              from the development and implementation of a graphical tracing
+              system for the Prolog language. The system traces programs written
+              in Prolog and displays the result in the form of a proof tree. The
+              implementation of the tracer was written in <b>SWI-Prolog</b> with
+              an object-oriented library <b>XPCE</b>, with which a graphical
+              user interface was created.
+            </>
+          ) : (
+            <>
+              Моя дипломная работа{" "}
+              <b>"Средства поддержки обучения логическому программированию"</b>{" "}
+              состояла в разработке и реализации системы графической трассировки
+              для языка Пролог. Система осуществляет трассировку пролог-программ
+              и выводит результат в виде дерева доказательства. Реализация
+              трассировщика была написана на <b>SWI-Prolog</b> с
+              объектно-ориентированной библиотекой <b>XPCE</b>, при помощи
+              которой был создан графический пользовательский интерфейс.
+            </>
+          )}
         </p>
 
         <Certificates isTable={false}>
@@ -258,20 +287,51 @@ const Education = () => {
         </Certificates>
 
         <p className="education__text">
-          As part of my studies at the University, I worked with the{" "}
-          <b>Linux</b> operating system, technologies <b>OpenMP</b>, <b>MPI</b>,
-          as well as with a number of programming languages: <b>Assembler</b>,{" "}
-          <b>C</b>, <b>C++</b>, <b>C#</b>, <b>Java</b>, <b>Lisp</b>,{" "}
-          <b>Prolog</b>, a little <b>Haskell</b>.
+          {isEnLang ? (
+            <>
+              As part of my studies at the University, I worked with the{" "}
+              <b>Linux</b> operating system, technologies <b>OpenMP</b>,{" "}
+              <b>MPI</b>, databases: <b>SQL</b>, as well as with a number of
+              programming languages: <b>Assembler</b>, <b>C</b>, <b>C++</b>,{" "}
+              <b>C#</b>, <b>Java</b>, <b>Lisp</b>, <b>Prolog</b>, a little{" "}
+              <b>Haskell</b>.
+            </>
+          ) : (
+            <>
+              Во время обучения в Университете я работала с операционной
+              системой <b>Linux</b>, технологиями: <b>OpenMP</b>, <b>MPI</b>,
+              базами данных: <b>SQL</b>, а также с рядом языков
+              программирования: <b>Assembler</b>, <b>C</b>, <b>C++</b>,{" "}
+              <b>C#</b>, <b>Java</b>, <b>Lisp</b>, <b>Пролог</b>, немного{" "}
+              <b>Haskell</b>.
+            </>
+          )}
         </p>
 
         <p className="education__text">
-          Also I have a little experience with <b>PHP</b> and <b>Python</b>.
+          {isEnLang ? (
+            <>
+              Also I have a little experience with <b>PHP</b> and <b>Python</b>.
+            </>
+          ) : (
+            <>
+              Также у меня есть небольшой опыт с <b>PHP</b> и <b>Python</b>.
+            </>
+          )}
         </p>
 
         <p className="education__text">
-          I am a fast learner and ready with great pleasure to learn all the
-          necessary technologies for work.
+          {isEnLang ? (
+            <>
+              I am a fast learner and ready with great pleasure to learn all the
+              necessary technologies for work.
+            </>
+          ) : (
+            <>
+              Я быстро учусь и готова с большим удовольствием изучить все
+              необходимые технологии для работы.
+            </>
+          )}
         </p>
       </section>
     </div>
