@@ -50,6 +50,10 @@
     animation: fadeInUp 1s 2.8s forwards;
     opacity: 0;
 
+    [lang="ru"] & {
+      animation: fadeInUp 1s 3s forwards;
+    }
+
     &_is_highlight {
       font-weight: 600;
       color: var(--contacts-color-highlight);

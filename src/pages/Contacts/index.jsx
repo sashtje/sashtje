@@ -67,26 +67,47 @@ const Contacts = () => {
       <main className="page__content contacts">
         <h1 className="contacts__title">
           <AnimatedLetters
-            strArray={[
-              ["M", ""],
-              ["y", ""],
-            ]}
+            strArray={
+              isEnLang
+                ? [
+                    ["M", ""],
+                    ["y", ""],
+                  ]
+                : [
+                    ["М", ""],
+                    ["о", ""],
+                    ["и", ""],
+                  ]
+            }
             startDelay={1.5}
-            timeBeforeHoverActive={2.7}
+            timeBeforeHoverActive={isEnLang ? 2.7 : 2.8}
           />{" "}
           <AnimatedLetters
-            strArray={[
-              ["c", ""],
-              ["o", ""],
-              ["n", ""],
-              ["t", ""],
-              ["a", ""],
-              ["c", ""],
-              ["t", ""],
-              ["s", ""],
-            ]}
-            startDelay={1.8}
-            timeBeforeHoverActive={3.6}
+            strArray={
+              isEnLang
+                ? [
+                    ["c", ""],
+                    ["o", ""],
+                    ["n", ""],
+                    ["t", ""],
+                    ["a", ""],
+                    ["c", ""],
+                    ["t", ""],
+                    ["s", ""],
+                  ]
+                : [
+                    ["к", ""],
+                    ["о", ""],
+                    ["н", ""],
+                    ["т", ""],
+                    ["а", ""],
+                    ["к", ""],
+                    ["т", ""],
+                    ["ы", ""],
+                  ]
+            }
+            startDelay={isEnLang ? 1.8 : 1.9}
+            timeBeforeHoverActive={isEnLang ? 3.6 : 3.7}
           />
         </h1>
         <p className="contacts__about">
