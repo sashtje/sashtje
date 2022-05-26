@@ -139,26 +139,27 @@ const About = () => {
               alt="Sashtje, frontend developer"
             />
             <p className="about-me__text">
-              I am passionate about Web development and design, enjoy coding and
-              learning new things.
+              {isEnLang
+                ? "I am passionate about Web development and design, enjoy coding and learning new things."
+                : "Я увлечена веб-разработкой и дизайном, получаю удовольствие от написания кода и изучения новых вещей."}
             </p>
 
             <p className="about-me__text">
-              I like to create various animations and my goal is to make the
-              communication between a user and the Web the most enjoyable and
-              interesting.
+              {isEnLang
+                ? "I like to create various animations and my goal is to make the communication between a user and the Web the most enjoyable and interesting."
+                : "Мне нравится создавать различные анимации, и моя цель — сделать общение между пользователем и Интернетом максимально приятным и интересным."}
             </p>
 
             <p className="about-me__text">
-              I am an independent, responsible, persistent, communicative and
-              result-oriented person. It is important for me to do my work with
-              a high quality.
+              {isEnLang
+                ? "I am an independent, responsible, persistent, communicative and result-oriented person. It is important for me to do my work with a high quality."
+                : "Я самостоятельный, ответственный, настойчивый, коммуникабельный и ориентированный на результат человек. Для меня важно делать свою работу качественно."}
             </p>
 
             <p className="about-me__text">
-              I would be happy to find a development team to work together on
-              modern interesting projects and to continuously improving my
-              skills.
+              {isEnLang
+                ? "I would be happy to find a development team to work together on modern interesting projects and to continuously improving my skills."
+                : "Буду рада найти команду разработчиков для совместной работы над современными интересными проектами и постоянного совершенствования своих навыков."}
             </p>
 
             <ContactControls />
