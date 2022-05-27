@@ -4,47 +4,67 @@ import theWatchImg from "../assets/images/projects/the-watch.webp";
 
 import timerCatImg from "../assets/images/projects/timer-cat-light.webp";
 
-import birthdayCardImg from "../assets/images/projects/birthday-card.webp";
-
-import rsLangImg from "../assets/images/projects/rs-lang.webp";
-
-import rsReactImg from "../assets/images/projects/rs-react.webp";
-
-import rsCvImg from "../assets/images/projects/rs-cv.webp";
-
-import rsMuseumImg from "../assets/images/projects/rs-museum.webp";
-
 import rsMomentumImg from "../assets/images/projects/rs-momentum.webp";
 
 import rsArtQuizImg from "../assets/images/projects/rs-art-quiz.webp";
 
-import rsNewsPortalImg from "../assets/images/projects/rs-news-portal.webp";
-
 import rsChristmasImg from "../assets/images/projects/rs-christmas-task.webp";
-
-import rsAsyncRaceImg from "../assets/images/projects/rs-async-race.webp";
 
 import rsCssMemSliderImg from "../assets/images/projects/rs-css-mem-slider.webp";
 
 import rsPresentationSVGImg from "../assets/images/projects/rs-presentation-svg.webp";
 
-import bicycleLandingPageImg from "../assets/images/projects/bicycle-landing-page.webp";
-
-import cocktailsLandingPageImg from "../assets/images/projects/cocktails.webp";
-
-import lionInDesertImg from "../assets/images/projects/lion-in-desert.webp";
-
-import surveyFormImg from "../assets/images/projects/survey-form.webp";
-
-import musicWorldImg from "../assets/images/projects/music-world.webp";
-
-import techDocImg from "../assets/images/projects/tech-doc.webp";
-
-import tributePageImg from "../assets/images/projects/tribute-page.webp";
-
-import fakePortfolioImg from "../assets/images/projects/fake-portfolio.webp";
-
 import travelSiteImg from "../assets/images/projects/travel-site.webp";
+
+let birthdayCardImg,
+  rsLangImg,
+  rsReactImg,
+  rsCvImg,
+  rsMuseumImg,
+  rsNewsPortalImg,
+  rsAsyncRaceImg,
+  bicycleLandingPageImg,
+  cocktailsLandingPageImg,
+  lionInDesertImg,
+  surveyFormImg,
+  musicWorldImg,
+  techDocImg,
+  tributePageImg,
+  fakePortfolioImg;
+
+if (matchMedia(`(hover: none)`).matches) {
+  birthdayCardImg = require("../assets/images/projects/birthday-card-mobile.webp");
+  rsLangImg = require("../assets/images/projects/rs-lang-mobile.webp");
+  rsReactImg = require("../assets/images/projects/rs-react-mobile.webp");
+  rsCvImg = require("../assets/images/projects/rs-cv-mobile.webp");
+  rsMuseumImg = require("../assets/images/projects/rs-museum-mobile.webp");
+  rsNewsPortalImg = require("../assets/images/projects/rs-news-portal-mobile.webp");
+  rsAsyncRaceImg = require("../assets/images/projects/rs-async-race-mobile.webp");
+  bicycleLandingPageImg = require("../assets/images/projects/bicycle-landing-page-mobile.webp");
+  cocktailsLandingPageImg = require("../assets/images/projects/cocktails-mobile.webp");
+  lionInDesertImg = require("../assets/images/projects/lion-in-desert-mobile.webp");
+  surveyFormImg = require("../assets/images/projects/survey-form-mobile.webp");
+  musicWorldImg = require("../assets/images/projects/music-world-mobile.webp");
+  techDocImg = require("../assets/images/projects/tech-doc-mobile.webp");
+  tributePageImg = require("../assets/images/projects/tribute-page-mobile.webp");
+  fakePortfolioImg = require("../assets/images/projects/fake-portfolio-mobile.webp");
+} else {
+  birthdayCardImg = require("../assets/images/projects/birthday-card.webp");
+  rsLangImg = require("../assets/images/projects/rs-lang.webp");
+  rsReactImg = require("../assets/images/projects/rs-react.webp");
+  rsCvImg = require("../assets/images/projects/rs-cv.webp");
+  rsMuseumImg = require("../assets/images/projects/rs-museum.webp");
+  rsNewsPortalImg = require("../assets/images/projects/rs-news-portal.webp");
+  rsAsyncRaceImg = require("../assets/images/projects/rs-async-race.webp");
+  bicycleLandingPageImg = require("../assets/images/projects/bicycle-landing-page.webp");
+  cocktailsLandingPageImg = require("../assets/images/projects/cocktails.webp");
+  lionInDesertImg = require("../assets/images/projects/lion-in-desert.webp");
+  surveyFormImg = require("../assets/images/projects/survey-form.webp");
+  musicWorldImg = require("../assets/images/projects/music-world.webp");
+  techDocImg = require("../assets/images/projects/tech-doc.webp");
+  tributePageImg = require("../assets/images/projects/tribute-page.webp");
+  fakePortfolioImg = require("../assets/images/projects/fake-portfolio.webp");
+}
 
 const theWatch = {
   title: "The watch",
