@@ -28,6 +28,7 @@
     text-decoration: none;
     color: var(--contact-controls-btn-color);
     overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
     transition: color 0.3s;
 
     &::after {

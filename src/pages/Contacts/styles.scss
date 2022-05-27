@@ -77,6 +77,7 @@
     transition: 0.5s;
     outline-offset: 3px;
     border-bottom: 3px solid transparent;
+    -webkit-tap-highlight-color: transparent;
     padding: 7px;
 
     &:hover {
@@ -174,6 +175,11 @@
       display: none;
     }
   }
+}
+
+.leaflet-container a.leaflet-popup-close-button,
+.leaflet-bar a {
+  -webkit-tap-highlight-color: transparent;
 }
 
 [data-theme="dark"] {
@@ -280,6 +286,7 @@
     background-color: transparent;
     cursor: pointer;
     float: right;
+    -webkit-tap-highlight-color: transparent;
     transition: 0.3s;
 
     &:hover {

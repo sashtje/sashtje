@@ -84,6 +84,7 @@ $first-delay: 0s;
     box-shadow: 0 0px 30px var(--about-my-photo-shadow);
     cursor: pointer;
     animation: fadeInLeft 1s 3.3s backwards;
+    -webkit-tap-highlight-color: transparent;
     transition: 0.3s;
 
     @media (max-width: 325px) {
@@ -213,6 +214,7 @@ $first-delay: 0s;
     justify-content: center;
     align-items: center;
     font-size: var(--cube-font-size);
+    -webkit-tap-highlight-color: transparent;
     transition: box-shadow 0.5s;
 
     &:hover {

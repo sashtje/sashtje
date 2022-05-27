@@ -47,6 +47,7 @@
     top: 0;
     padding: 0;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
     transition: color 0.3s;
 
     &:hover {

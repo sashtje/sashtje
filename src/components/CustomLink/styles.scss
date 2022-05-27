@@ -13,6 +13,7 @@
 .link {
   font-weight: 600;
   color: var(--link-color);
+  -webkit-tap-highlight-color: transparent;
 
   &:visited {
     color: var(--link-visited);

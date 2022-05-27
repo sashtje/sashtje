@@ -62,6 +62,7 @@
   box-shadow: 0 0 15px var(--projects-shadow);
   background-color: var(--projects-bg);
   border-radius: 20px;
+  -webkit-tap-highlight-color: transparent;
   transition: 0.3s;
 
   &:hover {
@@ -100,6 +101,7 @@
     display: block;
     padding: 5px;
     color: var(--projects-code-link);
+    -webkit-tap-highlight-color: transparent;
     transition: 0.3s;
 
     &:hover {

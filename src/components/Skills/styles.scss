@@ -43,6 +43,7 @@
     padding: 10px;
     cursor: pointer;
     border-radius: 10px;
+    -webkit-tap-highlight-color: transparent;
     transition: 0.3s;
 
     &:hover {

@@ -56,6 +56,7 @@
     text-decoration: none;
     color: var(--sidebar-link);
     font-size: 1.5rem;
+    -webkit-tap-highlight-color: transparent;
     transition: 0.3s;
 
     @media (orientation: portrait) {

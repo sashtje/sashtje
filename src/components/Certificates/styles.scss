@@ -16,6 +16,7 @@
     cursor: pointer;
     border: 6px ridge #bebebe;
     align-self: start;
+    -webkit-tap-highlight-color: transparent;
     transition: 0.3s;
 
     &:hover {

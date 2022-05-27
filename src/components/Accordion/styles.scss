@@ -42,6 +42,7 @@
     align-items: center;
     gap: 10px;
     box-shadow: 0 0 5px var(--accordion-shadow);
+    -webkit-tap-highlight-color: transparent;
     transition: 0.3s;
 
     &:hover {
@@ -79,6 +80,7 @@
     cursor: pointer;
     float: right;
     margin: 20px;
+    -webkit-tap-highlight-color: transparent;
     transition: 0.3s;
 
     &:hover {
