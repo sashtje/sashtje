@@ -32,7 +32,10 @@ let birthdayCardImg,
   tributePageImg,
   fakePortfolioImg;
 
-if (matchMedia(`(hover: hover)`).matches) {
+if (
+  matchMedia(`(hover: hover) and (min-width: 700px) and (min-height: 700px)`)
+    .matches
+) {
   birthdayCardImg = require("../assets/images/projects/birthday-card.webp");
   rsLangImg = require("../assets/images/projects/rs-lang.webp");
   rsReactImg = require("../assets/images/projects/rs-react.webp");
