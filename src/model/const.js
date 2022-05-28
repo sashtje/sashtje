@@ -24,5 +24,5 @@ export const EMAIL_FAIL =
 export const EMAIL_FAIL_RU =
   "Что-то пошло не так :( Пожалуйста, проверьте своё подключение к Интернету и попробуйте снова, или свяжитесь со мной любым другим способом.";
 
-export const HREF_CV_EN = `${process.env.PUBLIC_URL}/cv/CV Aleksandra Rogova (Sashtje).txt`;
-export const HREF_CV_RU = `${process.env.PUBLIC_URL}/cv/CV Александра Рогова (Sashtje).txt`;
+export const HREF_CV_EN = `${process.env.PUBLIC_URL}/cv/CV Aleksandra Rogova (Sashtje).pdf`;
+export const HREF_CV_RU = `${process.env.PUBLIC_URL}/cv/CV Александра Рогова (Sashtje).pdf`;
