@@ -7,9 +7,7 @@
 - 🌞 I'm fond of beautiful design & art, books, biking and travel
 - ✉️ I will be **glad to collaborate** on interesting projects. Feel free to write me. See my contacts :arrow_down_small:
 
-[**Portfolio & CV**](https://sashtje.github.io/sashtje/)
-
-## Languages
+## Technologies
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sashtje&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
